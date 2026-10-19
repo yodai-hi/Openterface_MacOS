@@ -78,6 +78,17 @@
         }
       }
     },
+    "(current)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(現在)"
+          }
+        }
+      }
+    },
     "(in use by another instance)": {
       "extractionState": "manual",
       "localizations": {
@@ -3699,6 +3710,17 @@
         }
       }
     },
+    "Keep Automatic": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自動のまま"
+          }
+        }
+      }
+    },
     "Key Interval": {
       "extractionState": "manual",
       "localizations": {
@@ -6156,6 +6178,17 @@
         }
       }
     },
+    "Select Device…": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイスを選択…"
+          }
+        }
+      }
+    },
     "Select Local Firmware File to Flash": {
       "extractionState": "manual",
       "localizations": {
@@ -6163,6 +6196,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "書き込むローカルファームウェアファイルを選択"
+          }
+        }
+      }
+    },
+    "Select a Device": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイスを選択"
           }
         }
       }
@@ -6405,6 +6449,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "設定..."
+          }
+        }
+      }
+    },
+    "Several Openterface units are connected. Choose the one this window should use. Other units can be opened later from Control ▸ Device ▸ Open in New Instance.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "複数の Openterface が接続されています。このウィンドウで使うデバイスを選んでください。他のデバイスは後から コントロール ▸ デバイス ▸ 新しいインスタンスで開く で開けます。"
           }
         }
       }
@@ -7572,6 +7627,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "NLA (ネットワークレベル認証) を使用"
+          }
+        }
+      }
+    },
+    "Use This Device": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このデバイスを使う"
           }
         }
       }

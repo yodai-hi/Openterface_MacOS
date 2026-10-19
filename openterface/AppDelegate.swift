@@ -572,6 +572,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMe
                 self?.ensureMainWindowVisible()
             }
         }
+
+        // With several free units attached, let the user pick the one for this window.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            DeviceChooserPresenter.shared.offerAtLaunchIfNeeded()
+        }
     }
 
     // MARK: - Multi-instance window placement

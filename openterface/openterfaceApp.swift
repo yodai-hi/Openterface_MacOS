@@ -325,6 +325,13 @@ struct openterfaceApp: App {
                     Divider()
 
                     Button(action: {
+                        DeviceChooserPresenter.shared.present()
+                    }) {
+                        Text("Select Device…")
+                    }
+                    .disabled(deviceSelection.candidates.isEmpty)
+
+                    Button(action: {
                         USBDevicesManager.shared.update()
                     }) {
                         Text("Refresh Devices")
@@ -1204,9 +1211,10 @@ struct SwitchToggleStyle: ToggleStyle {
     var height: CGFloat
     
     func makeBody(configuration: Configuration) -> some View {
-        HStack {
+        HStack(spacing: 8) {
             configuration.label
-            Spacer()
+                .fixedSize()
+            Spacer(minLength: 4)
             RoundedRectangle(cornerRadius: height / 2)
                 .fill(configuration.isOn ? Color.gray : Color.orange)
                 .frame(width: width, height: height)
@@ -1223,7 +1231,9 @@ struct SwitchToggleStyle: ToggleStyle {
                 }
             }
         }
-        .frame(width: 105, height: 24)
+        .padding(.horizontal, 6)
+        .frame(minWidth: 105)
+        .frame(height: 24)
     }
 }
 

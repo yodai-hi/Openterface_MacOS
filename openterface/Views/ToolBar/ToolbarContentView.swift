@@ -262,7 +262,7 @@ struct ToolbarContentView: ToolbarContent {
                                 .foregroundColor(colorForConnectionStatus(isMouseConnected))
                         }
                     }
-                    .padding(.horizontal, 4)
+                    .padding(.horizontal, 8)
                 }
                 .onChange(of: serialPortStatus.isControlChipsetReady) { isReady in
                     if isAwaitingControlChipsetReady && isReady {

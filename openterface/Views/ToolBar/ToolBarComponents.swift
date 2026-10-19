@@ -32,9 +32,9 @@ struct ResolutionView: View {
     
     var body: some View {
         HStack(spacing: 4) {
-            VStack(alignment: .leading, spacing: -2) {
+            VStack(alignment: .leading, spacing: 1) {
                 Text("\(width)x\(height)").font(.system(size: 10, weight: .medium))
-                HStack(spacing: 2) {
+                HStack(spacing: 4) {
                     Text("\(fps)Hz").font(.system(size: 8, weight: .medium))
                     Text(userSettings.customAspectRatio.toString)
                         .font(.system(size: 8, weight: .medium))
@@ -44,7 +44,8 @@ struct ResolutionView: View {
                 }
             }
         }
-        .padding(.horizontal, 4)
+        .fixedSize()
+        .padding(.horizontal, 8)
         .frame(minWidth: 66, alignment: .leading)
         .help(helpText)
     }
@@ -80,7 +81,7 @@ struct SerialInfoView: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .multilineTextAlignment(.leading)
         }
-        .padding(.horizontal, 4)
+        .padding(.horizontal, 8)
         .frame(minWidth: 140, minHeight: 30, alignment: .leading)
     }
 }
@@ -218,7 +219,7 @@ private struct LockIndicatorButton: View {
             Text(title)
                 .font(.system(size: 8, weight: .semibold))
                 .foregroundColor(isOn ? .blue : .secondary)
-                .frame(width: 28, alignment: .center)
+                .frame(minWidth: 32, alignment: .center)
         }
         .buttonStyle(.plain)
         .help(helpText)
@@ -227,11 +228,12 @@ private struct LockIndicatorButton: View {
 
 struct LockIndicatorsView: View {
     var body: some View {
-        VStack(spacing: 1) {
+        VStack(spacing: 2) {
             CapsLockIndicatorView()
             NumLockIndicatorView()
             ScrollLockIndicatorView()
         }
+        .padding(.horizontal, 4)
     }
 }
 

@@ -416,10 +416,19 @@ final class DeviceSelectionManager: ObservableObject {
 
     // MARK: - Selection
 
-    /// Pins this process to `candidate` and reconnects video, HID and serial.
+    /// Pins this process to `candidate`. Video, HID and serial are reconnected only when the
+    /// unit actually changes; pinning the unit that is already bound keeps the live session.
     func select(_ candidate: OpenterfaceDeviceCandidate) {
-        logger.log(content: "Device selection: pin to \(candidate.displayName) video=\(candidate.videoLocationID ?? "-") serial=\(candidate.serialPortPath ?? "-")")
+        let alreadyBound = activeCandidate?.id == candidate.id
+        logger.log(content: "Device selection: pin to \(candidate.displayName) video=\(candidate.videoLocationID ?? "-") serial=\(candidate.serialPortPath ?? "-")\(alreadyBound ? " (already bound, no reconnect)" : "")")
         storePins(video: candidate.videoLocationID, serial: candidate.serialPortPath)
+
+        if alreadyBound {
+            // Re-run the scan so the pin and claim are recorded; the chip references stay the same.
+            USBDevicesManager.shared.update()
+            NotificationCenter.default.post(name: DeviceSelectionManager.selectionDidChange, object: nil)
+            return
+        }
         reconnectAfterSelectionChange()
     }
 
