@@ -135,8 +135,15 @@ final class DeviceSelectionManager: ObservableObject {
     /// Candidate that matches the current pin (nil when running in automatic mode or the
     /// pinned device is not connected).
     var pinnedCandidate: OpenterfaceDeviceCandidate? {
-        guard isPinned else { return nil }
-        return candidates.first { isActive($0) }
+        // Match on the pin values themselves; going through isActive()/activeCandidate here
+        // recurses endlessly when the pinned unit is not bound (in use elsewhere or unplugged).
+        if let video = pinnedVideoLocationID {
+            return candidates.first { $0.videoLocationID?.lowercased() == video.lowercased() }
+        }
+        if let serial = pinnedSerialPortPath {
+            return candidates.first { $0.serialPortPath == serial }
+        }
+        return nil
     }
 
     /// Candidate currently driving this process, taken from the chip references that

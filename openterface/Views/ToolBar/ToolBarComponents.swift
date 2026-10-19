@@ -45,7 +45,8 @@ struct ResolutionView: View {
             }
         }
         .fixedSize()
-        .padding(.horizontal, 8)
+        .padding(.leading, 10)
+        .padding(.trailing, 2)
         .frame(minWidth: 66, alignment: .leading)
         .help(helpText)
     }
@@ -81,7 +82,8 @@ struct SerialInfoView: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .multilineTextAlignment(.leading)
         }
-        .padding(.horizontal, 8)
+        .padding(.leading, 2)
+        .padding(.trailing, 10)
         .frame(minWidth: 140, minHeight: 30, alignment: .leading)
     }
 }
@@ -219,7 +221,7 @@ private struct LockIndicatorButton: View {
             Text(title)
                 .font(.system(size: 8, weight: .semibold))
                 .foregroundColor(isOn ? .blue : .secondary)
-                .frame(minWidth: 32, alignment: .center)
+                .frame(minWidth: 30, alignment: .center)
         }
         .buttonStyle(.plain)
         .help(helpText)
@@ -233,7 +235,8 @@ struct LockIndicatorsView: View {
             NumLockIndicatorView()
             ScrollLockIndicatorView()
         }
-        .padding(.horizontal, 4)
+        .padding(.leading, 2)
+        .padding(.trailing, 8)
     }
 }
 

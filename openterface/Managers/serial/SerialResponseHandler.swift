@@ -231,12 +231,18 @@ extension SerialResponseHandler {
 
 //        logger.log(content: isTargetConnected ? "The Target Screen keyboard and mouse are connected" : "The Target Screen keyboard and mouse are disconnected")
 
+        // CH32V208 drives keyboard and mouse over the serial link directly and its HAL status
+        // reports the target as connected whenever the port is open (see CH32V208ControlChipset),
+        // so the target bit of GET_HID_INFO must not turn the keyboard/mouse indicators off.
+        // Receiving this reply at all proves the serial link is up.
+        let hidReady = AppStatus.controlChipsetType == .ch32v208 ? true : isTargetConnected
+
         // All @Published property mutations must happen on the main thread for SwiftUI to react
         DispatchQueue.main.async {
             SerialPortStatus.shared.chipVersion = chipVersion
             SerialPortStatus.shared.isTargetConnected = isTargetConnected
-            SerialPortStatus.shared.isKeyboardConnected = isTargetConnected
-            SerialPortStatus.shared.isMouseConnected = isTargetConnected
+            SerialPortStatus.shared.isKeyboardConnected = hidReady
+            SerialPortStatus.shared.isMouseConnected = hidReady
             SerialPortStatus.shared.isNumLockOn = isNumLockOn
             SerialPortStatus.shared.isCapLockOn = isCapLockOn
             SerialPortStatus.shared.isScrollOn = isScrollOn

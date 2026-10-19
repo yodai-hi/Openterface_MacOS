@@ -95,6 +95,7 @@ struct ToolbarContentView: ToolbarContent {
                 floatingKeyboardManager.showFloatingKeysWindow()
             } label: {
                 Image(systemName: showButtons ? "keyboard" : "keyboard.chevron.compact.down.fill")
+                    .padding(.leading, 6)
             }
 
             Button {
@@ -262,7 +263,7 @@ struct ToolbarContentView: ToolbarContent {
                                 .foregroundColor(colorForConnectionStatus(isMouseConnected))
                         }
                     }
-                    .padding(.horizontal, 8)
+                    .padding(.horizontal, 2)
                 }
                 .onChange(of: serialPortStatus.isControlChipsetReady) { isReady in
                     if isAwaitingControlChipsetReady && isReady {
@@ -355,7 +356,7 @@ struct ToolbarContentView: ToolbarContent {
         ToolbarItemGroup(placement: .automatic) {
             if shouldShowHardwareToggle {
                 Toggle(isOn: $switchToTarget) {
-                    HStack(spacing: 6) {
+                    HStack(spacing: 5) {
                         Image(switchToTarget ? "Target_icon" : "Host_icon")
                             .resizable()
                             .aspectRatio(contentMode: .fit)

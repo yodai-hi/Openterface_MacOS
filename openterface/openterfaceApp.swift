@@ -1211,7 +1211,7 @@ struct SwitchToggleStyle: ToggleStyle {
     var height: CGFloat
     
     func makeBody(configuration: Configuration) -> some View {
-        HStack(spacing: 8) {
+        HStack(spacing: 6) {
             configuration.label
                 .fixedSize()
             Spacer(minLength: 4)
@@ -1231,7 +1231,7 @@ struct SwitchToggleStyle: ToggleStyle {
                 }
             }
         }
-        .padding(.horizontal, 6)
+        .padding(.horizontal, 10)
         .frame(minWidth: 105)
         .frame(height: 24)
     }
