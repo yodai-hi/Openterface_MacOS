@@ -356,10 +356,28 @@ class USBDevicesManager: USBDevicesManagerProtocol {
                 anchorLocation = AppStatus.USBDevices.first { $0.locationID.lowercased() == serialLocation.lowercased() }?.locationID
             }
 
-            guard let anchor = anchorLocation, bindUnit(containing: anchor) else {
+            guard let anchor = anchorLocation else {
                 clearSelectedDevices()
                 selection.claimUnit(nil)
                 logger.log(content: "Pinned device (video=\(pinnedVideo ?? "-"), serial=\(pinnedSerial ?? "-")) is not connected; waiting for it instead of using another unit")
+                return
+            }
+
+            // Never share a unit with another live instance, even when explicitly pinned to it.
+            let pinnedPairs = DeviceSelectionManager.pairUnits(in: AppStatus.USBDevices, using: self)
+            if let pinnedUnit = pinnedPairs.first(where: {
+                $0.video?.locationID.lowercased() == anchor.lowercased() || $0.control?.locationID.lowercased() == anchor.lowercased()
+            }), claimedByOthers.contains(pinnedUnit.key) {
+                clearSelectedDevices()
+                selection.claimUnit(nil)
+                logger.log(content: "Pinned unit \(pinnedUnit.key) is driven by another instance; waiting for it to be released")
+                return
+            }
+
+            guard bindUnit(containing: anchor) else {
+                clearSelectedDevices()
+                selection.claimUnit(nil)
+                logger.log(content: "Pinned device (video=\(pinnedVideo ?? "-"), serial=\(pinnedSerial ?? "-")) could not be bound; waiting")
                 return
             }
             selection.claimUnit(DeviceSelectionManager.unitKey(video: videoChipDevice, control: controlChipDevice))

@@ -139,20 +139,23 @@ final class DeviceSelectionManager: ObservableObject {
         return candidates.first { isActive($0) }
     }
 
-    /// Candidate currently driving this process: the pinned one, or the first detected
-    /// group in automatic mode (mirrors `USBDevicesManager.updateChipsetTypeFlag`).
+    /// Candidate currently driving this process, taken from the chip references that
+    /// `USBDevicesManager` actually bound (in automatic mode that is not necessarily the
+    /// first entry of `candidates`).
     var activeCandidate: OpenterfaceDeviceCandidate? {
-        isPinned ? pinnedCandidate : candidates.first
+        let boundVideo = AppStatus.videoChipDevice?.locationID.lowercased()
+        let boundControl = AppStatus.controlChipDevice?.locationID.lowercased()
+        if let bound = candidates.first(where: { candidate in
+            (boundVideo != nil && candidate.videoLocationID?.lowercased() == boundVideo)
+                || (boundVideo == nil && boundControl != nil && candidate.controlLocationID?.lowercased() == boundControl)
+        }) {
+            return bound
+        }
+        return isPinned ? pinnedCandidate : nil
     }
 
     func isActive(_ candidate: OpenterfaceDeviceCandidate) -> Bool {
-        if let video = pinnedVideoLocationID {
-            return candidate.videoLocationID?.lowercased() == video.lowercased()
-        }
-        if let serial = pinnedSerialPortPath {
-            return candidate.serialPortPath == serial
-        }
-        return candidates.first?.id == candidate.id
+        activeCandidate?.id == candidate.id
     }
 
     /// Thread-safe accessor used by `USBDevicesManager`.
