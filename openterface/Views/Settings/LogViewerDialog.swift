@@ -42,7 +42,7 @@ struct LogViewerDialog: View {
             }
         }
         .padding()
-        .frame(width: 700, height: 500)
+        .frame(minWidth: 700, minHeight: 500)
         .onAppear {
             loadLog()
         }
@@ -144,7 +144,7 @@ struct AITraceViewerDialog: View {
             }
         }
         .padding()
-        .frame(width: 860, height: 620)
+        .frame(minWidth: 860, minHeight: 620)
         .onAppear {
             loadTrace()
         }

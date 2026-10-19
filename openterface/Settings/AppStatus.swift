@@ -266,4 +266,6 @@ struct USBDeviceInfo {
     let productID: Int
     let locationID: String
     let speed: String
+    /// USB iSerialNumber string, when the device reports one (used to tell units apart).
+    var serialNumber: String? = nil
 }

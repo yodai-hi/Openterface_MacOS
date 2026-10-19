@@ -243,7 +243,7 @@ struct ToolbarContentView: ToolbarContent {
                 Button(action: {
                     showUSBDevices()
                 }) {
-                    HStack {
+                    HStack(spacing: 6) {
                         if isShowingBaudrateTransition {
                             ProgressView()
                                 .controlSize(.small)
@@ -262,6 +262,7 @@ struct ToolbarContentView: ToolbarContent {
                                 .foregroundColor(colorForConnectionStatus(isMouseConnected))
                         }
                     }
+                    .padding(.horizontal, 4)
                 }
                 .onChange(of: serialPortStatus.isControlChipsetReady) { isReady in
                     if isAwaitingControlChipsetReady && isReady {
@@ -307,7 +308,7 @@ struct ToolbarContentView: ToolbarContent {
                     SerialInfoView(portName: displayName,
                                    baudRate: displayBaud,
                                    processingHz: UserSettings.shared.mouseEventThrottleHz)
-                        .frame(width: 140, alignment: .leading)
+                        .frame(minWidth: 140, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 .buttonStyle(PlainButtonStyle())
@@ -336,7 +337,7 @@ struct ToolbarContentView: ToolbarContent {
                     .disabled(serialPortMgr.isConfiguring)
             } else {
                 RemoteInfoView(protocolMode: connectionMode)
-                    .frame(width: 190, alignment: .leading)
+                    .frame(minWidth: 190, alignment: .leading)
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
@@ -354,7 +355,7 @@ struct ToolbarContentView: ToolbarContent {
         ToolbarItemGroup(placement: .automatic) {
             if shouldShowHardwareToggle {
                 Toggle(isOn: $switchToTarget) {
-                    HStack {
+                    HStack(spacing: 6) {
                         Image(switchToTarget ? "Target_icon" : "Host_icon")
                             .resizable()
                             .aspectRatio(contentMode: .fit)

@@ -79,7 +79,7 @@ struct AudioVideoSettingsView: View {
                                         Text(ratio.toString).tag(ratio)
                                     }
                                 }
-                                .frame(width: 120)
+                                .frame(minWidth: 120)
                             }
 
                             Text("Current ratio: \(String(format: "%.3f", userSettings.customAspectRatio.widthToHeightRatio))")

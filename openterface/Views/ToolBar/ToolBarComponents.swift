@@ -44,7 +44,8 @@ struct ResolutionView: View {
                 }
             }
         }
-        .frame(width: 66, alignment: .leading)
+        .padding(.horizontal, 4)
+        .frame(minWidth: 66, alignment: .leading)
         .help(helpText)
     }
     
@@ -79,6 +80,7 @@ struct SerialInfoView: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .multilineTextAlignment(.leading)
         }
+        .padding(.horizontal, 4)
         .frame(minWidth: 140, minHeight: 30, alignment: .leading)
     }
 }

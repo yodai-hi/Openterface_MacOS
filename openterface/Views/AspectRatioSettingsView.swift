@@ -63,7 +63,7 @@ struct AspectRatioSettingsView: View {
                 Text(selectedGravity.description)
                     .font(.caption)
                     .foregroundColor(.secondary)
-                    .lineLimit(3)
+                    .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.bottom, 8)
             
@@ -182,7 +182,7 @@ struct AspectRatioSettingsView: View {
                         Text("When enabled, maintains aspect ratio when resizing the window. When disabled, allows free resizing.")
                             .font(.caption)
                             .foregroundColor(.secondary)
-                            .lineLimit(3)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                     Spacer()
                     Toggle("", isOn: $isAspectRatioLocked)
@@ -218,7 +218,8 @@ struct AspectRatioSettingsView: View {
             Spacer()
         }
         .padding(24)
-        .frame(width: 500, alignment: .topLeading)
+        .frame(minWidth: 500, maxWidth: 640, alignment: .topLeading)
+        .fixedSize(horizontal: false, vertical: true)
     }
     
     private func getCommonResolutions(for aspectRatio: AspectRatioOption) -> String {

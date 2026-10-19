@@ -292,12 +292,16 @@ struct openterfaceApp: App {
                         Text("No Openterface devices detected")
                     } else {
                         ForEach(deviceSelection.candidates) { candidate in
+                            let isActive = deviceSelection.isPinned && deviceSelection.isActive(candidate)
+                            let inUse = deviceSelection.unitKeysInUseByOtherInstances.contains(candidate.unitKey)
                             Button(action: {
                                 deviceSelection.select(candidate)
                             }) {
-                                let isActive = deviceSelection.isPinned && deviceSelection.isActive(candidate)
-                                Text(verbatim: isActive ? "\(candidate.displayName) ✓" : candidate.displayName)
+                                Text(verbatim: candidate.displayName
+                                     + (inUse ? " " + String(localized: "(in use by another instance)") : "")
+                                     + (isActive ? " ✓" : ""))
                             }
+                            .disabled(inUse)
                         }
                     }
 
@@ -305,11 +309,15 @@ struct openterfaceApp: App {
 
                     Menu("Open in New Instance") {
                         ForEach(deviceSelection.candidates) { candidate in
+                            let inUse = deviceSelection.unitKeysInUseByOtherInstances.contains(candidate.unitKey)
+                            let isMine = deviceSelection.activeCandidate?.id == candidate.id
                             Button(action: {
                                 deviceSelection.openInNewInstance(candidate)
                             }) {
-                                Text(verbatim: candidate.displayName)
+                                Text(verbatim: candidate.displayName
+                                     + (inUse || isMine ? " " + String(localized: "(in use by another instance)") : ""))
                             }
+                            .disabled(inUse || isMine)
                         }
                     }
                     .disabled(deviceSelection.candidates.isEmpty)

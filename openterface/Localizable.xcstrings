@@ -78,6 +78,17 @@
         }
       }
     },
+    "(in use by another instance)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(他のインスタンスで使用中)"
+          }
+        }
+      }
+    },
     "(optional)": {
       "extractionState": "manual",
       "localizations": {
@@ -2214,6 +2225,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "デバイス情報"
+          }
+        }
+      }
+    },
+    "Device Name:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイス名:"
           }
         }
       }
@@ -6551,6 +6573,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "現在のターゲット OS のマクロを表示中 — クリックするとすべて表示"
+          }
+        }
+      }
+    },
+    "Shown in the Device menu instead of the serial number. Leave empty to use the default name.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイスメニューでシリアル番号の代わりに表示されます。空欄にするとデフォルトの名前を使います。"
           }
         }
       }

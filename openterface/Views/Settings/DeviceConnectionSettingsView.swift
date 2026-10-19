@@ -10,6 +10,22 @@ struct DeviceConnectionSettingsView: View {
 
     private static let automaticDeviceTag = "__automatic__"
 
+    /// Units this window may switch to: everything not driven by another live instance
+    /// (the unit this window already drives stays listed).
+    private var selectableCandidates: [OpenterfaceDeviceCandidate] {
+        deviceSelection.candidates.filter { candidate in
+            !deviceSelection.unitKeysInUseByOtherInstances.contains(candidate.unitKey)
+                || deviceSelection.activeCandidate?.id == candidate.id
+        }
+    }
+
+    private func nicknameBinding(for candidate: OpenterfaceDeviceCandidate) -> Binding<String> {
+        Binding(
+            get: { deviceSelection.nickname(for: candidate) ?? "" },
+            set: { deviceSelection.setNickname($0, for: candidate) }
+        )
+    }
+
     /// Picker binding: "automatic" or the id of the pinned unit.
     private var selectedDeviceTag: Binding<String> {
         Binding(
@@ -49,16 +65,26 @@ struct DeviceConnectionSettingsView: View {
                         Spacer()
                         Picker("Active Device", selection: selectedDeviceTag) {
                             Text("Automatic (First Detected)").tag(Self.automaticDeviceTag)
-                            ForEach(deviceSelection.candidates) { candidate in
+                            ForEach(selectableCandidates) { candidate in
                                 Text(verbatim: candidate.displayName).tag(candidate.id)
                             }
                         }
                         .labelsHidden()
                         .pickerStyle(MenuPickerStyle())
-                        .frame(width: 260)
+                        .frame(minWidth: 260)
                     }
 
                     if let active = deviceSelection.activeCandidate {
+                        HStack {
+                            Text("Device Name:")
+                            Spacer()
+                            TextField(active.defaultName, text: nicknameBinding(for: active))
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .frame(minWidth: 200, maxWidth: 320)
+                        }
+                        Text("Shown in the Device menu instead of the serial number. Leave empty to use the default name.")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
                         HStack {
                             Text("Video Location ID:")
                             Spacer()
@@ -88,14 +114,18 @@ struct DeviceConnectionSettingsView: View {
 
                         Menu("Open in New Instance") {
                             ForEach(deviceSelection.candidates) { candidate in
+                                let blocked = deviceSelection.unitKeysInUseByOtherInstances.contains(candidate.unitKey)
+                                    || deviceSelection.activeCandidate?.id == candidate.id
                                 Button(action: {
                                     deviceSelection.openInNewInstance(candidate)
                                 }) {
-                                    Text(verbatim: candidate.displayName)
+                                    Text(verbatim: candidate.displayName
+                                         + (blocked ? " " + String(localized: "(in use by another instance)") : ""))
                                 }
+                                .disabled(blocked)
                             }
                         }
-                        .frame(width: 200)
+                        .frame(minWidth: 200)
                         .disabled(deviceSelection.candidates.isEmpty)
 
                         Spacer()
@@ -169,7 +199,7 @@ struct DeviceConnectionSettingsView: View {
                             }
                         }
                         .pickerStyle(MenuPickerStyle())
-                        .frame(width: 200)
+                        .frame(minWidth: 200)
                         .onChange(of: userSettings.preferredBaudrate) { newBaudrate in
                             if serialPortManager.isDeviceReady {
                                 isUpdatingBaudrate = true

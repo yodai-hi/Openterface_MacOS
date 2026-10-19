@@ -308,7 +308,7 @@ struct EnhancedMacroCreatorDialog: View {
             }
         }
         .padding()
-        .frame(width: 450, height: 350)
+        .frame(minWidth: 450, minHeight: 350)
         .onDisappear { stopRecording() }
     }
 

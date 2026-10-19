@@ -27,44 +27,61 @@ import IOKit
 private var logger: LoggerProtocol = DependencyContainer.shared.resolve(LoggerProtocol.self)
 
 /// One physical Openterface unit (video chip + control chip + its serial port) that
-/// this process could attach to.
+/// this process could attach to. Only units with a video chip are listed.
 struct OpenterfaceDeviceCandidate: Identifiable {
-    /// Stable identifier: the video chip location ID when available, otherwise the
-    /// control chip location ID.
+    /// Stable identifier: the video chip location ID.
     let id: String
-    let groupIndex: Int
-    let videoDevice: USBDeviceInfo?
+    let index: Int
+    let videoDevice: USBDeviceInfo
     let controlDevice: USBDeviceInfo?
     /// Callout path of the serial port that belongs to the control chip, resolved via IOKit.
     let serialPortPath: String?
 
-    var videoLocationID: String? { videoDevice?.locationID }
+    var videoLocationID: String? { videoDevice.locationID }
     var controlLocationID: String? { controlDevice?.locationID }
+    var serialNumber: String? { videoDevice.serialNumber }
 
-    /// Short hub/port identifier such as "0x1134" – readable but still unique per port.
-    var shortLocation: String {
-        DeviceSelectionManager.shortLocationID(videoLocationID ?? controlLocationID ?? id)
-    }
+    /// Key used for cross-instance claims (same value `USBDevicesManager` claims).
+    var unitKey: String { DeviceSelectionManager.unitKey(video: videoDevice, control: controlDevice) }
 
-    /// Human readable label used in menus and pickers, e.g. "#1 Openterface (0x1134)".
+    /// Short hub/port identifier such as "0x1144".
+    var shortLocation: String { DeviceSelectionManager.shortLocationID(videoDevice.locationID) }
+
+    /// Label used in menus and pickers: nickname, else "Openterface <serial>", else location.
     var displayName: String {
-        let name = videoDevice?.productName ?? controlDevice?.productName ?? "Openterface"
-        return "#\(groupIndex + 1) \(name) (\(shortLocation))"
+        if let nickname = DeviceSelectionManager.shared.nickname(for: self), !nickname.isEmpty {
+            return nickname
+        }
+        return defaultName
     }
 
-    /// Compact label appended to the window title, e.g. "#1 0x1134".
-    var titleLabel: String {
-        "#\(groupIndex + 1) \(shortLocation)"
+    /// Name without the user nickname applied.
+    var defaultName: String {
+        let product = videoDevice.productName.contains("Unknown") ? "Openterface" : videoDevice.productName
+        if let serial = serialNumber, !serial.isEmpty {
+            return "\(product) \(serial)"
+        }
+        return "\(product) (\(shortLocation))"
+    }
+
+    /// Compact label appended to the window title.
+    var titleLabel: String { displayName }
+
+    /// Identity that survives re-plugging into another port: the USB serial number when
+    /// present, else the location ID.
+    var persistentKey: String {
+        if let serial = serialNumber, !serial.isEmpty { return "serial:" + serial }
+        return "location:" + videoDevice.locationID.lowercased()
     }
 }
 
 extension OpenterfaceDeviceCandidate: Equatable {
     static func == (lhs: OpenterfaceDeviceCandidate, rhs: OpenterfaceDeviceCandidate) -> Bool {
         lhs.id == rhs.id &&
-        lhs.groupIndex == rhs.groupIndex &&
-        lhs.videoLocationID == rhs.videoLocationID &&
+        lhs.index == rhs.index &&
         lhs.controlLocationID == rhs.controlLocationID &&
-        lhs.serialPortPath == rhs.serialPortPath
+        lhs.serialPortPath == rhs.serialPortPath &&
+        lhs.serialNumber == rhs.serialNumber
     }
 }
 
@@ -100,6 +117,12 @@ final class DeviceSelectionManager: ObservableObject {
     // `applyLaunchArguments` runs before the dependency container (and thus the logger)
     // is set up, so its message is kept here and emitted on the first USB scan.
     private var pendingLaunchLogMessage: String?
+
+    // Units driven by other live instances of this app (see "Cross-instance unit claims").
+    @Published private(set) var unitKeysInUseByOtherInstances: Set<String> = []
+    private let claimLock = NSLock()
+    private var claimedUnitKey: String?
+    private var unitKeysInUseSnapshot: Set<String> = []
 
     private init() {}
 
@@ -242,6 +265,102 @@ final class DeviceSelectionManager: ObservableObject {
         return "0x" + text
     }
 
+    /// Port path encoded in a location ID: "0x00243000" -> [2, 4, 3].
+    static func portPath(_ locationID: String) -> [Int] {
+        var text = locationID.lowercased()
+        if text.hasPrefix("0x") { text = String(text.dropFirst(2)) }
+        // First byte is the bus number; the remaining nibbles are port numbers, zero padded.
+        let nibbles = text.count > 2 ? Array(text.dropFirst(2)) : []
+        var path: [Int] = []
+        for ch in nibbles {
+            guard let value = Int(String(ch), radix: 16), value != 0 else { break }
+            path.append(value)
+        }
+        return path
+    }
+
+    /// Claim/selection key of a unit: the video chip location, else the control chip location.
+    static func unitKey(video: USBDeviceInfo?, control: USBDeviceInfo?) -> String {
+        (video?.locationID ?? control?.locationID ?? "none").lowercased()
+    }
+
+    struct UnitPair {
+        let video: USBDeviceInfo?
+        let control: USBDeviceInfo?
+        /// How the pair was established (for logs): "hub", "port" or "single".
+        let pairing: String
+        var key: String { DeviceSelectionManager.unitKey(video: video, control: control) }
+    }
+
+    /// Pairs video chips with control chips into physical units.
+    ///
+    /// 1. Same internal hub (location prefix): the USB 2.0 case, e.g. serial 0x00113200 and
+    ///    video 0x00113400 under hub 0x00113000.
+    /// 2. Same physical port on the USB 3 tree: an MS2130S attached over USB 3 enumerates on
+    ///    the SuperSpeed hub instead of the unit's internal USB 2 hub (e.g. video 0x00243000
+    ///    while the serial sits under hub 0x00113000). The port path of the video and of the
+    ///    control chip's hub then have the same depth and the same last port number.
+    /// 3. Anything left stays unpaired.
+    static func pairUnits(in devices: [USBDeviceInfo], using usb: USBDevicesManager) -> [UnitPair] {
+        let videos = devices
+            .filter { usb.isOpenterfaceVideoChipset(vendorId: $0.vendorID, productId: $0.productID) }
+            .sorted { $0.locationID.lowercased() < $1.locationID.lowercased() }
+        var controls = devices
+            .filter { usb.isOpenterfaceControlChipset(vendorId: $0.vendorID, productId: $0.productID) }
+            .sorted { $0.locationID.lowercased() < $1.locationID.lowercased() }
+
+        var pairs: [UnitPair] = []
+        var unpairedVideos: [USBDeviceInfo] = []
+
+        for video in videos {
+            let prefix = unitPrefix(video.locationID)
+            if let index = controls.firstIndex(where: { unitPrefix($0.locationID) == prefix }) {
+                pairs.append(UnitPair(video: video, control: controls.remove(at: index), pairing: "hub"))
+            } else {
+                unpairedVideos.append(video)
+            }
+        }
+
+        for video in unpairedVideos {
+            let videoPath = portPath(video.locationID)
+            let match = controls.firstIndex { control in
+                let hubPath = portPath(unitPrefix(control.locationID))
+                return !videoPath.isEmpty && videoPath.count == hubPath.count && videoPath.last == hubPath.last
+            }
+            if let index = match {
+                pairs.append(UnitPair(video: video, control: controls.remove(at: index), pairing: "port"))
+            } else {
+                pairs.append(UnitPair(video: video, control: nil, pairing: "single"))
+            }
+        }
+
+        for control in controls {
+            pairs.append(UnitPair(video: nil, control: control, pairing: "single"))
+        }
+        return pairs.sorted { $0.key < $1.key }
+    }
+
+    // MARK: - Nicknames (shared by all instances through UserDefaults)
+
+    private static let nicknamesDefaultsKey = "openterfaceDeviceNicknames"
+
+    func nickname(for candidate: OpenterfaceDeviceCandidate) -> String? {
+        let store = UserDefaults.standard.dictionary(forKey: DeviceSelectionManager.nicknamesDefaultsKey) as? [String: String]
+        return store?[candidate.persistentKey]
+    }
+
+    func setNickname(_ nickname: String, for candidate: OpenterfaceDeviceCandidate) {
+        var store = UserDefaults.standard.dictionary(forKey: DeviceSelectionManager.nicknamesDefaultsKey) as? [String: String] ?? [:]
+        let trimmed = nickname.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmed.isEmpty {
+            store.removeValue(forKey: candidate.persistentKey)
+        } else {
+            store[candidate.persistentKey] = trimmed
+        }
+        UserDefaults.standard.set(store, forKey: DeviceSelectionManager.nicknamesDefaultsKey)
+        objectWillChange.send()
+    }
+
     /// "0x00113400" -> "0x1134"
     static func shortLocationID(_ locationID: String) -> String {
         var text = locationID.lowercased()
@@ -254,48 +373,29 @@ final class DeviceSelectionManager: ObservableObject {
 
     /// Rebuilds the candidate list from `AppStatus.groupOpenterfaceDevices`.
     /// Safe to call from any thread; publishing happens on the main thread.
-    func refreshCandidates(using usb: USBDevicesManager) {
+    /// Emits the launch-argument message once the logger is available.
+    func flushPendingLaunchLog() {
         if let message = pendingLaunchLogMessage {
             pendingLaunchLogMessage = nil
             logger.log(content: message)
         }
+    }
+
+    func refreshCandidates(using usb: USBDevicesManager) {
+        flushPendingLaunchLog()
         let serialByLocation = SerialPortLocator.usbLocationIDsByCalloutPath()
 
-        // `AppStatus.groupOpenterfaceDevices` groups by hub prefix and can merge two units
-        // that sit behind the same upstream hub, so units are paired here by location instead.
-        let devices = AppStatus.USBDevices
-        let videos = devices
-            .filter { usb.isOpenterfaceVideoChipset(vendorId: $0.vendorID, productId: $0.productID) }
-            .sorted { $0.locationID.lowercased() < $1.locationID.lowercased() }
-        var controls = devices
-            .filter { usb.isOpenterfaceControlChipset(vendorId: $0.vendorID, productId: $0.productID) }
-            .sorted { $0.locationID.lowercased() < $1.locationID.lowercased() }
-
-        var pairs: [(video: USBDeviceInfo?, control: USBDeviceInfo?)] = []
-        for video in videos {
-            let prefix = DeviceSelectionManager.unitPrefix(video.locationID)
-            if let index = controls.firstIndex(where: { DeviceSelectionManager.unitPrefix($0.locationID) == prefix }) {
-                pairs.append((video, controls.remove(at: index)))
-            } else {
-                pairs.append((video, nil))
-            }
-        }
-        // Control chips without a video chip (e.g. a unit whose capture half is not enumerated yet)
-        for control in controls {
-            pairs.append((nil, control))
-        }
-
         var built: [OpenterfaceDeviceCandidate] = []
-        for (index, pair) in pairs.enumerated() {
+        for unit in DeviceSelectionManager.pairUnits(in: AppStatus.USBDevices, using: usb) {
+            guard let video = unit.video else { continue }   // control-only entries are not selectable
             var serialPath: String?
-            if let control = pair.control {
+            if let control = unit.control {
                 serialPath = serialByLocation.first { $0.value.lowercased() == control.locationID.lowercased() }?.key
             }
-            let id = pair.video?.locationID ?? pair.control?.locationID ?? "unit-\(index)"
-            built.append(OpenterfaceDeviceCandidate(id: id,
-                                                    groupIndex: index,
-                                                    videoDevice: pair.video,
-                                                    controlDevice: pair.control,
+            built.append(OpenterfaceDeviceCandidate(id: video.locationID.lowercased(),
+                                                    index: built.count,
+                                                    videoDevice: video,
+                                                    controlDevice: unit.control,
                                                     serialPortPath: serialPath))
         }
 
@@ -356,6 +456,94 @@ final class DeviceSelectionManager: ObservableObject {
         } else {
             DispatchQueue.main.async(execute: run)
         }
+    }
+
+    // MARK: - Cross-instance unit claims
+
+    // Each instance writes "<unitKey>.claim" (containing its pid) into a folder shared by all
+    // instances of this bundle. An instance started without a pin skips units whose claim
+    // belongs to another live instance, so a plain `open -n` second copy automatically takes
+    // the next free unit instead of fighting over the first one.
+
+    private static var claimsDirectory: URL? {
+        guard let base = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else {
+            return nil
+        }
+        let directory = base
+            .appendingPathComponent(Bundle.main.bundleIdentifier ?? "openterface", isDirectory: true)
+            .appendingPathComponent("instance-claims", isDirectory: true)
+        try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        return directory
+    }
+
+    private static func claimFile(for unitKey: String) -> URL? {
+        claimsDirectory?.appendingPathComponent(unitKey + ".claim")
+    }
+
+    /// Returns true when `pid` is a live process running this same app bundle.
+    private static func isLiveInstance(_ pid: pid_t) -> Bool {
+        guard let app = NSRunningApplication(processIdentifier: pid), !app.isTerminated else { return false }
+        return app.bundleIdentifier == Bundle.main.bundleIdentifier
+    }
+
+    /// Unit keys claimed by other live instances. Claims left behind by dead processes are removed.
+    /// Safe to call from any thread.
+    @discardableResult
+    func unitKeysClaimedByOtherInstances() -> Set<String> {
+        var keys = Set<String>()
+        if let directory = DeviceSelectionManager.claimsDirectory,
+           let files = try? FileManager.default.contentsOfDirectory(at: directory, includingPropertiesForKeys: nil) {
+            let myPID = ProcessInfo.processInfo.processIdentifier
+            for file in files where file.pathExtension == "claim" {
+                let key = file.deletingPathExtension().lastPathComponent
+                guard let text = try? String(contentsOf: file, encoding: .utf8),
+                      let pid = pid_t(text.trimmingCharacters(in: .whitespacesAndNewlines)) else {
+                    try? FileManager.default.removeItem(at: file)
+                    continue
+                }
+                if pid == myPID { continue }
+                if DeviceSelectionManager.isLiveInstance(pid) {
+                    keys.insert(key)
+                } else {
+                    try? FileManager.default.removeItem(at: file)
+                }
+            }
+        }
+
+        claimLock.lock()
+        unitKeysInUseSnapshot = keys
+        claimLock.unlock()
+
+        let publish = {
+            if self.unitKeysInUseByOtherInstances != keys {
+                self.unitKeysInUseByOtherInstances = keys
+            }
+        }
+        if Thread.isMainThread { publish() } else { DispatchQueue.main.async(execute: publish) }
+        return keys
+    }
+
+    /// Thread-safe copy of the last claim scan.
+    func currentUnitKeysInUseByOtherInstances() -> Set<String> {
+        claimLock.lock(); defer { claimLock.unlock() }
+        return unitKeysInUseSnapshot
+    }
+
+    /// Records that this process drives `unitKey` (nil releases the current claim).
+    func claimUnit(_ unitKey: String?) {
+        claimLock.lock(); defer { claimLock.unlock() }
+        guard unitKey != claimedUnitKey else { return }
+        if let previous = claimedUnitKey, let file = DeviceSelectionManager.claimFile(for: previous) {
+            try? FileManager.default.removeItem(at: file)
+        }
+        claimedUnitKey = unitKey
+        if let unitKey = unitKey, let file = DeviceSelectionManager.claimFile(for: unitKey) {
+            try? "\(ProcessInfo.processInfo.processIdentifier)\n".write(to: file, atomically: true, encoding: .utf8)
+        }
+    }
+
+    func releaseClaim() {
+        claimUnit(nil)
     }
 
     // MARK: - Multi instance helpers

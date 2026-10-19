@@ -165,7 +165,7 @@ struct RemoteControlSettingsView: View {
 
             HStack {
                 Text("Credential")
-                    .frame(width: 80, alignment: .leading)
+                    .frame(minWidth: 80, alignment: .leading)
                 Picker("Credential", selection: Binding<UUID?>(
                     get: { credentialsStore.selectedCredentialID(for: .vnc) },
                     set: { newValue in
@@ -182,14 +182,14 @@ struct RemoteControlSettingsView: View {
 
             HStack {
                 Text("Host")
-                    .frame(width: 80, alignment: .leading)
+                    .frame(minWidth: 80, alignment: .leading)
                 TextField("127.0.0.1", text: $userSettings.vncHost)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
 
             HStack {
                 Text("Port")
-                    .frame(width: 80, alignment: .leading)
+                    .frame(minWidth: 80, alignment: .leading)
                 TextField("5900", text: $vncPortText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .onChange(of: vncPortText) { value in
@@ -201,14 +201,14 @@ struct RemoteControlSettingsView: View {
 
             HStack {
                 Text("Username")
-                    .frame(width: 80, alignment: .leading)
+                    .frame(minWidth: 80, alignment: .leading)
                 TextField("Optional", text: $userSettings.vncUsername)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
 
             HStack {
                 Text("Password")
-                    .frame(width: 80, alignment: .leading)
+                    .frame(minWidth: 80, alignment: .leading)
                 SecureField("Optional", text: $userSettings.vncPassword)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
@@ -284,7 +284,7 @@ struct RemoteControlSettingsView: View {
 
             HStack {
                 Text("Credential")
-                    .frame(width: 80, alignment: .leading)
+                    .frame(minWidth: 80, alignment: .leading)
                 Picker("Credential", selection: Binding<UUID?>(
                     get: { credentialsStore.selectedCredentialID(for: .rdp) },
                     set: { newValue in
@@ -301,14 +301,14 @@ struct RemoteControlSettingsView: View {
 
             HStack {
                 Text("Host")
-                    .frame(width: 80, alignment: .leading)
+                    .frame(minWidth: 80, alignment: .leading)
                 TextField("example.com", text: $userSettings.rdpHost)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
 
             HStack {
                 Text("Port")
-                    .frame(width: 80, alignment: .leading)
+                    .frame(minWidth: 80, alignment: .leading)
                 TextField("3389", text: Binding(
                     get: { String(userSettings.rdpPort) },
                     set: { newVal in
@@ -320,21 +320,21 @@ struct RemoteControlSettingsView: View {
 
             HStack {
                 Text("Domain")
-                    .frame(width: 80, alignment: .leading)
+                    .frame(minWidth: 80, alignment: .leading)
                 TextField("(optional)", text: $userSettings.rdpDomain)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
 
             HStack {
                 Text("Username")
-                    .frame(width: 80, alignment: .leading)
+                    .frame(minWidth: 80, alignment: .leading)
                 TextField("Required", text: $userSettings.rdpUsername)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
 
             HStack {
                 Text("Password")
-                    .frame(width: 80, alignment: .leading)
+                    .frame(minWidth: 80, alignment: .leading)
                 SecureField("(optional)", text: $userSettings.rdpPassword)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
@@ -860,28 +860,28 @@ private struct CredentialEditorDialog: View {
 
             HStack {
                 Text("Protocol")
-                    .frame(width: 90, alignment: .leading)
+                    .frame(minWidth: 90, alignment: .leading)
                 Text(entry.protocolType.displayName)
                     .foregroundColor(.secondary)
             }
 
             HStack {
                 Text("Name")
-                    .frame(width: 90, alignment: .leading)
+                    .frame(minWidth: 90, alignment: .leading)
                 TextField("My Credential", text: $entry.displayName)
                     .textFieldStyle(.roundedBorder)
             }
 
             HStack {
                 Text("Host / IP")
-                    .frame(width: 90, alignment: .leading)
+                    .frame(minWidth: 90, alignment: .leading)
                 TextField("127.0.0.1", text: $entry.host)
                     .textFieldStyle(.roundedBorder)
             }
 
             HStack {
                 Text("Port")
-                    .frame(width: 90, alignment: .leading)
+                    .frame(minWidth: 90, alignment: .leading)
                 TextField(
                     "\(entry.protocolType.defaultPort)",
                     text: Binding(
@@ -899,7 +899,7 @@ private struct CredentialEditorDialog: View {
 
             HStack {
                 Text("Username")
-                    .frame(width: 90, alignment: .leading)
+                    .frame(minWidth: 90, alignment: .leading)
                 TextField(entry.protocolType == .rdp ? "Required" : "Optional", text: $entry.username)
                     .textFieldStyle(.roundedBorder)
             }
@@ -907,7 +907,7 @@ private struct CredentialEditorDialog: View {
             if entry.protocolType == .rdp {
                 HStack {
                     Text("Domain")
-                        .frame(width: 90, alignment: .leading)
+                        .frame(minWidth: 90, alignment: .leading)
                     TextField("Optional", text: $entry.domain)
                         .textFieldStyle(.roundedBorder)
                 }
@@ -915,7 +915,7 @@ private struct CredentialEditorDialog: View {
 
             HStack {
                 Text("Password")
-                    .frame(width: 90, alignment: .leading)
+                    .frame(minWidth: 90, alignment: .leading)
                 SecureField("Optional", text: $password)
                     .textFieldStyle(.roundedBorder)
             }

@@ -134,7 +134,10 @@ class USBDevicesManager: USBDevicesManagerProtocol {
                 logger.log(content: "🔌 Openterface video chipset USB speed: \(speedString) (value=\(speedValue))")
             }
 
-            let deviceInfo = USBDeviceInfo(productName: productName, manufacturer: manufacturer, vendorID: vendorID, productID: productID, locationID: locationIDString, speed: speedString)
+            // USB Serial Number (iSerialNumber) – lets the UI name individual units
+            let serialNumber = IORegistryEntryCreateCFProperty(usbDevice, "USB Serial Number" as CFString, kCFAllocatorDefault, 0)?.takeRetainedValue() as? String
+
+            let deviceInfo = USBDeviceInfo(productName: productName, manufacturer: manufacturer, vendorID: vendorID, productID: productID, locationID: locationIDString, speed: speedString, serialNumber: serialNumber)
             devices.append(deviceInfo)
         }
         
@@ -318,74 +321,120 @@ class USBDevicesManager: USBDevicesManagerProtocol {
             }
         }
         
-        // A pinned device (launch arguments or UI selection) always wins over the
-        // "first group found" defaults chosen above. Re-applied on every rescan so a
-        // hot-plug never silently moves this process to another unit.
-        applyPinnedDeviceSelection()
+        // Bind this process to one unit (pinned, or the first unit no other instance is
+        // using). Re-applied on every rescan so a hot-plug never silently moves this
+        // process to another unit.
+        applyInstanceDeviceSelection()
 
         if AppStatus.videoChipsetType == .unknown && AppStatus.controlChipsetType == .unknown {
             logger.log(content: "No supported chipsets detected")
         }
     }
 
-    /// Forces `videoChipDevice` / `controlChipDevice` to the unit this process is pinned to.
-    /// When the pinned unit is not connected the references are cleared instead of falling
-    /// back to another unit, so two instances never grab the same hardware.
-    private func applyPinnedDeviceSelection() {
+    /// Binds this process to one unit.
+    ///
+    /// - Pinned (launch arguments or UI): force `videoChipDevice` / `controlChipDevice` to that
+    ///   unit; when it is not connected the references are cleared instead of falling back to
+    ///   another unit, so two instances never grab the same hardware.
+    /// - Automatic: keep the default choice made above unless another live instance already
+    ///   drives that unit, in which case the first free unit is taken.
+    private func applyInstanceDeviceSelection() {
         let selection = DeviceSelectionManager.shared
+        selection.flushPendingLaunchLog()
         let pinnedVideo = selection.currentPinnedVideoLocationID()
         let pinnedSerial = selection.currentPinnedSerialPortPath()
-        guard pinnedVideo != nil || pinnedSerial != nil else { return }
+        let claimedByOthers = selection.unitKeysClaimedByOtherInstances()
 
-        // Resolve the unit that holds the pinned chip. Units are paired by location prefix
-        // (see DeviceSelectionManager.unitPrefix) rather than by hub group, because two units
-        // behind the same upstream hub end up in one entry of groupOpenterfaceDevices.
-        var anchorLocation: String?
-        if let pinnedVideo = pinnedVideo {
-            anchorLocation = AppStatus.USBDevices.first { $0.locationID.lowercased() == pinnedVideo.lowercased() }?.locationID
-        } else if let pinnedSerial = pinnedSerial,
-                  let serialLocation = SerialPortLocator.usbLocationID(forCalloutPath: pinnedSerial) {
-            anchorLocation = AppStatus.USBDevices.first { $0.locationID.lowercased() == serialLocation.lowercased() }?.locationID
-        }
+        if pinnedVideo != nil || pinnedSerial != nil {
+            // Resolve the pinned unit from the video location first, then from the serial port.
+            var anchorLocation: String?
+            if let pinnedVideo = pinnedVideo {
+                anchorLocation = AppStatus.USBDevices.first { $0.locationID.lowercased() == pinnedVideo.lowercased() }?.locationID
+            }
+            if anchorLocation == nil, let pinnedSerial = pinnedSerial,
+               let serialLocation = SerialPortLocator.usbLocationID(forCalloutPath: pinnedSerial) {
+                anchorLocation = AppStatus.USBDevices.first { $0.locationID.lowercased() == serialLocation.lowercased() }?.locationID
+            }
 
-        var pinnedGroup: [USBDeviceInfo]?
-        if let anchor = anchorLocation {
-            let prefix = DeviceSelectionManager.unitPrefix(anchor)
-            pinnedGroup = AppStatus.USBDevices.filter { DeviceSelectionManager.unitPrefix($0.locationID) == prefix }
-        }
-
-        guard let group = pinnedGroup, !group.isEmpty else {
-            videoChipDevice = nil
-            controlChipDevice = nil
-            AppStatus.videoChipDevice = nil
-            AppStatus.controlChipDevice = nil
-            AppStatus.videoChipsetType = .unknown
-            AppStatus.controlChipsetType = .unknown
-            logger.log(content: "Pinned device (video=\(pinnedVideo ?? "-"), serial=\(pinnedSerial ?? "-")) is not connected; waiting for it instead of using another unit")
+            guard let anchor = anchorLocation, bindUnit(containing: anchor) else {
+                clearSelectedDevices()
+                selection.claimUnit(nil)
+                logger.log(content: "Pinned device (video=\(pinnedVideo ?? "-"), serial=\(pinnedSerial ?? "-")) is not connected; waiting for it instead of using another unit")
+                return
+            }
+            selection.claimUnit(DeviceSelectionManager.unitKey(video: videoChipDevice, control: controlChipDevice))
             return
         }
 
-        let video = group.first { getVideoChipsetType(vendorId: $0.vendorID, productId: $0.productID) != .unknown }
-        let controls = group.filter { getControlChipsetType(vendorId: $0.vendorID, productId: $0.productID) != .unknown }
-        // CH32V208 takes priority, matching the automatic detection above.
-        let control = controls.first { getControlChipsetType(vendorId: $0.vendorID, productId: $0.productID) == .ch32v208 } ?? controls.first
+        // Automatic mode: the legacy choice above may pair a video chip with the wrong control
+        // chip when several units are attached, so always re-bind through the unit pairing.
+        let pairs = DeviceSelectionManager.pairUnits(in: AppStatus.USBDevices, using: self)
+        let unitsWithVideo = pairs.filter { $0.video != nil }
+        guard !unitsWithVideo.isEmpty else {
+            selection.claimUnit(nil)
+            return
+        }
 
-        videoChipDevice = video
-        controlChipDevice = control
-        AppStatus.videoChipDevice = video
-        AppStatus.controlChipDevice = control
-        AppStatus.videoChipsetType = video.map { getVideoChipsetType(vendorId: $0.vendorID, productId: $0.productID) } ?? .unknown
-        AppStatus.controlChipsetType = control.map { getControlChipsetType(vendorId: $0.vendorID, productId: $0.productID) } ?? .unknown
+        let currentAnchor = (videoChipDevice ?? controlChipDevice)?.locationID.lowercased()
+        let currentUnit = unitsWithVideo.first { unit in
+            unit.video?.locationID.lowercased() == currentAnchor || unit.control?.locationID.lowercased() == currentAnchor
+        } ?? unitsWithVideo[0]
 
-        logger.log(content: "Pinned device applied: video=\(video?.productName ?? "none")@\(video?.locationID ?? "-") control=\(control?.productName ?? "none")@\(control?.locationID ?? "-")")
+        let chosen: DeviceSelectionManager.UnitPair?
+        if !claimedByOthers.contains(currentUnit.key) {
+            chosen = currentUnit
+        } else {
+            logger.log(content: "Unit \(currentUnit.key) is driven by another instance; looking for a free unit")
+            chosen = unitsWithVideo.first { !claimedByOthers.contains($0.key) }
+        }
+
+        if let unit = chosen, let anchor = unit.video?.locationID ?? unit.control?.locationID, bindUnit(containing: anchor) {
+            selection.claimUnit(unit.key)
+        } else {
+            clearSelectedDevices()
+            selection.claimUnit(nil)
+            logger.log(content: "All connected Openterface units are in use by other instances; waiting for a free unit")
+        }
     }
-    
+
+    private func clearSelectedDevices() {
+        videoChipDevice = nil
+        controlChipDevice = nil
+        AppStatus.videoChipDevice = nil
+        AppStatus.controlChipDevice = nil
+        AppStatus.videoChipsetType = .unknown
+        AppStatus.controlChipsetType = .unknown
+    }
+
+    /// Points the chip references at the unit (video chip + control chip pair) that contains
+    /// the device at `anchorLocation`. Pairing is done by `DeviceSelectionManager.pairUnits`.
+    @discardableResult
+    private func bindUnit(containing anchorLocation: String) -> Bool {
+        let target = anchorLocation.lowercased()
+        let pairs = DeviceSelectionManager.pairUnits(in: AppStatus.USBDevices, using: self)
+        guard let unit = pairs.first(where: {
+            $0.video?.locationID.lowercased() == target || $0.control?.locationID.lowercased() == target
+        }) else { return false }
+
+        videoChipDevice = unit.video
+        controlChipDevice = unit.control
+        AppStatus.videoChipDevice = unit.video
+        AppStatus.controlChipDevice = unit.control
+        AppStatus.videoChipsetType = unit.video.map { getVideoChipsetType(vendorId: $0.vendorID, productId: $0.productID) } ?? .unknown
+        AppStatus.controlChipsetType = unit.control.map { getControlChipsetType(vendorId: $0.vendorID, productId: $0.productID) } ?? .unknown
+
+        logger.log(content: "Bound to unit \(unit.key): video=\(unit.video?.productName ?? "none")@\(unit.video?.locationID ?? "-") control=\(unit.control?.productName ?? "none")@\(unit.control?.locationID ?? "-") (\(unit.pairing))")
+        return true
+    }
+
     /// Check if any Openterface devices are currently connected
     /// - Returns: True if at least one supported device (Openterface or WCH) is connected, false otherwise
     func isOpenterfaceConnected() -> Bool {
-        // When pinned to one unit, only that unit counts as "connected" for this process.
+        // When pinned to one unit, or when other instances are driving units, only the unit
+        // bound to this process counts as "connected".
         let selection = DeviceSelectionManager.shared
-        if selection.currentPinnedVideoLocationID() != nil || selection.currentPinnedSerialPortPath() != nil {
+        if selection.currentPinnedVideoLocationID() != nil || selection.currentPinnedSerialPortPath() != nil
+            || !selection.currentUnitKeysInUseByOtherInstances().isEmpty {
             return videoChipDevice != nil || controlChipDevice != nil
         }
 

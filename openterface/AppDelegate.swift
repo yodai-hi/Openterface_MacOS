@@ -1122,6 +1122,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMe
         
         // Deinitialize Hardware Abstraction Layer
         deinitializeHAL()
+        // Let other instances pick up this unit
+        DeviceSelectionManager.shared.releaseClaim()
         return .terminateNow
     }
     

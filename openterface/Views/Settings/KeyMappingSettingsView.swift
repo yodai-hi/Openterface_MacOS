@@ -209,7 +209,7 @@ struct KeyTestDialog: View {
             }
         }
         .padding()
-        .frame(width: 300, height: 150)
+        .frame(minWidth: 300, minHeight: 150)
     }
 }
 

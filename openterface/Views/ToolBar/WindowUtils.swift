@@ -91,6 +91,9 @@ final class WindowUtils {
         
         settingsWindow.title = String(localized: "Aspect Ratio & Video Settings")
         settingsWindow.contentView = hostingView
+        // Size the sheet to the localized content instead of a fixed 500x700
+        let fitting = hostingView.fittingSize
+        settingsWindow.setContentSize(NSSize(width: max(fitting.width, 500), height: max(fitting.height, 400)))
         settingsWindow.center()
         settingsWindow.isReleasedWhenClosed = true
         

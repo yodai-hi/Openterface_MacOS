@@ -58,6 +58,7 @@ struct SettingsScreen: View {
                                 Text(LocalizedStringKey(tab.rawValue))
                                     .font(.system(size: 11))
                                     .multilineTextAlignment(.leading)
+                                    .fixedSize(horizontal: false, vertical: true)
                             }
                             Spacer()
                         }
@@ -105,7 +106,7 @@ struct SettingsScreen: View {
             }
             .frame(maxWidth: .infinity, alignment: .topLeading)
         }
-        .frame(width: 900, height: 700)
+        .frame(minWidth: 900, minHeight: 700)
     }
 }
 
