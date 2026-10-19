@@ -109,8 +109,8 @@ class PlayerView: NSView, NSWindowDelegate {
         DispatchQueue.main.async {
             let alert = NSAlert()
             alert.alertStyle = .warning
-            alert.messageText = "⚠️ Target Frame Rate Too High"
-            alert.informativeText = """
+            alert.messageText = String(localized: "⚠️ Target Frame Rate Too High")
+            alert.informativeText = String(localized: """
             Target device is outputting: \(String(format: "%.0f", fps))Hz
 
             Apple's AVFoundation does not support this device's \(String(format: "%.0f", fps))Hz compressed video format.
@@ -128,7 +128,7 @@ class PlayerView: NSView, NSWindowDelegate {
             Note: The Openterface device is functioning correctly. This limitation
             is due to compatibility between the device's video compression and
             macOS's AVFoundation framework.
-            """
+            """)
             alert.addButton(withTitle: "OK")
             alert.runModal()
         }

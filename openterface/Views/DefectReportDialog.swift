@@ -51,8 +51,8 @@ class DefectReportDialog {
         onStatusMessage("📧 Showing email template dialog...")
         
         let alert = NSAlert()
-        alert.messageText = "📧 Defect Report - Ready to Send"
-        alert.informativeText = "Please fill in your Order ID (mandatory) and review the email template below."
+        alert.messageText = String(localized: "📧 Defect Report - Ready to Send")
+        alert.informativeText = String(localized: "Please fill in your Order ID (mandatory) and review the email template below.")
         alert.alertStyle = .informational
         
         // Create OrderID input field
@@ -109,7 +109,7 @@ class DefectReportDialog {
         supportEmailField.font = NSFont.systemFont(ofSize: 11)
         
         let copyEmailButton = NSButton(frame: NSRect(x: 410, y: 2, width: 70, height: 20))
-        copyEmailButton.title = "Copy"
+        copyEmailButton.title = String(localized: "Copy")
         copyEmailButton.bezelStyle = .rounded
         copyEmailButton.font = NSFont.systemFont(ofSize: 10)
         copyEmailButton.target = nil
@@ -148,7 +148,7 @@ class DefectReportDialog {
         
         // Create a box for the path information
         let infoBox = NSBox(frame: NSRect(x: 0, y: 0, width: 600, height: 100))
-        infoBox.title = "📁 Log Files to Attach"
+        infoBox.title = String(localized: "📁 Log Files to Attach")
         infoBox.boxType = .primary
         // `borderType` is deprecated; use a layer-based border for similar appearance
         infoBox.wantsLayer = true
@@ -219,7 +219,7 @@ class DefectReportDialog {
         
         // Create "Copy to Clipboard" button as a normal button
         let copyToClipboardButton = NSButton(frame: NSRect(x: 310, y: 5, width: 130, height: 20))
-        copyToClipboardButton.title = "Copy to Clipboard"
+        copyToClipboardButton.title = String(localized: "Copy to Clipboard")
         copyToClipboardButton.bezelStyle = .rounded
         copyToClipboardButton.font = NSFont.systemFont(ofSize: 10)
         copyToClipboardButton.isEnabled = false
@@ -227,7 +227,7 @@ class DefectReportDialog {
         
         // Create "Open Log Folder" button as a normal button
         let openLogFolderButton = NSButton(frame: NSRect(x: 450, y: 5, width: 130, height: 20))
-        openLogFolderButton.title = "Open Log Folder"
+        openLogFolderButton.title = String(localized: "Open Log Folder")
         openLogFolderButton.bezelStyle = .rounded
         openLogFolderButton.font = NSFont.systemFont(ofSize: 10)
         containerView.addSubview(openLogFolderButton)
@@ -238,7 +238,7 @@ class DefectReportDialog {
         alert.accessoryView = containerView
         
         // Add main dialog buttons
-        alert.addButton(withTitle: "Done")
+        alert.addButton(withTitle: String(localized: "Done"))
         
         // Set up copy email button with action
         class CopyEmailAction: NSObject {
@@ -251,9 +251,9 @@ class DefectReportDialog {
             @objc func doCopyEmail() {
                 NSPasteboard.general.clearContents()
                 NSPasteboard.general.setString("support@openterface.com", forType: .string)
-                self.button.title = "Copied!"
+                self.button.title = String(localized: "Copied!")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
-                    self?.button.title = "Copy"
+                    self?.button.title = String(localized: "Copy")
                 }
             }
         }
@@ -286,9 +286,9 @@ class DefectReportDialog {
                     NSPasteboard.general.clearContents()
                     NSPasteboard.general.setString(fullContent, forType: .string)
                     
-                    self.button.title = "Copied!"
+                    self.button.title = String(localized: "Copied!")
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
-                        self?.button.title = "Copy to Clipboard"
+                        self?.button.title = String(localized: "Copy to Clipboard")
                     }
                 }
                 // Keep dialog open

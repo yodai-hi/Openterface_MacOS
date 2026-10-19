@@ -310,8 +310,8 @@ class VideoManager: NSObject, ObservableObject, VideoManagerProtocol {
     /// Shows an alert encouraging the user to enable camera access
     func alertToEncourageAccessInitially(for device: String) {
         let alert = NSAlert()
-        alert.messageText = "\(device) Access Required"
-        alert.informativeText = "⚠️ This application does not have permission to access your \(device.lowercased()).\n\nYou can enable it in \"System Preferences\" -> \"Privacy\" -> \"\(device)\"."
+        alert.messageText = String(localized: "\(device) Access Required")
+        alert.informativeText = String(localized: "⚠️ This application does not have permission to access your \(device.lowercased()).\n\nYou can enable it in \"System Preferences\" -> \"Privacy\" -> \"\(device)\".")
         alert.addButton(withTitle: "OK")
         alert.alertStyle = .warning
         alert.runModal()
@@ -787,6 +787,22 @@ class VideoManager: NSObject, ObservableObject, VideoManagerProtocol {
         DispatchQueue.main.async {
             self.isVideoConnected = false
         }
+    }
+
+    /// Stops the session and drops every video input so that `prepareVideo()` binds to the
+    /// unit currently selected in `DeviceSelectionManager` instead of reusing the old device.
+    func resetVideoInputsForDeviceChange() {
+        logger.log(content: "Resetting video inputs for device change")
+        isVideoSessionStarting = false
+        lastVideoSessionStartTime = Date(timeIntervalSince1970: 0)
+        AppStatus.isMatchVideoDevice = false
+
+        stopVideoSession()
+
+        captureSession.beginConfiguration()
+        let videoInputs = captureSession.inputs.filter { $0 is AVCaptureDeviceInput }
+        videoInputs.forEach { captureSession.removeInput($0) }
+        captureSession.commitConfiguration()
     }
     
     /// Adds an input to the capture session if possible

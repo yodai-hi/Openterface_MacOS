@@ -47,27 +47,27 @@ class DiagnosticsViewModel: NSObject, ObservableObject {
         
         var title: String {
             switch self {
-            case .overallConnection: return "Overall Connection"
-            case .serialConnection: return "Serial Connection"
-            case .hostPlugAndPlayTest: return "Host Plug & Play"
-            case .targetBlackCableTest: return "Target Plug & Play"
-            case .resetFactoryBaudrate: return "Factory Reset"
-            case .changeTo115200: return "High Baudrate"
-            case .stressTest: return "Stress Test"
-            case .targetPortChecking: return "Target Port Checking"
+            case .overallConnection: return String(localized: "Overall Connection")
+            case .serialConnection: return String(localized: "Serial Connection")
+            case .hostPlugAndPlayTest: return String(localized: "Host Plug & Play")
+            case .targetBlackCableTest: return String(localized: "Target Plug & Play")
+            case .resetFactoryBaudrate: return String(localized: "Factory Reset")
+            case .changeTo115200: return String(localized: "High Baudrate")
+            case .stressTest: return String(localized: "Stress Test")
+            case .targetPortChecking: return String(localized: "Target Port Checking")
             }
         }
         
         var description: String {
             switch self {
-            case .overallConnection: return "Verifying all cable connections (Orange USB-C, Black USB-C, and HDMI)"
-            case .serialConnection: return "Detecting serial port baud rate and connection status"
-            case .hostPlugAndPlayTest: return "Testing Orange USB-C hot-plug/unplug detection and reconnection (host side)"
-            case .targetBlackCableTest: return "Testing Black USB-C hot-plug/unplug detection and reconnection (target side)"
-            case .resetFactoryBaudrate: return "Resetting serial configuration to factory defaults"
-            case .changeTo115200: return "Changing serial baudrate to 115200"
-            case .stressTest: return "Running platform stress test for 30 seconds"
-            case .targetPortChecking: return "Checking the target port healthness by host orange cable"
+            case .overallConnection: return String(localized: "Verifying all cable connections (Orange USB-C, Black USB-C, and HDMI)")
+            case .serialConnection: return String(localized: "Detecting serial port baud rate and connection status")
+            case .hostPlugAndPlayTest: return String(localized: "Testing Orange USB-C hot-plug/unplug detection and reconnection (host side)")
+            case .targetBlackCableTest: return String(localized: "Testing Black USB-C hot-plug/unplug detection and reconnection (target side)")
+            case .resetFactoryBaudrate: return String(localized: "Resetting serial configuration to factory defaults")
+            case .changeTo115200: return String(localized: "Changing serial baudrate to 115200")
+            case .stressTest: return String(localized: "Running platform stress test for 30 seconds")
+            case .targetPortChecking: return String(localized: "Checking the target port healthness by host orange cable")
             }
         }
     }

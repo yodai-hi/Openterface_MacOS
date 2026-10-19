@@ -1336,22 +1336,22 @@ enum MouseControlMode: Int {
     var displayName: String {
         switch self {
         case .relativeHID:
-            return "Relative (HID)"
+            return String(localized: "Relative (HID)")
         case .relativeEvents:
-            return "Relative (Events)"
+            return String(localized: "Relative (Events)")
         case .absolute:
-            return "Absolute"
+            return String(localized: "Absolute")
         }
     }
     
     var description: String {
         switch self {
         case .relativeHID:
-            return "Relative mouse control via HID (requires accessibility permissions)"
+            return String(localized: "Relative mouse control via HID (requires accessibility permissions)")
         case .relativeEvents:
-            return "Relative mouse control via window events (no extra permissions)"
+            return String(localized: "Relative mouse control via window events (no extra permissions)")
         case .absolute:
-            return "Absolute mouse positioning"
+            return String(localized: "Absolute mouse positioning")
         }
     }
 }
@@ -1365,22 +1365,22 @@ enum PasteBehavior: String, CaseIterable {
     var displayName: String {
         switch self {
         case .askEveryTime:
-            return "Ask Every Time"
+            return String(localized: "Ask Every Time")
         case .alwaysPasteToTarget:
-            return "Always Host Paste"
+            return String(localized: "Always Host Paste")
         case .alwaysPassToTarget:
-            return "Always Local Paste"
+            return String(localized: "Always Local Paste")
         }
     }
     
     var menuDisplayName: String {
         switch self {
         case .askEveryTime:
-            return "Ask Every Time"
+            return String(localized: "Ask Every Time")
         case .alwaysPasteToTarget:
-            return "Host Paste"
+            return String(localized: "Host Paste")
         case .alwaysPassToTarget:
-            return "Local Paste"
+            return String(localized: "Local Paste")
         }
     }
 }
@@ -1394,22 +1394,22 @@ enum KeyboardLayout: String, CaseIterable {
     var displayName: String {
         switch self {
         case .windows:
-            return "Windows Mode"
+            return String(localized: "Windows Mode")
         case .mac:
-            return "Mac Mode"
+            return String(localized: "Mac Mode")
         case .linux:
-            return "Linux Mode"
+            return String(localized: "Linux Mode")
         }
     }
     
     var description: String {
         switch self {
         case .windows:
-            return "Optimized for Windows targets"
+            return String(localized: "Optimized for Windows targets")
         case .mac:
-            return "Optimized for Mac targets"
+            return String(localized: "Optimized for Mac targets")
         case .linux:
-            return "Optimized for Linux targets"
+            return String(localized: "Optimized for Linux targets")
         }
     }
 }
@@ -1422,22 +1422,22 @@ enum ConnectionProtocolMode: String, CaseIterable {
     var displayName: String {
         switch self {
         case .kvm:
-            return "Hardware KVM"
+            return String(localized: "Hardware KVM")
         case .vnc:
             return "VNC"
         case .rdp:
-            return "Remote Desktop (RDP)"
+            return String(localized: "Remote Desktop (RDP)")
         }
     }
 
     var description: String {
         switch self {
         case .kvm:
-            return "Use direct Openterface USB capture and HID control"
+            return String(localized: "Use direct Openterface USB capture and HID control")
         case .vnc:
-            return "Connect to a remote host using RFB/VNC"
+            return String(localized: "Connect to a remote host using RFB/VNC")
         case .rdp:
-            return "Connect to a remote host using Microsoft RDP (port 3389)"
+            return String(localized: "Connect to a remote host using Microsoft RDP (port 3389)")
         }
     }
 }
@@ -1451,22 +1451,22 @@ enum AspectRatioMode: String, CaseIterable {
     var displayName: String {
         switch self {
         case .custom:
-            return "Custom Aspect Ratio"
+            return String(localized: "Custom Aspect Ratio")
         case .hidResolution:
-            return "HID Resolution (Device Info)"
+            return String(localized: "HID Resolution (Device Info)")
         case .activeResolution:
-            return "Active Resolution (Auto-Detect)"
+            return String(localized: "Active Resolution (Auto-Detect)")
         }
     }
     
     var description: String {
         switch self {
         case .custom:
-            return "Use a custom aspect ratio specified by the user"
+            return String(localized: "Use a custom aspect ratio specified by the user")
         case .hidResolution:
-            return "Use HID resolution from the capture card (may have blank areas)"
+            return String(localized: "Use HID resolution from the capture card (may have blank areas)")
         case .activeResolution:
-            return "Auto-detect the active video area periodically"
+            return String(localized: "Auto-detect the active video area periodically")
         }
     }
 }
@@ -1546,18 +1546,18 @@ enum BaudrateOption: Int, CaseIterable {
     var displayName: String {
         switch self {
         case .lowSpeed:
-            return "9600 bps (Low Speed)"
+            return String(localized: "9600 bps (Low Speed)")
         case .highSpeed:
-            return "115200 bps (High Speed)"
+            return String(localized: "115200 bps (High Speed)")
         }
     }
     
     var description: String {
         switch self {
         case .lowSpeed:
-            return "Slower, more reliable connection"
+            return String(localized: "Slower, more reliable connection")
         case .highSpeed:
-            return "Faster data transmission"
+            return String(localized: "Faster data transmission")
         }
     }
 }
@@ -1571,22 +1571,22 @@ enum GravityOption: String, CaseIterable {
     var displayName: String {
         switch self {
         case .resize:
-            return "Stretch to Fit"
+            return String(localized: "Stretch to Fit")
         case .resizeAspect:
-            return "Fit (Maintain Aspect Ratio)"
+            return String(localized: "Fit (Maintain Aspect Ratio)")
         case .resizeAspectFill:
-            return "Fill (Maintain Aspect Ratio)"
+            return String(localized: "Fill (Maintain Aspect Ratio)")
         }
     }
     
     var description: String {
         switch self {
         case .resize:
-            return "Stretches content to fill the entire view"
+            return String(localized: "Stretches content to fill the entire view")
         case .resizeAspect:
-            return "Fits content while preserving aspect ratio"
+            return String(localized: "Fits content while preserving aspect ratio")
         case .resizeAspectFill:
-            return "Fills view while preserving aspect ratio (may crop)"
+            return String(localized: "Fills view while preserving aspect ratio (may crop)")
         }
     }
     
@@ -1622,26 +1622,26 @@ enum ControlMode: Int, CaseIterable {
     var displayName: String {
         switch self {
         case .performance:
-            return "Performance Mode"
+            return String(localized: "Performance Mode")
         case .keyboardOnly:
-            return "Keyboard Only"
+            return String(localized: "Keyboard Only")
         case .compatibility:
-            return "Compatibility Mode"
+            return String(localized: "Compatibility Mode")
         case .customHID:
-            return "Custom HID"
+            return String(localized: "Custom HID")
         }
     }
     
     var description: String {
         switch self {
         case .performance:
-            return "Optimized for maximum performance"
+            return String(localized: "Optimized for maximum performance")
         case .keyboardOnly:
-            return "Keyboard input only"
+            return String(localized: "Keyboard input only")
         case .compatibility:
-            return "Maximum compatibility with target devices (default)"
+            return String(localized: "Maximum compatibility with target devices (default)")
         case .customHID:
-            return "Custom HID configuration"
+            return String(localized: "Custom HID configuration")
         }
     }
     
@@ -1660,26 +1660,26 @@ enum TargetComputerPlacement: String, CaseIterable {
     var displayName: String {
         switch self {
         case .left:
-            return "Left"
+            return String(localized: "Left")
         case .right:
-            return "Right"
+            return String(localized: "Right")
         case .top:
-            return "Top"
+            return String(localized: "Top")
         case .bottom:
-            return "Bottom"
+            return String(localized: "Bottom")
         }
     }
     
     var description: String {
         switch self {
         case .left:
-            return "Target Screen positioned to the left"
+            return String(localized: "Target Screen positioned to the left")
         case .right:
-            return "Target Screen positioned to the right"
+            return String(localized: "Target Screen positioned to the right")
         case .top:
-            return "Target Screen positioned at the top"
+            return String(localized: "Target Screen positioned at the top")
         case .bottom:
-            return "Target Screen positioned at the bottom"
+            return String(localized: "Target Screen positioned at the bottom")
         }
     }
 }
@@ -1691,9 +1691,9 @@ enum ChatDockSide: String, CaseIterable {
     var displayName: String {
         switch self {
         case .left:
-            return "Left"
+            return String(localized: "Left")
         case .right:
-            return "Right"
+            return String(localized: "Right")
         }
     }
 }
@@ -1709,7 +1709,7 @@ enum ChatImageUploadLimit: String, CaseIterable, Identifiable {
     var displayName: String {
         switch self {
         case .original:
-            return "Original"
+            return String(localized: "Original")
         case .p720:
             return "720p"
         case .p1080:
@@ -1722,13 +1722,13 @@ enum ChatImageUploadLimit: String, CaseIterable, Identifiable {
     var detail: String {
         switch self {
         case .original:
-            return "Send screenshots at their original resolution."
+            return String(localized: "Send screenshots at their original resolution.")
         case .p720:
-            return "Scale larger screenshots down to fit within 1280x720."
+            return String(localized: "Scale larger screenshots down to fit within 1280x720.")
         case .p1080:
-            return "Scale larger screenshots down to fit within 1920x1080."
+            return String(localized: "Scale larger screenshots down to fit within 1920x1080.")
         case .p1440:
-            return "Scale larger screenshots down to fit within 2560x1440."
+            return String(localized: "Scale larger screenshots down to fit within 2560x1440.")
         }
     }
 

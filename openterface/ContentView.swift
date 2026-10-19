@@ -173,7 +173,7 @@ struct ContentView: View {
         }
         .onAppear {
             viewModel.checkAuthorization() // Perform authorization check when the view appears
-            NSApplication.shared.mainWindow?.title = "Openterface KVM - \(AppVersion.getVersionString())"
+            NSApplication.shared.mainWindow?.title = "Openterface KVM - \(AppVersion.getVersionString())" + DeviceSelectionManager.shared.windowTitleSuffix
         }
         .onReceive(timer) { _ in
             if showInputOverlay != AppStatus.showInputOverlay {

@@ -277,12 +277,12 @@ struct ToolbarContentView: ToolbarContent {
                     """
                     : """
                     KeyBoard: \(
-                        isKeyboardConnected == true ? "Connected" :
-                        isKeyboardConnected == false ? "Not found" : "Unknown"
+                        isKeyboardConnected == true ? String(localized: "Connected") :
+                        isKeyboardConnected == false ? String(localized: "Not found") : String(localized: "Unknown")
                     )
                     Mouse: \(
-                        isMouseConnected == true ? "Connected" :
-                        isMouseConnected == false ? "Not found" : "Unknown"
+                        isMouseConnected == true ? String(localized: "Connected") :
+                        isMouseConnected == false ? String(localized: "Not found") : String(localized: "Unknown")
                     )
 
                     Click to view USB device details

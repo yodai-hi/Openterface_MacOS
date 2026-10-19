@@ -74,32 +74,32 @@ class StatusBarManager: NSObject, StatusBarManagerProtocol {
         let menu = NSMenu()
         
         // Parallel Mode toggle
-        parallelModeMenuItem = NSMenuItem(title: "Enter Parallel Mode", action: #selector(toggleParallelMode), keyEquivalent: "")
+        parallelModeMenuItem = NSMenuItem(title: String(localized: "Enter Parallel Mode"), action: #selector(toggleParallelMode), keyEquivalent: "")
         parallelModeMenuItem.target = self
         menu.addItem(parallelModeMenuItem)
         
         menu.addItem(NSMenuItem.separator())
         
         // Target Screen Placement submenu
-        let placementMenuItem = NSMenuItem(title: "Target Screen Placement", action: nil, keyEquivalent: "")
+        let placementMenuItem = NSMenuItem(title: String(localized: "Target Screen Placement"), action: nil, keyEquivalent: "")
         let placementSubmenu = NSMenu()
         
-        let leftItem = NSMenuItem(title: "Left", action: #selector(setTargetPlacementLeft), keyEquivalent: "")
+        let leftItem = NSMenuItem(title: String(localized: "Left"), action: #selector(setTargetPlacementLeft), keyEquivalent: "")
         leftItem.target = self
         leftItem.state = UserSettings.shared.targetComputerPlacement == .left ? .on : .off
         placementSubmenu.addItem(leftItem)
         
-        let rightItem = NSMenuItem(title: "Right", action: #selector(setTargetPlacementRight), keyEquivalent: "")
+        let rightItem = NSMenuItem(title: String(localized: "Right"), action: #selector(setTargetPlacementRight), keyEquivalent: "")
         rightItem.target = self
         rightItem.state = UserSettings.shared.targetComputerPlacement == .right ? .on : .off
         placementSubmenu.addItem(rightItem)
         
-        let topItem = NSMenuItem(title: "Top", action: #selector(setTargetPlacementTop), keyEquivalent: "")
+        let topItem = NSMenuItem(title: String(localized: "Top"), action: #selector(setTargetPlacementTop), keyEquivalent: "")
         topItem.target = self
         topItem.state = UserSettings.shared.targetComputerPlacement == .top ? .on : .off
         placementSubmenu.addItem(topItem)
         
-        let bottomItem = NSMenuItem(title: "Bottom", action: #selector(setTargetPlacementBottom), keyEquivalent: "")
+        let bottomItem = NSMenuItem(title: String(localized: "Bottom"), action: #selector(setTargetPlacementBottom), keyEquivalent: "")
         bottomItem.target = self
         bottomItem.state = UserSettings.shared.targetComputerPlacement == .bottom ? .on : .off
         placementSubmenu.addItem(bottomItem)
@@ -109,7 +109,7 @@ class StatusBarManager: NSObject, StatusBarManagerProtocol {
         
         menu.addItem(NSMenuItem.separator())
         
-        let exitItem = NSMenuItem(title: "Exit", action: #selector(exitApp), keyEquivalent: "")
+        let exitItem = NSMenuItem(title: String(localized: "Exit"), action: #selector(exitApp), keyEquivalent: "")
         exitItem.target = self
         menu.addItem(exitItem)
         statusBarItem.menu = menu
@@ -129,17 +129,17 @@ class StatusBarManager: NSObject, StatusBarManagerProtocol {
         
         // Update menu item title based on current state
         if parallelManager.isParallelModeEnabled {
-            parallelModeMenuItem.title = "Exit Parallel Mode"
+            parallelModeMenuItem.title = String(localized: "Exit Parallel Mode")
         } else {
-            parallelModeMenuItem.title = "Enter Parallel Mode"
+            parallelModeMenuItem.title = String(localized: "Enter Parallel Mode")
         }
     }
 
     @objc private func handleParallelModeChanged(_ notification: Notification) {
         if parallelManager.isParallelModeEnabled {
-            parallelModeMenuItem.title = "Exit Parallel Mode"
+            parallelModeMenuItem.title = String(localized: "Exit Parallel Mode")
         } else {
-            parallelModeMenuItem.title = "Enter Parallel Mode"
+            parallelModeMenuItem.title = String(localized: "Enter Parallel Mode")
         }
     }
     
@@ -173,7 +173,7 @@ class StatusBarManager: NSObject, StatusBarManagerProtocol {
     
     private func updatePlacementMenuStates() {
         if let menu = statusBarItem?.menu,
-           let placementMenuItem = menu.items.first(where: { $0.title == "Target Screen Placement" }),
+           let placementMenuItem = menu.items.first(where: { [String(localized: "Target Screen Placement"), "Target Screen Placement"].contains($0.title) }),
            let submenu = placementMenuItem.submenu {
             
             for item in submenu.items {

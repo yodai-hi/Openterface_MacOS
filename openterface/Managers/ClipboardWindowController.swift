@@ -33,7 +33,7 @@ class ClipboardWindow: NSWindow {
     
     private func setupWindow() {
         // Configure window properties
-        self.title = "Clipboard Manager"
+        self.title = String(localized: "Clipboard Manager")
         self.styleMask = [.titled, .closable, .resizable, .miniaturizable]
         self.isReleasedWhenClosed = false
         self.level = .floating

@@ -124,7 +124,7 @@ struct USBDevicesView: View {
         case .ch32v208:
             return "CH32V208"
         case .unknown:
-            return "Unknown"
+            return String(localized: "Unknown")
         }
     }
     

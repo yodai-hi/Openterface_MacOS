@@ -234,11 +234,11 @@ private enum MacroShortcutTab: String, CaseIterable, Identifiable {
     var displayName: String {
         switch self {
         case .functionKeys:
-            return "Function Keys"
+            return String(localized: "Function Keys")
         case .compositeKeys:
-            return "Composite Keys"
+            return String(localized: "Composite Keys")
         case .macros:
-            return "Macro"
+            return String(localized: "Macro")
         }
     }
 }

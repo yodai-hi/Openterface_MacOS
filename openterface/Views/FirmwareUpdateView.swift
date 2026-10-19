@@ -491,7 +491,7 @@ struct FirmwareUpdateView: View {
         
         // Show save dialog to let user choose backup location
         let savePanel = NSSavePanel()
-        savePanel.title = "Save Firmware Backup"
+        savePanel.title = String(localized: "Save Firmware Backup")
         savePanel.message = "Choose location to save firmware backup"
         savePanel.nameFieldStringValue = defaultFilename
         savePanel.allowedContentTypes = [.data]
@@ -528,7 +528,7 @@ struct FirmwareUpdateView: View {
 
     private func showFlashFileSelector() {
         let openPanel = NSOpenPanel()
-        openPanel.title = "Select Local Firmware File to Flash"
+        openPanel.title = String(localized: "Select Local Firmware File to Flash")
         openPanel.message = "Choose the local firmware file (.bin) to flash to device"
         openPanel.allowedFileTypes = ["bin"]
         openPanel.allowsMultipleSelection = false

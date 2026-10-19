@@ -65,8 +65,8 @@ class PermissionManager: ObservableObject, PermissionManagerProtocol {
     private func showAccessibilityPermissionInfo() {
         DispatchQueue.main.async {
             let alert = NSAlert()
-            alert.messageText = "Accessibility Permission Required"
-            alert.informativeText = """
+            alert.messageText = String(localized: "Accessibility Permission Required")
+            alert.informativeText = String(localized: """
             Openterface KVM has been automatically added to the accessibility list in System Preferences.
             
             To complete the setup:
@@ -79,8 +79,8 @@ class PermissionManager: ObservableObject, PermissionManagerProtocol {
             • Provide more precise relative mouse control
             
             You may need to restart the app after granting permissions.
-            """
-            alert.addButton(withTitle: "Open Settings")
+            """)
+            alert.addButton(withTitle: String(localized: "Open Settings"))
             alert.addButton(withTitle: "OK")
             alert.alertStyle = .informational
             
@@ -111,25 +111,25 @@ class PermissionManager: ObservableObject, PermissionManagerProtocol {
         
         DispatchQueue.main.async {
             let alert = NSAlert()
-            alert.messageText = "Accessibility Permission Status"
+            alert.messageText = String(localized: "Accessibility Permission Status")
             
             if isGranted {
-                alert.informativeText = "✅ Accessibility permissions are granted.\n\nHID-based relative mouse control is available."
+                alert.informativeText = String(localized: "✅ Accessibility permissions are granted.\n\nHID-based relative mouse control is available.")
                 alert.alertStyle = .informational
                 alert.addButton(withTitle: "OK")
             } else {
-                alert.informativeText = """
+                alert.informativeText = String(localized: """
                 ❌ Accessibility permissions are not granted.
                 
                 HID-based relative mouse control requires these permissions.
                 
                 Would you like to automatically request these permissions?
                 This will add Openterface to the accessibility list and show the system permission dialog.
-                """
+                """)
                 alert.alertStyle = .warning
-                alert.addButton(withTitle: "Request Permissions")
-                alert.addButton(withTitle: "Open Settings Manually")
-                alert.addButton(withTitle: "Cancel")
+                alert.addButton(withTitle: String(localized: "Request Permissions"))
+                alert.addButton(withTitle: String(localized: "Open Settings Manually"))
+                alert.addButton(withTitle: String(localized: "Cancel"))
             }
             
             let response = alert.runModal()

@@ -62,6 +62,7 @@ struct openterfaceApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @StateObject private var appState = AppState()
     @StateObject private var parallelState = ParallelState()
+    @ObservedObject private var deviceSelection = DeviceSelectionManager.shared
 
     // Protocol-based dependencies - using computed properties since App structs are immutable
     private var logger: LoggerProtocol { DependencyContainer.shared.resolve(LoggerProtocol.self) }
@@ -80,8 +81,16 @@ struct openterfaceApp: App {
     
     init() {
         UserDefaults.standard.set(true, forKey: "ApplePersistenceIgnoreState")
+        // Pin this process to one device when launched with --video-location / --serial,
+        // before the first USB scan picks a default.
+        DeviceSelectionManager.shared.applyLaunchArguments()
         // Setup dependencies before UI construction to ensure they're available
         AppDelegate.setupDependencies(container: DependencyContainer.shared)
+    }
+
+    /// Main window title; carries the pinned device label so several instances can be told apart.
+    private var mainWindowTitle: String {
+        "Openterface KVM - \(AppVersion.getVersionString())" + deviceSelection.windowTitleSuffix
     }
     
     @State private var logModeTitle = "No logging ✓"
@@ -135,7 +144,7 @@ struct openterfaceApp: App {
                 .animation(.easeInOut(duration: 0.5), value: showButtons)
                 .zIndex(100)
                 ContentView()
-                    .navigationTitle("Openterface KVM - \(AppVersion.getVersionString())")
+                    .navigationTitle(mainWindowTitle)
                     .modifier(appToolbarModifier)
                     .onReceive(timer) { _ in
                         // Initialize paste behavior title on first run
@@ -272,6 +281,50 @@ struct openterfaceApp: App {
         .commands {
             // Customize menu
             CommandMenu("Control") {
+                Menu("Device") {
+                    Button(action: {
+                        deviceSelection.selectAutomatic()
+                    }) {
+                        Text(deviceSelection.isPinned ? "Automatic (First Detected)" : "Automatic (First Detected) ✓")
+                    }
+
+                    if deviceSelection.candidates.isEmpty {
+                        Text("No Openterface devices detected")
+                    } else {
+                        ForEach(deviceSelection.candidates) { candidate in
+                            Button(action: {
+                                deviceSelection.select(candidate)
+                            }) {
+                                let isActive = deviceSelection.isPinned && deviceSelection.isActive(candidate)
+                                Text(verbatim: isActive ? "\(candidate.displayName) ✓" : candidate.displayName)
+                            }
+                        }
+                    }
+
+                    Divider()
+
+                    Menu("Open in New Instance") {
+                        ForEach(deviceSelection.candidates) { candidate in
+                            Button(action: {
+                                deviceSelection.openInNewInstance(candidate)
+                            }) {
+                                Text(verbatim: candidate.displayName)
+                            }
+                        }
+                    }
+                    .disabled(deviceSelection.candidates.isEmpty)
+
+                    Divider()
+
+                    Button(action: {
+                        USBDevicesManager.shared.update()
+                    }) {
+                        Text("Refresh Devices")
+                    }
+                }
+
+                Divider()
+
                 Menu("Connection Protocol") {
                     Button(action: {
                         setConnectionProtocolMode(.kvm)
@@ -449,7 +502,7 @@ struct openterfaceApp: App {
                             mouseHideTitle = "Auto-hide Host Cursor"
                         }
                     }, label: {
-                        Text(mouseHideTitle)
+                        Text(LocalizedStringKey(mouseHideTitle))
                     })
                 }
                 Menu("Audio Control") {
@@ -631,8 +684,8 @@ struct openterfaceApp: App {
                         ocrManager.startAreaSelection()
                     } else {
                         let alert = NSAlert()
-                        alert.messageText = "Feature Unavailable"
-                        alert.informativeText = "OCR functionality requires macOS 12.3 or later."
+                        alert.messageText = String(localized: "Feature Unavailable")
+                        alert.informativeText = String(localized: "OCR functionality requires macOS 12.3 or later.")
                         alert.addButton(withTitle: "OK")
                         alert.runModal()
                     }
@@ -658,7 +711,7 @@ struct openterfaceApp: App {
                 
                 Divider()
                 
-                Menu("Paste Behavior: \(pasteBehaviorTitle)") {
+                Menu("Paste Behavior: \(Text(LocalizedStringKey(pasteBehaviorTitle)))") {
                     Button("Ask Every Time\(UserSettings.shared.pasteBehavior == .askEveryTime ? " ✓" : "")") {
                         UserSettings.shared.pasteBehavior = .askEveryTime
                         pasteBehaviorTitle = "Ask Every Time"
@@ -854,7 +907,7 @@ struct openterfaceApp: App {
         NSApp.activate(ignoringOtherApps: true)
         let detailView = SettingsScreen()
         let controller = SettingsScreenWC(rootView: detailView)
-        controller.window?.title = "Settings"
+        controller.window?.title = String(localized: "Settings")
         controller.showWindow(nil)
         NSApp.activate(ignoringOtherApps: false)
     }
@@ -995,15 +1048,15 @@ final class AppState: ObservableObject {
     private var  logger = DependencyContainer.shared.resolve(LoggerProtocol.self)
     
     // Published properties for menu titles
-    @Published var relativeHIDTitle = "Relative (HID)"
-    @Published var relativeEventsTitle = "Relative (Events)"
-    @Published var absoluteTitle = "Absolute ✓"
+    @Published var relativeHIDTitle = String(localized: "Relative (HID)")
+    @Published var relativeEventsTitle = String(localized: "Relative (Events)")
+    @Published var absoluteTitle = String(localized: "Absolute") + " ✓"
     
     // Performance preset titles
-    @Published var lowPerformanceTitle = "🐢 Low Performance Target (30 Hz, 9600)"
-    @Published var casualUseTitle = "🖥️ Casual Use (80 Hz, 9600)"
-    @Published var gamingTitle = "🎮 Gaming (250 Hz, 115200)"
-    @Published var maxPerformanceTitle = "🐇 Max Performance (1000 Hz, 115200)"
+    @Published var lowPerformanceTitle = String(localized: "🐢 Low Performance Target (30 Hz, 9600)")
+    @Published var casualUseTitle = String(localized: "🖥️ Casual Use (80 Hz, 9600)")
+    @Published var gamingTitle = String(localized: "🎮 Gaming (250 Hz, 115200)")
+    @Published var maxPerformanceTitle = String(localized: "🐇 Max Performance (1000 Hz, 115200)")
     
     init() {
         // Set initial menu titles based on current setting
@@ -1099,20 +1152,10 @@ final class AppState: ObservableObject {
     }
     
     func updateMenuTitles(for mode: MouseControlMode) {
-        switch mode {
-        case .relativeHID:
-            relativeHIDTitle = "Relative (HID) ✓"
-            relativeEventsTitle = "Relative (Events)"
-            absoluteTitle = "Absolute"
-        case .relativeEvents:
-            relativeHIDTitle = "Relative (HID)"
-            relativeEventsTitle = "Relative (Events) ✓"
-            absoluteTitle = "Absolute"
-        case .absolute:
-            relativeHIDTitle = "Relative (HID)"
-            relativeEventsTitle = "Relative (Events)"
-            absoluteTitle = "Absolute ✓"
-        }
+        let check = " ✓"
+        relativeHIDTitle = String(localized: "Relative (HID)") + (mode == .relativeHID ? check : "")
+        relativeEventsTitle = String(localized: "Relative (Events)") + (mode == .relativeEvents ? check : "")
+        absoluteTitle = String(localized: "Absolute") + (mode == .absolute ? check : "")
     }
     
     func updatePerformancePresetTitles() {
@@ -1126,10 +1169,11 @@ final class AppState: ObservableObject {
         let isMaxPerformance = (currentHz == 1000 && currentBaudrate == .highSpeed)
         
         // Update titles with checkmarks
-        lowPerformanceTitle = isLowPerformance ? "🐢 Low Performance Target (30 Hz, 9600) ✓" : "🐢 Low Performance Target (30 Hz, 9600)"
-        casualUseTitle = isCasualUse ? "🖥️ Casual Use (80 Hz, 9600) ✓" : "🖥️ Casual Use (80 Hz, 9600)"
-        gamingTitle = isGaming ? "🎮 Gaming (250 Hz, 115200) ✓" : "🎮 Gaming (250 Hz, 115200)"
-        maxPerformanceTitle = isMaxPerformance ? "🐇 Max Performance (1000 Hz, 115200) ✓" : "🐇 Max Performance (1000 Hz, 115200)"
+        let check = " ✓"
+        lowPerformanceTitle = String(localized: "🐢 Low Performance Target (30 Hz, 9600)") + (isLowPerformance ? check : "")
+        casualUseTitle = String(localized: "🖥️ Casual Use (80 Hz, 9600)") + (isCasualUse ? check : "")
+        gamingTitle = String(localized: "🎮 Gaming (250 Hz, 115200)") + (isGaming ? check : "")
+        maxPerformanceTitle = String(localized: "🐇 Max Performance (1000 Hz, 115200)") + (isMaxPerformance ? check : "")
     }
 }
 
@@ -1200,7 +1244,7 @@ func showUSBDevicesWindow() {
     let usbDevicesView = USBDevicesView()
     let controller = NSHostingController(rootView: usbDevicesView)
     let window = NSWindow(contentViewController: controller)
-    window.title = "USB Devices"
+    window.title = String(localized: "USB Devices")
     window.setContentSize(NSSize(width: 400, height: 600))
     window.makeKeyAndOrderFront(nil)
     NSApp.activate(ignoringOtherApps: true)
@@ -1223,7 +1267,7 @@ func showFirmwareUpdateWindow() {
     let firmwareUpdateView = FirmwareUpdateView()
     let controller = NSHostingController(rootView: firmwareUpdateView)
     let window = NSWindow(contentViewController: controller)
-    window.title = "Firmware Update Tool"
+    window.title = String(localized: "Firmware Update Tool")
     window.identifier = NSUserInterfaceItemIdentifier(rawValue: "firmwareUpdateWindow")
     window.setContentSize(NSSize(width: 700, height: 720))
     window.styleMask = [.titled, .closable]
@@ -1254,7 +1298,7 @@ func showEdidNameWindow() {
     let edidNameView = EdidNameView()
     let controller = NSHostingController(rootView: edidNameView)
     let window = NSWindow(contentViewController: controller)
-    window.title = "EDID Monitor Name Editor"
+    window.title = String(localized: "EDID Monitor Name Editor")
     window.identifier = NSUserInterfaceItemIdentifier(rawValue: "edidNameWindow")
     window.setContentSize(NSSize(width: 450, height: 500))
     window.styleMask = [.titled, .closable, .miniaturizable]

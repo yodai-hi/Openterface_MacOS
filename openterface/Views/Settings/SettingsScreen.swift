@@ -55,7 +55,7 @@ struct SettingsScreen: View {
                             Image(systemName: tab.icon)
                                 .frame(width: 16)
                             VStack(alignment: .leading, spacing: 2) {
-                                Text(tab.rawValue)
+                                Text(LocalizedStringKey(tab.rawValue))
                                     .font(.system(size: 11))
                                     .multilineTextAlignment(.leading)
                             }
@@ -609,7 +609,7 @@ class SettingsScreenWC<RootView : View>: NSWindowController, NSWindowDelegate {
         let hostingController = NSHostingController(rootView: rootView)
         let window = NSWindow(contentViewController: hostingController)
         window.identifier = NSUserInterfaceItemIdentifier("settingsWindow")
-        window.title = "Openterface Settings"
+        window.title = String(localized: "Openterface Settings")
         window.makeKey()
         window.orderFrontRegardless()
         window.setContentSize(NSSize(width: 900, height: 700))

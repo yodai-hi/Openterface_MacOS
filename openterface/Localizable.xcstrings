@@ -1,0 +1,8290 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "%@ Access Required": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ へのアクセスが必要です"
+          }
+        }
+      }
+    },
+    "%@ Connection Error": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 接続エラー"
+          }
+        }
+      }
+    },
+    "%@ Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ モード"
+          }
+        }
+      }
+    },
+    "%lld devices found": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 台のデバイスが見つかりました"
+          }
+        }
+      }
+    },
+    "%lld steps": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld ステップ"
+          }
+        }
+      }
+    },
+    "%lld/13 characters": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld/13 文字"
+          }
+        }
+      }
+    },
+    "(Detected: %@)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(検出: %@)"
+          }
+        }
+      }
+    },
+    "(optional)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(任意)"
+          }
+        }
+      }
+    },
+    "1. Disconnect the Target USB port from your host computer\n2. Press and hold the on-board BOOT button\n3. While holding BOOT, connect Target USB to your host\n4. Release BOOT after USB connection is established": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1. Target USB ポートをホストコンピュータから外す\n2. 基板上の BOOT ボタンを押したままにする\n3. BOOT を押したまま Target USB をホストに接続する\n4. USB 接続が確立したら BOOT を離す"
+          }
+        }
+      }
+    },
+    "115200 bps": {
+      "extractionState": "manual"
+    },
+    "115200 bps (High Speed)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "115200 bps (高速)"
+          }
+        }
+      }
+    },
+    "127.0.0.1": {
+      "extractionState": "manual"
+    },
+    "3389": {
+      "extractionState": "manual"
+    },
+    "5900": {
+      "extractionState": "manual"
+    },
+    "9600 bps": {
+      "extractionState": "manual"
+    },
+    "9600 bps (Low Speed)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "9600 bps (低速)"
+          }
+        }
+      }
+    },
+    "AI Integration": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 連携"
+          }
+        }
+      }
+    },
+    "AI Trace Logs": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI トレースログ"
+          }
+        }
+      }
+    },
+    "API Base URL": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API ベース URL"
+          }
+        }
+      }
+    },
+    "API Key": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API キー"
+          }
+        }
+      }
+    },
+    "Absolute": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "絶対座標"
+          }
+        }
+      }
+    },
+    "Absolute mouse positioning": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "絶対座標でのマウス位置指定"
+          }
+        }
+      }
+    },
+    "Accessibility Permission Required": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アクセシビリティの権限が必要です"
+          }
+        }
+      }
+    },
+    "Accessibility Permission Status": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アクセシビリティ権限の状態"
+          }
+        }
+      }
+    },
+    "Ack Latency:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ACK 遅延:"
+          }
+        }
+      }
+    },
+    "Ack Rate:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ACK レート:"
+          }
+        }
+      }
+    },
+    "Active": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有効"
+          }
+        }
+      }
+    },
+    "Active Device": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用中のデバイス"
+          }
+        }
+      }
+    },
+    "Active Device:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用中のデバイス:"
+          }
+        }
+      }
+    },
+    "Active Resolution (Auto-Detect)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有効解像度 (自動検出)"
+          }
+        }
+      }
+    },
+    "Add": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "追加"
+          }
+        }
+      }
+    },
+    "Add Credential": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "認証情報を追加"
+          }
+        }
+      }
+    },
+    "Add macro": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マクロを追加"
+          }
+        }
+      }
+    },
+    "Advanced & Debug": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高度な設定とデバッグ"
+          }
+        }
+      }
+    },
+    "Advanced & Debug Configuration": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高度な設定とデバッグ"
+          }
+        }
+      }
+    },
+    "Agent Mode allows the assistant to request tool actions like capture screen, move/click mouse, and type text.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "エージェントモードでは、アシスタントが画面キャプチャ、マウスの移動/クリック、テキスト入力などのツール操作を要求できます。"
+          }
+        }
+      }
+    },
+    "Agent Mode is off: chat will only return text guidance and will not execute tools.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "エージェントモードはオフです: チャットはテキストの案内のみを返し、ツールは実行しません。"
+          }
+        }
+      }
+    },
+    "Agent: %@ | Tool: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "エージェント: %@ | ツール: %@"
+          }
+        }
+      }
+    },
+    "Alt": {
+      "extractionState": "manual"
+    },
+    "Alt (Left)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alt (左)"
+          }
+        }
+      }
+    },
+    "Alt (Right)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alt (右)"
+          }
+        }
+      }
+    },
+    "Always Host Paste": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常にホスト側ペースト"
+          }
+        }
+      }
+    },
+    "Always Local Paste": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常にローカルペースト"
+          }
+        }
+      }
+    },
+    "Always Show Host Cursor": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ホストカーソルを常に表示"
+          }
+        }
+      }
+    },
+    "Always on Top": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常に手前に表示"
+          }
+        }
+      }
+    },
+    "Always on Top ✓": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常に手前に表示 ✓"
+          }
+        }
+      }
+    },
+    "Application Information": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリケーション情報"
+          }
+        }
+      }
+    },
+    "Application Logs": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリケーションログ"
+          }
+        }
+      }
+    },
+    "Applies to screenshots attached in chat and to the agentic capture_screen tool before the image is sent to the AI service.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "チャットに添付するスクリーンショットと、エージェントの capture_screen ツールに適用され、画像を AI サービスへ送信する前にサイズが調整されます。"
+          }
+        }
+      }
+    },
+    "Apply & Continue": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "適用して続行"
+          }
+        }
+      }
+    },
+    "Approve": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "承認"
+          }
+        }
+      }
+    },
+    "Are you sure you want to change the monitor name from '%@' to '%@'?\n\nThis will modify the firmware and require a device reconnection.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "モニタ名を「%@」から「%@」に変更しますか?\n\nファームウェアが書き換えられ、デバイスの再接続が必要になります。"
+          }
+        }
+      }
+    },
+    "Are you sure you want to proceed with the firmware update? This process cannot be undone.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェアの更新を実行しますか? この処理は取り消せません。"
+          }
+        }
+      }
+    },
+    "Ask Every Time": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "毎回確認"
+          }
+        }
+      }
+    },
+    "Ask Every Time%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "毎回確認%@"
+          }
+        }
+      }
+    },
+    "Aspect Ratio": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アスペクト比"
+          }
+        }
+      }
+    },
+    "Aspect Ratio & Video Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アスペクト比とビデオ設定"
+          }
+        }
+      }
+    },
+    "Aspect Ratio Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アスペクト比モード"
+          }
+        }
+      }
+    },
+    "Aspect Ratio Source:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アスペクト比のソース:"
+          }
+        }
+      }
+    },
+    "Aspect ratio:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アスペクト比:"
+          }
+        }
+      }
+    },
+    "Attempts: %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "試行回数: %lld"
+          }
+        }
+      }
+    },
+    "Audio & Video": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オーディオとビデオ"
+          }
+        }
+      }
+    },
+    "Audio & Video Configuration": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オーディオとビデオの設定"
+          }
+        }
+      }
+    },
+    "Audio Control": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オーディオ制御"
+          }
+        }
+      }
+    },
+    "Audio Input Devices": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オーディオ入力デバイス"
+          }
+        }
+      }
+    },
+    "Audio Output Devices": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オーディオ出力デバイス"
+          }
+        }
+      }
+    },
+    "Audio Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オーディオ設定"
+          }
+        }
+      }
+    },
+    "Auto Check": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自動チェック"
+          }
+        }
+      }
+    },
+    "Auto-detect the active video area periodically": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有効な映像領域を定期的に自動検出"
+          }
+        }
+      }
+    },
+    "Auto-hide Host Cursor": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ホストカーソルを自動的に隠す"
+          }
+        }
+      }
+    },
+    "Auto-hide host cursor in absolute mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "絶対座標モードでホストカーソルを自動的に隠す"
+          }
+        }
+      }
+    },
+    "Auto-hide in Control Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "制御モードで自動的に隠す"
+          }
+        }
+      }
+    },
+    "Automatic (First Detected)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自動 (最初に検出したデバイス)"
+          }
+        }
+      }
+    },
+    "Automatic (First Detected) ✓": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自動 (最初に検出したデバイス) ✓"
+          }
+        }
+      }
+    },
+    "Available": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "利用可能"
+          }
+        }
+      }
+    },
+    "Available input devices: %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "利用可能な入力デバイス: %lld"
+          }
+        }
+      }
+    },
+    "Back": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "戻る"
+          }
+        }
+      }
+    },
+    "Backspace": {
+      "extractionState": "manual"
+    },
+    "Backup Current Firmware": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在のファームウェアをバックアップ"
+          }
+        }
+      }
+    },
+    "Balanced settings for everyday use (80 Hz, 9600 baud)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "日常使用向けのバランス設定 (80 Hz, 9600 baud)"
+          }
+        }
+      }
+    },
+    "Baudrate": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ボーレート"
+          }
+        }
+      }
+    },
+    "Baudrate: %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ボーレート: %lld"
+          }
+        }
+      }
+    },
+    "Behavior explanations:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "動作の説明:"
+          }
+        }
+      }
+    },
+    "Bottom": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下"
+          }
+        }
+      }
+    },
+    "Bottom%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下%@"
+          }
+        }
+      }
+    },
+    "Build:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ビルド:"
+          }
+        }
+      }
+    },
+    "Calc": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "電卓"
+          }
+        }
+      }
+    },
+    "Camera Control": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カメラ制御"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キャンセル"
+          }
+        }
+      }
+    },
+    "Cancel Plan": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プランをキャンセル"
+          }
+        }
+      }
+    },
+    "Caps Lock": {
+      "extractionState": "manual"
+    },
+    "Casual Use": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "日常使用"
+          }
+        }
+      }
+    },
+    "Change Now": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今すぐ変更"
+          }
+        }
+      }
+    },
+    "Change the monitor name that appears to the target system": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲットシステムに表示されるモニタ名を変更します"
+          }
+        }
+      }
+    },
+    "Changing serial baudrate to 115200": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "シリアルのボーレートを 115200 に変更"
+          }
+        }
+      }
+    },
+    "Changing...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "変更中..."
+          }
+        }
+      }
+    },
+    "Chat Dock Side": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "チャットのドック位置"
+          }
+        }
+      }
+    },
+    "Check HID Permissions...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HID 権限を確認..."
+          }
+        }
+      }
+    },
+    "Check Now": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今すぐチェック"
+          }
+        }
+      }
+    },
+    "Check Permissions": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "権限を確認"
+          }
+        }
+      }
+    },
+    "Checking the target port healthness by host orange cable": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ホスト側オレンジケーブルでターゲットポートの状態を確認"
+          }
+        }
+      }
+    },
+    "Checking...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "チェック中..."
+          }
+        }
+      }
+    },
+    "Choose…": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選択…"
+          }
+        }
+      }
+    },
+    "Clear": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "消去"
+          }
+        }
+      }
+    },
+    "Clear Chat History": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "チャット履歴を消去"
+          }
+        }
+      }
+    },
+    "Clear Recording": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "記録を消去"
+          }
+        }
+      }
+    },
+    "Clear Trace": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トレースを消去"
+          }
+        }
+      }
+    },
+    "Clear history": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "履歴を消去"
+          }
+        }
+      }
+    },
+    "Click to select %@ chipset": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリックして %@ チップセットを選択"
+          }
+        }
+      }
+    },
+    "Click to view Target Aspect Ratio...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリックしてターゲットのアスペクト比を表示..."
+          }
+        }
+      }
+    },
+    "Click to view full picture": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリックして全体を表示"
+          }
+        }
+      }
+    },
+    "Clipboard & OCR": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリップボードと OCR"
+          }
+        }
+      }
+    },
+    "Clipboard & OCR Management": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリップボードと OCR の管理"
+          }
+        }
+      }
+    },
+    "Clipboard Behavior": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリップボードの動作"
+          }
+        }
+      }
+    },
+    "Clipboard History": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリップボード履歴"
+          }
+        }
+      }
+    },
+    "Clipboard Manager": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリップボードマネージャ"
+          }
+        }
+      }
+    },
+    "Close": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "閉じる"
+          }
+        }
+      }
+    },
+    "Close App": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリを終了"
+          }
+        }
+      }
+    },
+    "Close Application": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリケーションを終了"
+          }
+        }
+      }
+    },
+    "Close diagnostics": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "診断を閉じる"
+          }
+        }
+      }
+    },
+    "Cmd": {
+      "extractionState": "manual"
+    },
+    "Cmd+V triggers clipboard management": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cmd+V でクリップボード管理を起動"
+          }
+        }
+      }
+    },
+    "Command": {
+      "extractionState": "manual"
+    },
+    "Common Macro Templates": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "よく使うマクロテンプレート"
+          }
+        }
+      }
+    },
+    "Common resolutions: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一般的な解像度: %@"
+          }
+        }
+      }
+    },
+    "Compatibility Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "互換モード"
+          }
+        }
+      }
+    },
+    "Composite Keys": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "組み合わせキー"
+          }
+        }
+      }
+    },
+    "Computer": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コンピュータ"
+          }
+        }
+      }
+    },
+    "Configure how Cmd+V paste events are handled": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cmd+V によるペースト操作の扱いを設定します"
+          }
+        }
+      }
+    },
+    "Configure key mapping, device behavior, and advanced features": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーマッピング、デバイスの動作、高度な機能を設定します"
+          }
+        }
+      }
+    },
+    "Configure network-based remote access protocols.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ネットワーク経由のリモートアクセスプロトコルを設定します。"
+          }
+        }
+      }
+    },
+    "Configure the OpenAI-compatible endpoint used by the docked chat window": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ドック表示のチャットウィンドウが使用する OpenAI 互換エンドポイントを設定します"
+          }
+        }
+      }
+    },
+    "Confirm EDID Name Update": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "EDID 名の更新を確認"
+          }
+        }
+      }
+    },
+    "Confirm Firmware Update": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェア更新の確認"
+          }
+        }
+      }
+    },
+    "Confirm Flash Local Firmware": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ローカルファームウェア書き込みの確認"
+          }
+        }
+      }
+    },
+    "Confirm the target OS before execution continues.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "実行を続ける前にターゲット OS を確認してください。"
+          }
+        }
+      }
+    },
+    "Connect": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接続"
+          }
+        }
+      }
+    },
+    "Connect to a remote host using Microsoft RDP (port 3389)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Microsoft RDP (ポート 3389) でリモートホストに接続"
+          }
+        }
+      }
+    },
+    "Connect to a remote host using RFB/VNC": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RFB/VNC でリモートホストに接続"
+          }
+        }
+      }
+    },
+    "Connected": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接続済み"
+          }
+        }
+      }
+    },
+    "Connected at %lld bps": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld bps で接続中"
+          }
+        }
+      }
+    },
+    "Connection Management": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接続管理"
+          }
+        }
+      }
+    },
+    "Connection Protocol": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接続プロトコル"
+          }
+        }
+      }
+    },
+    "Content to paste:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ペーストする内容:"
+          }
+        }
+      }
+    },
+    "Continue with %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ で続行"
+          }
+        }
+      }
+    },
+    "Control": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コントロール"
+          }
+        }
+      }
+    },
+    "Control (Left)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Control (左)"
+          }
+        }
+      }
+    },
+    "Control (Right)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Control (右)"
+          }
+        }
+      }
+    },
+    "Control Chipset Ready:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コントロールチップセットの準備:"
+          }
+        }
+      }
+    },
+    "Control Chipset Selection": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コントロールチップセットの選択"
+          }
+        }
+      }
+    },
+    "Control Chipset:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コントロールチップセット:"
+          }
+        }
+      }
+    },
+    "Control Mode Configuration": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コントロールモード設定"
+          }
+        }
+      }
+    },
+    "Controls how many tool-and-reasoning turns Agent Mode can use before it stops. Higher values help multi-step flows, while verified macros can save iterations by jumping directly to a known state.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "エージェントモードが停止するまでに使用できるツール実行と推論のターン数を制御します。値を大きくすると複数ステップの処理に有利です。検証済みマクロを使うと既知の状態へ直接移動でき、反復回数を節約できます。"
+          }
+        }
+      }
+    },
+    "Copied!": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コピーしました!"
+          }
+        }
+      }
+    },
+    "Copy": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コピー"
+          }
+        }
+      }
+    },
+    "Copy %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ をコピー"
+          }
+        }
+      }
+    },
+    "Copy All": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてコピー"
+          }
+        }
+      }
+    },
+    "Copy Message": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メッセージをコピー"
+          }
+        }
+      }
+    },
+    "Copy Trace": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トレースをコピー"
+          }
+        }
+      }
+    },
+    "Copy all status messages to clipboard": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべての状態メッセージをクリップボードにコピー"
+          }
+        }
+      }
+    },
+    "Copy all trace": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてのトレースをコピー"
+          }
+        }
+      }
+    },
+    "Copy device information": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイス情報をコピー"
+          }
+        }
+      }
+    },
+    "Copy entire USB tree information": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB ツリー情報全体をコピー"
+          }
+        }
+      }
+    },
+    "Copy error message to clipboard": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "エラーメッセージをクリップボードにコピー"
+          }
+        }
+      }
+    },
+    "Copy status and results to clipboard": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "状態と結果をクリップボードにコピー"
+          }
+        }
+      }
+    },
+    "Copy this log item": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このログ項目をコピー"
+          }
+        }
+      }
+    },
+    "Copy this trace item": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このトレース項目をコピー"
+          }
+        }
+      }
+    },
+    "Copy to Clipboard": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリップボードにコピー"
+          }
+        }
+      }
+    },
+    "Copy to clipboard": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリップボードにコピー"
+          }
+        }
+      }
+    },
+    "Create Keyboard Macro": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードマクロを作成"
+          }
+        }
+      }
+    },
+    "Create New Macro": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新しいマクロを作成"
+          }
+        }
+      }
+    },
+    "Create and manage keyboard macros for common tasks": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "よく使う操作のキーボードマクロを作成・管理します"
+          }
+        }
+      }
+    },
+    "Create custom key sequences for repeated tasks. Click 'Start Recording', then press the keys you want to include in your macro.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "繰り返し行う操作のためのキーシーケンスを作成します。「記録を開始」をクリックしてから、マクロに含めるキーを押してください。"
+          }
+        }
+      }
+    },
+    "Create or unverify a macro to show it in this view.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マクロを作成するか検証済みを解除すると、ここに表示されます。"
+          }
+        }
+      }
+    },
+    "Credential": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "認証情報"
+          }
+        }
+      }
+    },
+    "Credentials Manager": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "認証情報マネージャ"
+          }
+        }
+      }
+    },
+    "Ctrl": {
+      "extractionState": "manual"
+    },
+    "Current Clipboard": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在のクリップボード"
+          }
+        }
+      }
+    },
+    "Current Connection:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在の接続:"
+          }
+        }
+      }
+    },
+    "Current Monitor Name:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在のモニタ名:"
+          }
+        }
+      }
+    },
+    "Current Resolution:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在の解像度:"
+          }
+        }
+      }
+    },
+    "Current chipset:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在のチップセット:"
+          }
+        }
+      }
+    },
+    "Current connected: %lld bps": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在の接続: %lld bps"
+          }
+        }
+      }
+    },
+    "Current firmware version:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在のファームウェアバージョン:"
+          }
+        }
+      }
+    },
+    "Current modifier key mapping: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在の修飾キーマッピング: %@"
+          }
+        }
+      }
+    },
+    "Current ratio: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在の比率: %@"
+          }
+        }
+      }
+    },
+    "Current: Host": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在: ホスト"
+          }
+        }
+      }
+    },
+    "Current: Target": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在: ターゲット"
+          }
+        }
+      }
+    },
+    "Cursor Behavior": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カーソル動作"
+          }
+        }
+      }
+    },
+    "Custom": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カスタム"
+          }
+        }
+      }
+    },
+    "Custom Aspect Ratio": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カスタムアスペクト比"
+          }
+        }
+      }
+    },
+    "Custom HID": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カスタム HID"
+          }
+        }
+      }
+    },
+    "Custom HID configuration": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カスタム HID 構成"
+          }
+        }
+      }
+    },
+    "Custom configuration - manually adjust throttling and baudrate below": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カスタム設定 - 下でスロットリングとボーレートを手動で調整します"
+          }
+        }
+      }
+    },
+    "Debug & Logging": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバッグとログ"
+          }
+        }
+      }
+    },
+    "Default behavior:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デフォルトの動作:"
+          }
+        }
+      }
+    },
+    "Del": {
+      "extractionState": "manual"
+    },
+    "Delete": {
+      "extractionState": "manual"
+    },
+    "Describe the macro...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マクロの説明を入力..."
+          }
+        }
+      }
+    },
+    "Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "説明"
+          }
+        }
+      }
+    },
+    "Detailed logging helps troubleshoot connectivity and performance issues": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "詳細なログは接続やパフォーマンスの問題の調査に役立ちます"
+          }
+        }
+      }
+    },
+    "Detect Devices": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイスを検出"
+          }
+        }
+      }
+    },
+    "Detect active video area periodically": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有効な映像領域を定期的に検出"
+          }
+        }
+      }
+    },
+    "Detecting serial port baud rate and connection status": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "シリアルポートのボーレートと接続状態を検出"
+          }
+        }
+      }
+    },
+    "Detecting...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "検出中..."
+          }
+        }
+      }
+    },
+    "Device": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイス"
+          }
+        }
+      }
+    },
+    "Device & Connection": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイスと接続"
+          }
+        }
+      }
+    },
+    "Device & Connection Management": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイスと接続の管理"
+          }
+        }
+      }
+    },
+    "Device Details": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイスの詳細"
+          }
+        }
+      }
+    },
+    "Device Diagnostics": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイス診断"
+          }
+        }
+      }
+    },
+    "Device Information": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイス情報"
+          }
+        }
+      }
+    },
+    "Device Selection": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイスの選択"
+          }
+        }
+      }
+    },
+    "Device is connected through a USB hub. Ensure the hub has external power to avoid test failures.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイスは USB ハブ経由で接続されています。テストの失敗を避けるため、ハブに外部電源を供給してください。"
+          }
+        }
+      }
+    },
+    "Device must be reconnected after update": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更新後はデバイスの再接続が必要です"
+          }
+        }
+      }
+    },
+    "Device will automatically reconnect when baudrate is changed": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ボーレート変更時にデバイスは自動的に再接続します"
+          }
+        }
+      }
+    },
+    "Device:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイス:"
+          }
+        }
+      }
+    },
+    "Diagnostic Logging": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "診断ログ"
+          }
+        }
+      }
+    },
+    "Disable Audio": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オーディオを無効にする"
+          }
+        }
+      }
+    },
+    "Disables advanced graphics/frame-ack capabilities for problematic hosts": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "問題のあるホスト向けに高度なグラフィックス/フレーム ACK 機能を無効にします"
+          }
+        }
+      }
+    },
+    "Disconnect": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "切断"
+          }
+        }
+      }
+    },
+    "Disconnected": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未接続"
+          }
+        }
+      }
+    },
+    "Dismiss": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "閉じる"
+          }
+        }
+      }
+    },
+    "Display & Video Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ディスプレイとビデオの設定"
+          }
+        }
+      }
+    },
+    "Do you want to show alerts when HID resolution changes?": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HID 解像度が変わったときに通知を表示しますか?"
+          }
+        }
+      }
+    },
+    "Docs Target": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ドキュメントのターゲット"
+          }
+        }
+      }
+    },
+    "Domain": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ドメイン"
+          }
+        }
+      }
+    },
+    "Done": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完了"
+          }
+        }
+      }
+    },
+    "Double press within 2 seconds to exit full screen": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2 秒以内に 2 回押すとフルスクリーンを終了"
+          }
+        }
+      }
+    },
+    "Down Arrow": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下矢印"
+          }
+        }
+      }
+    },
+    "Drag top edge to resize input area": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上端をドラッグして入力欄のサイズを変更"
+          }
+        }
+      }
+    },
+    "EDID Display Name Editor...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "EDID ディスプレイ名エディタ..."
+          }
+        }
+      }
+    },
+    "EDID Monitor Name Editor": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "EDID モニタ名エディタ"
+          }
+        }
+      }
+    },
+    "ESC ESC": {
+      "extractionState": "manual"
+    },
+    "Each app instance drives one Openterface unit. Choose the unit for this window, or open another unit in a new instance.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリの各インスタンスは 1 台の Openterface を担当します。このウィンドウで使うデバイスを選ぶか、別のデバイスを新しいインスタンスで開いてください。"
+          }
+        }
+      }
+    },
+    "Edit": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "編集"
+          }
+        }
+      }
+    },
+    "Edit Credential": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "認証情報を編集"
+          }
+        }
+      }
+    },
+    "Edit Macro": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マクロを編集"
+          }
+        }
+      }
+    },
+    "Edit the live docs used by runtime loader for each target OS agent.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "各ターゲット OS エージェント用にランタイムローダーが使用するドキュメントを編集します。"
+          }
+        }
+      }
+    },
+    "Eject": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取り出し"
+          }
+        }
+      }
+    },
+    "Email": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メール"
+          }
+        }
+      }
+    },
+    "Enable": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有効にする"
+          }
+        }
+      }
+    },
+    "Enable Agent Mode (tool execution)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "エージェントモードを有効にする (ツール実行)"
+          }
+        }
+      }
+    },
+    "Enable Audio": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オーディオを有効にする"
+          }
+        }
+      }
+    },
+    "Enable Both": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "両方を有効にする"
+          }
+        }
+      }
+    },
+    "Enable Click Refinement Reasoning": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリック位置の補正推論を有効にする"
+          }
+        }
+      }
+    },
+    "Enable Diagnostic Logging": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "診断ログを有効にする"
+          }
+        }
+      }
+    },
+    "Enable HAL print logging": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HAL 出力のログを有効にする"
+          }
+        }
+      }
+    },
+    "Enable Logging Only": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ログのみ有効にする"
+          }
+        }
+      }
+    },
+    "Enable Multi-Agent Planning": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マルチエージェントプランニングを有効にする"
+          }
+        }
+      }
+    },
+    "Enable Tight Compression": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tight 圧縮を有効にする"
+          }
+        }
+      }
+    },
+    "Enable ZLIB Compression": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ZLIB 圧縮を有効にする"
+          }
+        }
+      }
+    },
+    "Enable audio streaming": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オーディオストリーミングを有効にする"
+          }
+        }
+      }
+    },
+    "Enable keyboard event logging": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードイベントのログを有効にする"
+          }
+        }
+      }
+    },
+    "Enable logging to save detailed diagnostics for troubleshooting.\n\nLog file: %@\n\nWould you like to enable serial data logging as well?": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トラブルシューティング用に詳細な診断情報を保存するには、ログを有効にしてください。\n\nログファイル: %@\n\nシリアルデータのログも有効にしますか?"
+          }
+        }
+      }
+    },
+    "Enable mouse event logging": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マウスイベントのログを有効にする"
+          }
+        }
+      }
+    },
+    "Enable serial output logging": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "シリアル出力のログを有効にする"
+          }
+        }
+      }
+    },
+    "End": {
+      "extractionState": "manual"
+    },
+    "Enter": {
+      "extractionState": "manual"
+    },
+    "Enter Parallel Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パラレルモードに入る"
+          }
+        }
+      }
+    },
+    "Enter new monitor name": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新しいモニタ名を入力"
+          }
+        }
+      }
+    },
+    "Enter text to test keyboard layout mapping:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードレイアウトのマッピングをテストするテキストを入力:"
+          }
+        }
+      }
+    },
+    "Error": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "エラー"
+          }
+        }
+      }
+    },
+    "Esc": {
+      "extractionState": "manual"
+    },
+    "Escape": {
+      "extractionState": "manual"
+    },
+    "Escape Key:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escape キー:"
+          }
+        }
+      }
+    },
+    "Event Rate Limit (Hz):": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "イベントレート上限 (Hz):"
+          }
+        }
+      }
+    },
+    "Example: <CTRL>c</CTRL> sends Ctrl+C. Modifier buttons auto-open or auto-close based on the caret position.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例: <CTRL>c</CTRL> は Ctrl+C を送信します。修飾キーのボタンはカーソル位置に応じて自動的に開閉します。"
+          }
+        }
+      }
+    },
+    "Execute & Next": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "実行して次へ"
+          }
+        }
+      }
+    },
+    "Execute Action": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アクションを実行"
+          }
+        }
+      }
+    },
+    "Execution Plan": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "実行プラン"
+          }
+        }
+      }
+    },
+    "Exit": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "終了"
+          }
+        }
+      }
+    },
+    "Exit Parallel Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パラレルモードを終了"
+          }
+        }
+      }
+    },
+    "Explorer": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "エクスプローラ"
+          }
+        }
+      }
+    },
+    "Export Logs": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ログを書き出す"
+          }
+        }
+      }
+    },
+    "Export Openterface Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Openterface 設定を書き出す"
+          }
+        }
+      }
+    },
+    "Export Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定を書き出す"
+          }
+        }
+      }
+    },
+    "Export Successful": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "書き出し完了"
+          }
+        }
+      }
+    },
+    "Export or import your configuration settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定を書き出し/読み込みます"
+          }
+        }
+      }
+    },
+    "Factory Reset": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "工場出荷時リセット"
+          }
+        }
+      }
+    },
+    "Faster data transmission": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高速なデータ転送"
+          }
+        }
+      }
+    },
+    "Favorites": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "お気に入り"
+          }
+        }
+      }
+    },
+    "Feature Unavailable": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "機能を利用できません"
+          }
+        }
+      }
+    },
+    "File path: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファイルパス: %@"
+          }
+        }
+      }
+    },
+    "File path: Not resolved yet. Save will create it under the preferred docs root.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファイルパス: 未解決です。保存すると優先ドキュメントルート配下に作成されます。"
+          }
+        }
+      }
+    },
+    "Fill (Maintain Aspect Ratio)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "フィル (アスペクト比を維持)"
+          }
+        }
+      }
+    },
+    "Fills view while preserving aspect ratio (may crop)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アスペクト比を保ったままビューを埋めます (一部が切れる場合があります)"
+          }
+        }
+      }
+    },
+    "Firmware Backup": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェアのバックアップ"
+          }
+        }
+      }
+    },
+    "Firmware File": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェアファイル"
+          }
+        }
+      }
+    },
+    "Firmware Update Complete": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェア更新完了"
+          }
+        }
+      }
+    },
+    "Firmware Update Dialog": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェア更新ダイアログ"
+          }
+        }
+      }
+    },
+    "Firmware Update Tool": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェア更新ツール"
+          }
+        }
+      }
+    },
+    "Firmware Update Tool...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェア更新ツール..."
+          }
+        }
+      }
+    },
+    "Firmware Update in Progress": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェアを更新中"
+          }
+        }
+      }
+    },
+    "Firmware Version:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェアバージョン:"
+          }
+        }
+      }
+    },
+    "Firmware update completed successfully!\n\nTo ensure the new firmware takes effect, please:\n• Unplug all cables from the device\n• Wait 5 seconds\n• Reconnect all cables\n\nThe application will now close.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェアの更新が完了しました。\n\n新しいファームウェアを有効にするため、次の手順を行ってください:\n• デバイスからすべてのケーブルを抜く\n• 5 秒待つ\n• すべてのケーブルを接続し直す\n\nアプリケーションを終了します。"
+          }
+        }
+      }
+    },
+    "Firmware update failed. Please try again or contact support.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェアの更新に失敗しました。もう一度試すか、サポートにお問い合わせください。"
+          }
+        }
+      }
+    },
+    "Fit (Maintain Aspect Ratio)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "フィット (アスペクト比を維持)"
+          }
+        }
+      }
+    },
+    "Fits content while preserving aspect ratio": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アスペクト比を保ったままコンテンツを収めます"
+          }
+        }
+      }
+    },
+    "Flash Firmware": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェアを書き込む"
+          }
+        }
+      }
+    },
+    "Flash Local Firmware": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ローカルのファームウェアを書き込む"
+          }
+        }
+      }
+    },
+    "Flash Now": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今すぐ書き込む"
+          }
+        }
+      }
+    },
+    "Flash firmware to compatible chips via USB ISP mode.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB ISP モードで対応チップにファームウェアを書き込みます。"
+          }
+        }
+      }
+    },
+    "For Raspberry Pi and low-performance targets (30 Hz, 9600 baud)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Raspberry Pi などの低性能ターゲット向け (30 Hz, 9600 baud)"
+          }
+        }
+      }
+    },
+    "Format:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "形式:"
+          }
+        }
+      }
+    },
+    "Forward": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "進む"
+          }
+        }
+      }
+    },
+    "Frame Rate:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "フレームレート:"
+          }
+        }
+      }
+    },
+    "From HID resolution query (may have blank areas)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HID 解像度の問い合わせ結果を使用 (余白が生じる場合があります)"
+          }
+        }
+      }
+    },
+    "Full screen mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "フルスクリーンモード"
+          }
+        }
+      }
+    },
+    "Function %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファンクション %lld"
+          }
+        }
+      }
+    },
+    "Function Keys": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファンクションキー"
+          }
+        }
+      }
+    },
+    "Gaming": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ゲーミング"
+          }
+        }
+      }
+    },
+    "Generate from the current name and description": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在の名前と説明から生成"
+          }
+        }
+      }
+    },
+    "Global Application Shortcuts": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリ全体のショートカット"
+          }
+        }
+      }
+    },
+    "Guide Step Trace": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ガイドステップのトレース"
+          }
+        }
+      }
+    },
+    "HDMI Status:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HDMI の状態:"
+          }
+        }
+      }
+    },
+    "HID Device Status": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HID デバイスの状態"
+          }
+        }
+      }
+    },
+    "HID Resolution (Device Info)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HID 解像度 (デバイス情報)"
+          }
+        }
+      }
+    },
+    "HID Resolution Change Alert Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HID 解像度変更の通知設定"
+          }
+        }
+      }
+    },
+    "Hardware KVM": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ハードウェア KVM"
+          }
+        }
+      }
+    },
+    "Hardware KVM%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ハードウェア KVM%@"
+          }
+        }
+      }
+    },
+    "Hide App Info Overlay": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリ情報オーバーレイを隠す"
+          }
+        }
+      }
+    },
+    "Hide Chat": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "チャットを隠す"
+          }
+        }
+      }
+    },
+    "Hide Input Overlay": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "入力オーバーレイを隠す"
+          }
+        }
+      }
+    },
+    "Hide Multimedia Keys": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マルチメディアキーを隠す"
+          }
+        }
+      }
+    },
+    "Hide Raw": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生データを隠す"
+          }
+        }
+      }
+    },
+    "Hide Video Rect Box": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "映像領域の枠を隠す"
+          }
+        }
+      }
+    },
+    "Hide companion chat": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コンパニオンチャットを隠す"
+          }
+        }
+      }
+    },
+    "High Baudrate": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高速ボーレート"
+          }
+        }
+      }
+    },
+    "Higher values allow more mouse events per second. Exceeding events will be dropped to maintain the specified rate limit.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "値を大きくすると 1 秒あたりのマウスイベント数が増えます。上限を超えたイベントは破棄されます。"
+          }
+        }
+      }
+    },
+    "Home": {
+      "extractionState": "manual"
+    },
+    "Home Page": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ホームページ"
+          }
+        }
+      }
+    },
+    "Host": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ホスト"
+          }
+        }
+      }
+    },
+    "Host / IP": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ホスト / IP"
+          }
+        }
+      }
+    },
+    "Host Input:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ホスト入力:"
+          }
+        }
+      }
+    },
+    "Host Paste": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ホスト側ペースト"
+          }
+        }
+      }
+    },
+    "Host Paste%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ホスト側ペースト%@"
+          }
+        }
+      }
+    },
+    "Host Plug & Play": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ホスト側プラグ&プレイ"
+          }
+        }
+      }
+    },
+    "I Understand": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "理解しました"
+          }
+        }
+      }
+    },
+    "I Understand the Risks": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リスクを理解しました"
+          }
+        }
+      }
+    },
+    "Image unavailable": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画像を表示できません"
+          }
+        }
+      }
+    },
+    "Images": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画像"
+          }
+        }
+      }
+    },
+    "Import Openterface Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Openterface 設定を読み込む"
+          }
+        }
+      }
+    },
+    "Import Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定を読み込む"
+          }
+        }
+      }
+    },
+    "Import Successful": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "読み込み完了"
+          }
+        }
+      }
+    },
+    "Important Information:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重要な情報:"
+          }
+        }
+      }
+    },
+    "Important:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重要:"
+          }
+        }
+      }
+    },
+    "Input Method Switched": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "入力ソースを切り替えました"
+          }
+        }
+      }
+    },
+    "Input: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "入力: %@"
+          }
+        }
+      }
+    },
+    "Key Interval": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キー間隔"
+          }
+        }
+      }
+    },
+    "Key Macros": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーマクロ"
+          }
+        }
+      }
+    },
+    "Key Macros & Automation": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーマクロと自動化"
+          }
+        }
+      }
+    },
+    "Key Mapping & Shortcuts": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーマッピングとショートカット"
+          }
+        }
+      }
+    },
+    "Key Sequence": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーシーケンス"
+          }
+        }
+      }
+    },
+    "KeyBoard: %@\nMouse: %@\n\nClick to view USB device details": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボード: %@\nマウス: %@\n\nクリックすると USB デバイスの詳細を表示"
+          }
+        }
+      }
+    },
+    "Keyboard & Mouse Chip Firmware Flash": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボード/マウスチップのファームウェア書き込み"
+          }
+        }
+      }
+    },
+    "Keyboard & Mouse Firmware Upgrade Not Available": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボード/マウスのファームウェア更新は利用できません"
+          }
+        }
+      }
+    },
+    "Keyboard Layout": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードレイアウト"
+          }
+        }
+      }
+    },
+    "Keyboard Layout Test": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードレイアウトのテスト"
+          }
+        }
+      }
+    },
+    "Keyboard Macros": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードマクロ"
+          }
+        }
+      }
+    },
+    "Keyboard Only": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードのみ"
+          }
+        }
+      }
+    },
+    "Keyboard input only": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボード入力のみ"
+          }
+        }
+      }
+    },
+    "Later": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "後で"
+          }
+        }
+      }
+    },
+    "Latest firmware version:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最新のファームウェアバージョン:"
+          }
+        }
+      }
+    },
+    "Layout mode:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レイアウトモード:"
+          }
+        }
+      }
+    },
+    "Left": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "左"
+          }
+        }
+      }
+    },
+    "Left Arrow": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "左矢印"
+          }
+        }
+      }
+    },
+    "Left%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "左%@"
+          }
+        }
+      }
+    },
+    "Linux Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Linux モード"
+          }
+        }
+      }
+    },
+    "Linux Mode Key Mapping:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Linux モードのキーマッピング:"
+          }
+        }
+      }
+    },
+    "List Output Devices": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "出力デバイスを一覧表示"
+          }
+        }
+      }
+    },
+    "Loaded files: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "読み込んだファイル: %@"
+          }
+        }
+      }
+    },
+    "Local Paste": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ローカルペースト"
+          }
+        }
+      }
+    },
+    "Local Paste%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ローカルペースト%@"
+          }
+        }
+      }
+    },
+    "Lock Aspect Ratio During Resize": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "サイズ変更時にアスペクト比を固定"
+          }
+        }
+      }
+    },
+    "Log to file": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファイルにログ出力"
+          }
+        }
+      }
+    },
+    "Log to file ✓": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファイルにログ出力 ✓"
+          }
+        }
+      }
+    },
+    "Logging On": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ログ記録中"
+          }
+        }
+      }
+    },
+    "Logging Setting": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ログ設定"
+          }
+        }
+      }
+    },
+    "Low Performance Target": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "低性能ターゲット"
+          }
+        }
+      }
+    },
+    "Mac Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac モード"
+          }
+        }
+      }
+    },
+    "Mac Mode Key Mapping:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac モードのキーマッピング:"
+          }
+        }
+      }
+    },
+    "Macro": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マクロ"
+          }
+        }
+      }
+    },
+    "Macro Management": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マクロ管理"
+          }
+        }
+      }
+    },
+    "Macro name": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マクロ名"
+          }
+        }
+      }
+    },
+    "Macros": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マクロ"
+          }
+        }
+      }
+    },
+    "Manage Credentials": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "認証情報を管理"
+          }
+        }
+      }
+    },
+    "Manage Credentials...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "認証情報を管理..."
+          }
+        }
+      }
+    },
+    "Manually configured settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手動で設定"
+          }
+        }
+      }
+    },
+    "Mark a macro as verified to show it in this view.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マクロを検証済みにすると、ここに表示されます。"
+          }
+        }
+      }
+    },
+    "Markdown File": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Markdown ファイル"
+          }
+        }
+      }
+    },
+    "Max Agent Iterations": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "エージェントの最大反復回数"
+          }
+        }
+      }
+    },
+    "Max Performance": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最大性能"
+          }
+        }
+      }
+    },
+    "Maximum 13 characters allowed": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最大 13 文字まで"
+          }
+        }
+      }
+    },
+    "Maximum compatibility with target devices (default)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲットデバイスとの最大の互換性 (デフォルト)"
+          }
+        }
+      }
+    },
+    "Maximum responsiveness for professional use (1000 Hz, 115200 baud)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プロ用途向けの最大応答性 (1000 Hz, 115200 baud)"
+          }
+        }
+      }
+    },
+    "Media": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メディア"
+          }
+        }
+      }
+    },
+    "Microphone (Input)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マイク (入力)"
+          }
+        }
+      }
+    },
+    "Minimize": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最小化"
+          }
+        }
+      }
+    },
+    "Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "モード"
+          }
+        }
+      }
+    },
+    "Mode: 0x%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "モード: 0x%@"
+          }
+        }
+      }
+    },
+    "Model": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "モデル"
+          }
+        }
+      }
+    },
+    "Mouse & HID": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マウスと HID"
+          }
+        }
+      }
+    },
+    "Mouse & HID Control": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マウスと HID の制御"
+          }
+        }
+      }
+    },
+    "Mouse Control Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マウス制御モード"
+          }
+        }
+      }
+    },
+    "Mouse Event Throttling": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マウスイベントのスロットリング"
+          }
+        }
+      }
+    },
+    "Mouse Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マウスモード"
+          }
+        }
+      }
+    },
+    "Mouse mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マウスモード"
+          }
+        }
+      }
+    },
+    "Multi-Agent Planning captures the current screen, creates a task list for approval, then runs screen-only task agents one at a time.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マルチエージェントプランニングは現在の画面をキャプチャし、承認用のタスクリストを作成してから、画面のみを扱うタスクエージェントを 1 つずつ実行します。"
+          }
+        }
+      }
+    },
+    "Multi-Agent Planning is off: chat stays in the existing direct-response or legacy agentic workflow.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マルチエージェントプランニングはオフです: チャットは従来の直接応答またはエージェントワークフローのままです。"
+          }
+        }
+      }
+    },
+    "Mute": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ミュート"
+          }
+        }
+      }
+    },
+    "Mute Audio": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オーディオをミュート"
+          }
+        }
+      }
+    },
+    "My Credential": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マイ認証情報"
+          }
+        }
+      }
+    },
+    "Name": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名前"
+          }
+        }
+      }
+    },
+    "New Macro": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新しいマクロ"
+          }
+        }
+      }
+    },
+    "New Monitor Name:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新しいモニタ名:"
+          }
+        }
+      }
+    },
+    "New session": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新しいセッション"
+          }
+        }
+      }
+    },
+    "Next": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "次へ"
+          }
+        }
+      }
+    },
+    "Next Track": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "次のトラック"
+          }
+        }
+      }
+    },
+    "No AI trace records yet.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI トレース記録はまだありません。"
+          }
+        }
+      }
+    },
+    "No Openterface devices detected": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Openterface デバイスが見つかりません"
+          }
+        }
+      }
+    },
+    "No Signal": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "信号なし"
+          }
+        }
+      }
+    },
+    "No additional information available": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "追加情報はありません"
+          }
+        }
+      }
+    },
+    "No clipboard history": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリップボード履歴はありません"
+          }
+        }
+      }
+    },
+    "No content in clipboard": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリップボードに内容がありません"
+          }
+        }
+      }
+    },
+    "No file selected": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファイルが選択されていません"
+          }
+        }
+      }
+    },
+    "No input devices available": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "利用可能な入力デバイスがありません"
+          }
+        }
+      }
+    },
+    "No logging": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ログなし"
+          }
+        }
+      }
+    },
+    "No logging ✓": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ログなし ✓"
+          }
+        }
+      }
+    },
+    "No macros created yet. Click 'Create New Macro' to get started.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マクロはまだありません。「新しいマクロを作成」をクリックして始めてください。"
+          }
+        }
+      }
+    },
+    "No output devices available": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "利用可能な出力デバイスがありません"
+          }
+        }
+      }
+    },
+    "No parsed text/image markers for this entry. Use Show Raw to inspect full payload.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このエントリには解析済みのテキスト/画像マーカーがありません。「生データを表示」で全ペイロードを確認してください。"
+          }
+        }
+      }
+    },
+    "No tests run yet": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "テストはまだ実行されていません"
+          }
+        }
+      }
+    },
+    "No trace entries available yet.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トレースはまだありません。"
+          }
+        }
+      }
+    },
+    "No trace information found for this guide step.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このガイドステップのトレース情報は見つかりませんでした。"
+          }
+        }
+      }
+    },
+    "No unverified macros": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未検証のマクロはありません"
+          }
+        }
+      }
+    },
+    "No verified macros": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "検証済みのマクロはありません"
+          }
+        }
+      }
+    },
+    "None": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "なし"
+          }
+        }
+      }
+    },
+    "Not Detected": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未検出"
+          }
+        }
+      }
+    },
+    "Not Ready": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未準備"
+          }
+        }
+      }
+    },
+    "Not connected": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未接続"
+          }
+        }
+      }
+    },
+    "Not found": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "見つかりません"
+          }
+        }
+      }
+    },
+    "Note: You may need to restart the application for the new firmware to take effect.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "注: 新しいファームウェアを有効にするには、アプリケーションの再起動が必要な場合があります。"
+          }
+        }
+      }
+    },
+    "OCR Copy": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OCR コピー"
+          }
+        }
+      }
+    },
+    "OCR functionality requires macOS 12.3 or later.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OCR 機能には macOS 12.3 以降が必要です。"
+          }
+        }
+      }
+    },
+    "OK": {
+      "extractionState": "manual"
+    },
+    "Only printable ASCII characters supported": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "印字可能な ASCII 文字のみ対応"
+          }
+        }
+      }
+    },
+    "Open AI request/response trace logs": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI のリクエスト/レスポンスのトレースログを開く"
+          }
+        }
+      }
+    },
+    "Open Clipboard Manager": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリップボードマネージャを開く"
+          }
+        }
+      }
+    },
+    "Open Diagnostics Tool": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "診断ツールを開く"
+          }
+        }
+      }
+    },
+    "Open Log Folder": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ログフォルダを開く"
+          }
+        }
+      }
+    },
+    "Open Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定を開く"
+          }
+        }
+      }
+    },
+    "Open Settings Manually": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手動で設定を開く"
+          }
+        }
+      }
+    },
+    "Open Skills folder – add your own .json skill files here": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スキルフォルダを開く – 独自の .json スキルファイルをここに追加"
+          }
+        }
+      }
+    },
+    "Open in New Instance": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新しいインスタンスで開く"
+          }
+        }
+      }
+    },
+    "Open in Preview": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プレビューで開く"
+          }
+        }
+      }
+    },
+    "Openterface KVM Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Openterface KVM 設定"
+          }
+        }
+      }
+    },
+    "Openterface KVM has been automatically added to the accessibility list in System Preferences.\n\nTo complete the setup:\n1. A system dialog should have appeared asking for permission\n2. If not, you can manually enable it in System Preferences > Privacy & Security > Accessibility\n3. Find \"Openterface\" in the list and ensure it's checked\n\nThis allows the app to:\n• Control mouse movements via HID interface\n• Provide more precise relative mouse control\n\nYou may need to restart the app after granting permissions.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Openterface KVM はシステム設定のアクセシビリティ一覧に自動的に追加されました。\n\n設定を完了するには:\n1. 権限を求めるシステムダイアログが表示されているはずです\n2. 表示されない場合は、システム設定 > プライバシーとセキュリティ > アクセシビリティ で手動で有効にしてください\n3. 一覧から「Openterface」を見つけてチェックが入っていることを確認してください\n\nこれにより、アプリは次のことができます:\n• HID インターフェース経由でマウスを制御\n• より正確な相対マウス制御を提供\n\n権限を付与した後、アプリの再起動が必要な場合があります。"
+          }
+        }
+      }
+    },
+    "Openterface Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Openterface 設定"
+          }
+        }
+      }
+    },
+    "Operations": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "操作"
+          }
+        }
+      }
+    },
+    "Opt": {
+      "extractionState": "manual"
+    },
+    "Optimized for Linux targets": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Linux ターゲット向けに最適化"
+          }
+        }
+      }
+    },
+    "Optimized for Mac targets": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac ターゲット向けに最適化"
+          }
+        }
+      }
+    },
+    "Optimized for Windows targets": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Windows ターゲット向けに最適化"
+          }
+        }
+      }
+    },
+    "Optimized for gaming and fast interactions (250 Hz, 115200 baud)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ゲームや高速な操作向けに最適化 (250 Hz, 115200 baud)"
+          }
+        }
+      }
+    },
+    "Optimized for maximum performance": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最大性能向けに最適化"
+          }
+        }
+      }
+    },
+    "Option (Left)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Option (左)"
+          }
+        }
+      }
+    },
+    "Option (Right)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Option (右)"
+          }
+        }
+      }
+    },
+    "Optional": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任意"
+          }
+        }
+      }
+    },
+    "Original": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オリジナル"
+          }
+        }
+      }
+    },
+    "Output devices: %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "出力デバイス: %lld"
+          }
+        }
+      }
+    },
+    "Output: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "出力: %@"
+          }
+        }
+      }
+    },
+    "Overall Connection": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全体の接続"
+          }
+        }
+      }
+    },
+    "Password": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パスワード"
+          }
+        }
+      }
+    },
+    "Paste": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ペースト"
+          }
+        }
+      }
+    },
+    "Paste Action Required": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ペースト操作の選択"
+          }
+        }
+      }
+    },
+    "Paste Behavior: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ペースト動作: %@"
+          }
+        }
+      }
+    },
+    "Paste Confirmation": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ペーストの確認"
+          }
+        }
+      }
+    },
+    "Paste Detection:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ペーストの検出:"
+          }
+        }
+      }
+    },
+    "Performance Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パフォーマンスモード"
+          }
+        }
+      }
+    },
+    "Performance Presets": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パフォーマンスプリセット"
+          }
+        }
+      }
+    },
+    "PgDown": {
+      "extractionState": "manual"
+    },
+    "PgUp": {
+      "extractionState": "manual"
+    },
+    "Plan Trace": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プランのトレース"
+          }
+        }
+      }
+    },
+    "Play/Pause": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再生/一時停止"
+          }
+        }
+      }
+    },
+    "Please do not disconnect or power off the device": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイスを取り外したり電源を切ったりしないでください"
+          }
+        }
+      }
+    },
+    "Please do not disconnect the device during this process": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "この処理中はデバイスを取り外さないでください"
+          }
+        }
+      }
+    },
+    "Please fill in your Order ID (mandatory) and review the email template below.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "注文 ID (必須) を入力し、以下のメールテンプレートを確認してください。"
+          }
+        }
+      }
+    },
+    "Port": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ポート"
+          }
+        }
+      }
+    },
+    "Power": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "電源"
+          }
+        }
+      }
+    },
+    "Preferred Baudrate:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "優先ボーレート:"
+          }
+        }
+      }
+    },
+    "Prefers Tight encoding for better interactive bandwidth savings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "対話操作時の帯域節約のため Tight エンコーディングを優先します"
+          }
+        }
+      }
+    },
+    "Presets": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プリセット"
+          }
+        }
+      }
+    },
+    "Prevent screen saver": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スクリーンセーバを抑止"
+          }
+        }
+      }
+    },
+    "Prevent screen saver ✓": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スクリーンセーバを抑止 ✓"
+          }
+        }
+      }
+    },
+    "Previous": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前へ"
+          }
+        }
+      }
+    },
+    "Previous Track": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前のトラック"
+          }
+        }
+      }
+    },
+    "Progress": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "進行状況"
+          }
+        }
+      }
+    },
+    "Protocol": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プロトコル"
+          }
+        }
+      }
+    },
+    "Provider Configuration": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プロバイダ設定"
+          }
+        }
+      }
+    },
+    "Quick access to common key combinations for target device": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲットデバイス向けのよく使うキーの組み合わせにすばやくアクセス"
+          }
+        }
+      }
+    },
+    "Quick settings for different use cases": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用途別のクイック設定"
+          }
+        }
+      }
+    },
+    "Quick templates for common scenarios": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "よくある場面向けのクイックテンプレート"
+          }
+        }
+      }
+    },
+    "RDP": {
+      "extractionState": "manual"
+    },
+    "RDP Connection": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RDP 接続"
+          }
+        }
+      }
+    },
+    "Raw payload": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生のペイロード"
+          }
+        }
+      }
+    },
+    "Re-examine": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再確認"
+          }
+        }
+      }
+    },
+    "Re-run Prompt": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プロンプトを再実行"
+          }
+        }
+      }
+    },
+    "Ready": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "準備完了"
+          }
+        }
+      }
+    },
+    "Recommended: 60-120 Hz for stable performance": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "推奨: 安定動作には 60〜120 Hz"
+          }
+        }
+      }
+    },
+    "Record": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "録画"
+          }
+        }
+      }
+    },
+    "Recorded sequence: %lld keys": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "記録したシーケンス: %lld キー"
+          }
+        }
+      }
+    },
+    "Reduces bandwidth usage at the cost of CPU": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CPU 負荷と引き換えに帯域使用量を削減します"
+          }
+        }
+      }
+    },
+    "Refresh": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更新"
+          }
+        }
+      }
+    },
+    "Refresh AI trace contents": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI トレース内容を再読み込み"
+          }
+        }
+      }
+    },
+    "Refresh Audio Devices": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オーディオデバイスを再読み込み"
+          }
+        }
+      }
+    },
+    "Refresh Current Name": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在の名前を再読み込み"
+          }
+        }
+      }
+    },
+    "Refresh Devices": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイスを再読み込み"
+          }
+        }
+      }
+    },
+    "Refresh Input Devices": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "入力デバイスを再読み込み"
+          }
+        }
+      }
+    },
+    "Refresh Output Devices": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "出力デバイスを再読み込み"
+          }
+        }
+      }
+    },
+    "Refresh Rate:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リフレッシュレート:"
+          }
+        }
+      }
+    },
+    "Refresh USB device tree": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB デバイスツリーを再読み込み"
+          }
+        }
+      }
+    },
+    "Refresh log contents": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ログ内容を再読み込み"
+          }
+        }
+      }
+    },
+    "Relative (Events)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "相対座標 (イベント)"
+          }
+        }
+      }
+    },
+    "Relative (HID)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "相対座標 (HID)"
+          }
+        }
+      }
+    },
+    "Relative mouse control via HID (requires accessibility permissions)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HID 経由の相対マウス制御 (アクセシビリティ権限が必要)"
+          }
+        }
+      }
+    },
+    "Relative mouse control via window events (no extra permissions)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ウィンドウイベント経由の相対マウス制御 (追加の権限は不要)"
+          }
+        }
+      }
+    },
+    "Reload": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再読み込み"
+          }
+        }
+      }
+    },
+    "Reload skills from disk": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ディスクからスキルを再読み込み"
+          }
+        }
+      }
+    },
+    "Remember my choice": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選択を記憶する"
+          }
+        }
+      }
+    },
+    "Remote Connection": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リモート接続"
+          }
+        }
+      }
+    },
+    "Remote Control": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リモートコントロール"
+          }
+        }
+      }
+    },
+    "Remote Desktop (RDP)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リモートデスクトップ (RDP)"
+          }
+        }
+      }
+    },
+    "Remote Desktop (RDP)%@%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リモートデスクトップ (RDP)%@%@"
+          }
+        }
+      }
+    },
+    "Remote Protocol": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リモートプロトコル"
+          }
+        }
+      }
+    },
+    "Remove screenshot": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スクリーンショットを削除"
+          }
+        }
+      }
+    },
+    "Request Permissions": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "権限をリクエスト"
+          }
+        }
+      }
+    },
+    "Required": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "必須"
+          }
+        }
+      }
+    },
+    "Required by most modern Windows hosts": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最近のほとんどの Windows ホストで必要です"
+          }
+        }
+      }
+    },
+    "Requires accessibility permissions": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アクセシビリティの権限が必要です"
+          }
+        }
+      }
+    },
+    "Reset & Restore": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リセットと復元"
+          }
+        }
+      }
+    },
+    "Reset All Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべての設定をリセット"
+          }
+        }
+      }
+    },
+    "Reset Now": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今すぐリセット"
+          }
+        }
+      }
+    },
+    "Reset Zoom": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ズームをリセット"
+          }
+        }
+      }
+    },
+    "Reset application settings to default values": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリケーション設定をデフォルト値にリセットします"
+          }
+        }
+      }
+    },
+    "Resetting serial configuration to factory defaults": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "シリアル設定を工場出荷時にリセット"
+          }
+        }
+      }
+    },
+    "Resetting...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リセット中..."
+          }
+        }
+      }
+    },
+    "Resolution:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解像度:"
+          }
+        }
+      }
+    },
+    "Resolved folder: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解決されたフォルダ: %@"
+          }
+        }
+      }
+    },
+    "Resolved folder: Not found (using built-in defaults + target profile guardrails).": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解決されたフォルダ: 見つかりません (組み込みのデフォルトとターゲットプロファイルのガードレールを使用)。"
+          }
+        }
+      }
+    },
+    "Restart": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最初から"
+          }
+        }
+      }
+    },
+    "Restart HID Operations": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HID 操作を再開"
+          }
+        }
+      }
+    },
+    "Reveal in Finder": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Finder で表示"
+          }
+        }
+      }
+    },
+    "Right": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "右"
+          }
+        }
+      }
+    },
+    "Right Arrow": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "右矢印"
+          }
+        }
+      }
+    },
+    "Right%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "右%@"
+          }
+        }
+      }
+    },
+    "Run": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "実行"
+          }
+        }
+      }
+    },
+    "Run comprehensive hardware and connection tests": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ハードウェアと接続の総合テストを実行"
+          }
+        }
+      }
+    },
+    "Running platform stress test for 30 seconds": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 秒間のストレステストを実行"
+          }
+        }
+      }
+    },
+    "Running...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "実行中..."
+          }
+        }
+      }
+    },
+    "Runtime Agent Definition Status": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ランタイムエージェント定義の状態"
+          }
+        }
+      }
+    },
+    "Runtime Agent Markdown Files": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ランタイムエージェントの Markdown ファイル"
+          }
+        }
+      }
+    },
+    "Save": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
+          }
+        }
+      }
+    },
+    "Save Firmware Backup": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェアのバックアップを保存"
+          }
+        }
+      }
+    },
+    "Save Macro": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マクロを保存"
+          }
+        }
+      }
+    },
+    "Scale larger screenshots down to fit within 1280x720.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大きなスクリーンショットを 1280x720 以内に縮小します。"
+          }
+        }
+      }
+    },
+    "Scale larger screenshots down to fit within 1920x1080.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大きなスクリーンショットを 1920x1080 以内に縮小します。"
+          }
+        }
+      }
+    },
+    "Scale larger screenshots down to fit within 2560x1440.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大きなスクリーンショットを 2560x1440 以内に縮小します。"
+          }
+        }
+      }
+    },
+    "Scaling Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スケーリングモード"
+          }
+        }
+      }
+    },
+    "Scaling:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スケーリング:"
+          }
+        }
+      }
+    },
+    "Scan": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スキャン"
+          }
+        }
+      }
+    },
+    "Screen Capture Size": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面キャプチャのサイズ"
+          }
+        }
+      }
+    },
+    "Screen Save": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スクリーンセーバ"
+          }
+        }
+      }
+    },
+    "Screen shows **%@** but the configured OS is **%@**. Choose which OS to use for this task:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面には **%@** が表示されていますが、設定された OS は **%@** です。このタスクで使用する OS を選択してください:"
+          }
+        }
+      }
+    },
+    "Screenshot attached": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スクリーンショットを添付済み"
+          }
+        }
+      }
+    },
+    "Search": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "検索"
+          }
+        }
+      }
+    },
+    "Select Local Firmware File to Flash": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "書き込むローカルファームウェアファイルを選択"
+          }
+        }
+      }
+    },
+    "Select a device to view details": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイスを選択すると詳細を表示します"
+          }
+        }
+      }
+    },
+    "Select a local .bin file and write it to the device directly": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ローカルの .bin ファイルを選択してデバイスに直接書き込みます"
+          }
+        }
+      }
+    },
+    "Select a test and click 'Run Test' to begin": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "テストを選択し「テスト開始」をクリックしてください"
+          }
+        }
+      }
+    },
+    "Select exactly one mode: Chat, Agentic, Planner, or Guide": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "モードを 1 つ選択: Chat、Agentic、Planner、Guide"
+          }
+        }
+      }
+    },
+    "Select target OS to use:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用するターゲット OS を選択:"
+          }
+        }
+      }
+    },
+    "Select target system:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲットシステムを選択:"
+          }
+        }
+      }
+    },
+    "Select the operation mode for the HID chip:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HID チップの動作モードを選択:"
+          }
+        }
+      }
+    },
+    "Send": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "送信"
+          }
+        }
+      }
+    },
+    "Send Defect Report to Support": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不具合レポートをサポートに送信"
+          }
+        }
+      }
+    },
+    "Send screenshots at their original resolution.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スクリーンショットを元の解像度で送信します。"
+          }
+        }
+      }
+    },
+    "Send to Target": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲットへ送信"
+          }
+        }
+      }
+    },
+    "Sent": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "送信済み"
+          }
+        }
+      }
+    },
+    "Sent to Target": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲットへ送信済み"
+          }
+        }
+      }
+    },
+    "Serial Connection": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "シリアル接続"
+          }
+        }
+      }
+    },
+    "Serial Port Configuration": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "シリアルポート設定"
+          }
+        }
+      }
+    },
+    "Serial Port:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "シリアルポート:"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定"
+          }
+        }
+      }
+    },
+    "Settings Management": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定の管理"
+          }
+        }
+      }
+    },
+    "Settings are saved as JSON files with timestamp. Import will overwrite current settings.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定はタイムスタンプ付きの JSON ファイルとして保存されます。読み込むと現在の設定は上書きされます。"
+          }
+        }
+      }
+    },
+    "Settings have been successfully exported.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定を書き出しました。"
+          }
+        }
+      }
+    },
+    "Settings have been successfully imported and applied.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定を読み込んで適用しました。"
+          }
+        }
+      }
+    },
+    "Settings...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定..."
+          }
+        }
+      }
+    },
+    "Shift": {
+      "extractionState": "manual"
+    },
+    "Shortcut Group": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ショートカットグループ"
+          }
+        }
+      }
+    },
+    "Show App Info Overlay": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリ情報オーバーレイを表示"
+          }
+        }
+      }
+    },
+    "Show Capture Folder": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キャプチャフォルダを表示"
+          }
+        }
+      }
+    },
+    "Show Captures Folder": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キャプチャフォルダを表示"
+          }
+        }
+      }
+    },
+    "Show Chat": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "チャットを表示"
+          }
+        }
+      }
+    },
+    "Show HID resolution change alerts": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HID 解像度変更の通知を表示"
+          }
+        }
+      }
+    },
+    "Show Input Overlay": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "入力オーバーレイを表示"
+          }
+        }
+      }
+    },
+    "Show Multimedia Keys": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マルチメディアキーを表示"
+          }
+        }
+      }
+    },
+    "Show Raw": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生データを表示"
+          }
+        }
+      }
+    },
+    "Show Video Rect Box": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "映像領域の枠を表示"
+          }
+        }
+      }
+    },
+    "Show companion chat": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コンパニオンチャットを表示"
+          }
+        }
+      }
+    },
+    "Show only unverified macros": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未検証のマクロのみ表示"
+          }
+        }
+      }
+    },
+    "Show only verified macros": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "検証済みのマクロのみ表示"
+          }
+        }
+      }
+    },
+    "Showing all macros — click to filter by target OS": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてのマクロを表示中 — クリックするとターゲット OS で絞り込み"
+          }
+        }
+      }
+    },
+    "Showing macros for current target OS — click to show all": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在のターゲット OS のマクロを表示中 — クリックするとすべて表示"
+          }
+        }
+      }
+    },
+    "Sleep": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スリープ"
+          }
+        }
+      }
+    },
+    "Slower, more reliable connection": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "低速だが信頼性の高い接続"
+          }
+        }
+      }
+    },
+    "Space": {
+      "extractionState": "manual"
+    },
+    "Spacebar": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スペースバー"
+          }
+        }
+      }
+    },
+    "Speakers (Output)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スピーカー (出力)"
+          }
+        }
+      }
+    },
+    "Special Key Behaviors": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "特殊キーの動作"
+          }
+        }
+      }
+    },
+    "Special Key Combinations": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "特殊キーの組み合わせ"
+          }
+        }
+      }
+    },
+    "Start Recording": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "記録を開始"
+          }
+        }
+      }
+    },
+    "Start Test": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "テスト開始"
+          }
+        }
+      }
+    },
+    "Start Video Recording": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ビデオ録画を開始"
+          }
+        }
+      }
+    },
+    "Statistics:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "統計:"
+          }
+        }
+      }
+    },
+    "Status": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "状態"
+          }
+        }
+      }
+    },
+    "Status & Results": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "状態と結果"
+          }
+        }
+      }
+    },
+    "Status & Results Summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "状態と結果の概要"
+          }
+        }
+      }
+    },
+    "Status: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "状態: %@"
+          }
+        }
+      }
+    },
+    "Step %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ステップ %lld"
+          }
+        }
+      }
+    },
+    "Step-by-step hardware and connection testing": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ハードウェアと接続を段階的にテストします"
+          }
+        }
+      }
+    },
+    "Stop": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止"
+          }
+        }
+      }
+    },
+    "Stop All HID Operations": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべての HID 操作を停止"
+          }
+        }
+      }
+    },
+    "Stop Auto": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自動を停止"
+          }
+        }
+      }
+    },
+    "Stop Loading": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "読み込み停止"
+          }
+        }
+      }
+    },
+    "Stop Recording": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "記録を停止"
+          }
+        }
+      }
+    },
+    "Stored securely in macOS Keychain": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS キーチェーンに安全に保存されます"
+          }
+        }
+      }
+    },
+    "Stress Test": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ストレステスト"
+          }
+        }
+      }
+    },
+    "Stretch to Fit": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "引き伸ばして合わせる"
+          }
+        }
+      }
+    },
+    "Stretches content to fill the entire view": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ビュー全体に合わせてコンテンツを引き伸ばします"
+          }
+        }
+      }
+    },
+    "Strict compatibility mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "厳密な互換モード"
+          }
+        }
+      }
+    },
+    "Super": {
+      "extractionState": "manual"
+    },
+    "Switch to Host": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ホストに切り替え"
+          }
+        }
+      }
+    },
+    "Switch to Target": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲットに切り替え"
+          }
+        }
+      }
+    },
+    "System:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "システム:"
+          }
+        }
+      }
+    },
+    "Tab": {
+      "extractionState": "manual"
+    },
+    "Take Picture": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "写真を撮る"
+          }
+        }
+      }
+    },
+    "Target": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲット"
+          }
+        }
+      }
+    },
+    "Target Aspect Ratio...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲットのアスペクト比..."
+          }
+        }
+      }
+    },
+    "Target Connected:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲット接続:"
+          }
+        }
+      }
+    },
+    "Target Device Keyboard Layout": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲットデバイスのキーボードレイアウト"
+          }
+        }
+      }
+    },
+    "Target OS": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲット OS"
+          }
+        }
+      }
+    },
+    "Target OS mismatch": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲット OS の不一致"
+          }
+        }
+      }
+    },
+    "Target OS: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲット OS: %@"
+          }
+        }
+      }
+    },
+    "Target Output:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲット出力:"
+          }
+        }
+      }
+    },
+    "Target Plug & Play": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲット側プラグ&プレイ"
+          }
+        }
+      }
+    },
+    "Target Port Checking": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲットポートの確認"
+          }
+        }
+      }
+    },
+    "Target Screen Placement": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲット画面の配置"
+          }
+        }
+      }
+    },
+    "Target Screen positioned at the bottom": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲット画面を下に配置"
+          }
+        }
+      }
+    },
+    "Target Screen positioned at the top": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲット画面を上に配置"
+          }
+        }
+      }
+    },
+    "Target Screen positioned to the left": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲット画面を左に配置"
+          }
+        }
+      }
+    },
+    "Target Screen positioned to the right": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲット画面を右に配置"
+          }
+        }
+      }
+    },
+    "Target System": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲットシステム"
+          }
+        }
+      }
+    },
+    "Target device is outputting: %@Hz\n\nApple's AVFoundation does not support this device's %@Hz compressed video format.\nThe maximum supported frame rate is %lldHz.\n\nThe system will automatically limit capture to %lldHz.\n\nHow to fix:\nPlease lower the target device's output frame rate to %lldHz or below:\n\n1. Open the target computer's display settings\n2. Change the refresh rate to %lldHz or lower\n3. Openterface will automatically adapt to the new frame rate\n\nNote: The Openterface device is functioning correctly. This limitation\nis due to compatibility between the device's video compression and\nmacOS's AVFoundation framework.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ターゲットデバイスの出力: %@Hz\n\nApple の AVFoundation はこのデバイスの %@Hz 圧縮ビデオ形式に対応していません。\n対応する最大フレームレートは %lldHz です。\n\nキャプチャは自動的に %lldHz に制限されます。\n\n対処方法:\nターゲットデバイスの出力フレームレートを %lldHz 以下に下げてください:\n\n1. ターゲットコンピュータのディスプレイ設定を開く\n2. リフレッシュレートを %lldHz 以下に変更する\n3. Openterface は新しいフレームレートに自動的に適応します\n\n注: Openterface デバイス自体は正常に動作しています。この制限は\nデバイスのビデオ圧縮方式と macOS の AVFoundation フレームワークの\n互換性によるものです。"
+          }
+        }
+      }
+    },
+    "Task Complete": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タスク完了"
+          }
+        }
+      }
+    },
+    "Test Connection": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接続をテスト"
+          }
+        }
+      }
+    },
+    "Test Layout": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レイアウトをテスト"
+          }
+        }
+      }
+    },
+    "Test text": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "テストテキスト"
+          }
+        }
+      }
+    },
+    "Testing Black USB-C hot-plug/unplug detection and reconnection (target side)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "黒 USB-C の抜き差し検出と再接続をテスト (ターゲット側)"
+          }
+        }
+      }
+    },
+    "Testing Orange USB-C hot-plug/unplug detection and reconnection (host side)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オレンジ USB-C の抜き差し検出と再接続をテスト (ホスト側)"
+          }
+        }
+      }
+    },
+    "Testing...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "テスト中..."
+          }
+        }
+      }
+    },
+    "Tests": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "テスト"
+          }
+        }
+      }
+    },
+    "Tests include cable detection, serial connection, baudrate configuration, and stress testing": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ケーブル検出、シリアル接続、ボーレート設定、ストレステストを含みます"
+          }
+        }
+      }
+    },
+    "Text": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "テキスト"
+          }
+        }
+      }
+    },
+    "Text messages and captured screenshots from chat are sent to this configured AI service.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "チャットのテキストメッセージとキャプチャしたスクリーンショットは、ここで設定した AI サービスに送信されます。"
+          }
+        }
+      }
+    },
+    "The connected device control chip is not upgradable, so upgrading the keyboard and mouse firmware is not available in this device.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接続中のデバイスのコントロールチップは更新に対応していないため、このデバイスではキーボード/マウスのファームウェア更新は利用できません。"
+          }
+        }
+      }
+    },
+    "The selected device is not connected. Waiting for it to reappear.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選択したデバイスが接続されていません。再接続を待っています。"
+          }
+        }
+      }
+    },
+    "The selected target system is appended to AI prompts so shortcut recommendations match the target OS.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選択したターゲットシステムは AI プロンプトに付加され、ショートカットの提案がターゲット OS に合うようになります。"
+          }
+        }
+      }
+    },
+    "These shortcuts work globally when Openterface is active": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "これらのショートカットは Openterface がアクティブなときに全体で有効です"
+          }
+        }
+      }
+    },
+    "This will reset all preferences to default values": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべての環境設定がデフォルト値にリセットされます"
+          }
+        }
+      }
+    },
+    "Tokens: in %lld | out %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トークン: 入力 %lld | 出力 %lld"
+          }
+        }
+      }
+    },
+    "Top": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上"
+          }
+        }
+      }
+    },
+    "Top%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上%@"
+          }
+        }
+      }
+    },
+    "Trace": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トレース"
+          }
+        }
+      }
+    },
+    "Trace Step": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ステップをトレース"
+          }
+        }
+      }
+    },
+    "Trace: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トレース: %@"
+          }
+        }
+      }
+    },
+    "Type your message...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メッセージを入力..."
+          }
+        }
+      }
+    },
+    "USB Control:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB 制御:"
+          }
+        }
+      }
+    },
+    "USB Device": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB デバイス"
+          }
+        }
+      }
+    },
+    "USB Device Tree": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB デバイスツリー"
+          }
+        }
+      }
+    },
+    "USB Devices": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB デバイス"
+          }
+        }
+      }
+    },
+    "USB Hub": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB ハブ"
+          }
+        }
+      }
+    },
+    "USB Hub Detected": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB ハブを検出"
+          }
+        }
+      }
+    },
+    "USB Hub Warning": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB ハブの警告"
+          }
+        }
+      }
+    },
+    "USB Info": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB 情報"
+          }
+        }
+      }
+    },
+    "Unknown": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不明"
+          }
+        }
+      }
+    },
+    "Unmute Audio": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ミュートを解除"
+          }
+        }
+      }
+    },
+    "Update": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更新"
+          }
+        }
+      }
+    },
+    "Update Monitor Name": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "モニタ名を更新"
+          }
+        }
+      }
+    },
+    "Update Now": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今すぐ更新"
+          }
+        }
+      }
+    },
+    "Update process will:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更新処理の内容:"
+          }
+        }
+      }
+    },
+    "Updating Baudrate...": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ボーレートを更新中..."
+          }
+        }
+      }
+    },
+    "Updating Monitor Name": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "モニタ名を更新中"
+          }
+        }
+      }
+    },
+    "Updating serial baudrate...\n\nKeyboard and mouse will reconnect automatically when the control chipset is ready.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "シリアルのボーレートを更新中...\n\nコントロールチップセットの準備ができると、キーボードとマウスは自動的に再接続します。"
+          }
+        }
+      }
+    },
+    "Use HID resolution from the capture card (may have blank areas)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キャプチャカードの HID 解像度を使用 (余白が生じる場合があります)"
+          }
+        }
+      }
+    },
+    "Use NLA (Network Level Authentication)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NLA (ネットワークレベル認証) を使用"
+          }
+        }
+      }
+    },
+    "Use a custom aspect ratio specified by the user": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ユーザーが指定したカスタムアスペクト比を使用"
+          }
+        }
+      }
+    },
+    "Use direct Openterface USB capture and HID control": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Openterface の USB キャプチャと HID 制御を直接使用"
+          }
+        }
+      }
+    },
+    "Username": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ユーザー名"
+          }
+        }
+      }
+    },
+    "VNC (RFB 3.8)": {
+      "extractionState": "manual"
+    },
+    "VNC Connection": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VNC 接続"
+          }
+        }
+      }
+    },
+    "Verified": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "検証済み"
+          }
+        }
+      }
+    },
+    "Verify": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "検証"
+          }
+        }
+      }
+    },
+    "Verifying all cable connections (Orange USB-C, Black USB-C, and HDMI)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてのケーブル接続を確認 (オレンジ USB-C、黒 USB-C、HDMI)"
+          }
+        }
+      }
+    },
+    "Version:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "バージョン:"
+          }
+        }
+      }
+    },
+    "Video Capture Format": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ビデオキャプチャ形式"
+          }
+        }
+      }
+    },
+    "Video Chipset:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ビデオチップセット:"
+          }
+        }
+      }
+    },
+    "Video Location ID:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ビデオの Location ID:"
+          }
+        }
+      }
+    },
+    "View": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示"
+          }
+        }
+      }
+    },
+    "View Logs": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ログを表示"
+          }
+        }
+      }
+    },
+    "Volume Down": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "音量を下げる"
+          }
+        }
+      }
+    },
+    "Volume Up": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "音量を上げる"
+          }
+        }
+      }
+    },
+    "WARNING: Flashing a local firmware file is a potentially dangerous operation that could permanently damage your device.\n\n• Only use firmware files specifically designed for your device\n• Ensure the file is from a trusted source\n• Do not interrupt the process once started\n• The device may become unusable if incorrect firmware is installed\n\nProceed only if you understand these risks.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "警告: ローカルのファームウェアファイルの書き込みは、デバイスを恒久的に損傷させる可能性のある危険な操作です。\n\n• お使いのデバイス専用のファームウェアファイルのみを使用してください\n• 信頼できる入手元のファイルであることを確認してください\n• 開始後は処理を中断しないでください\n• 誤ったファームウェアを書き込むとデバイスが使用不能になる場合があります\n\nこれらのリスクを理解した場合のみ続行してください。"
+          }
+        }
+      }
+    },
+    "Wake Up": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復帰"
+          }
+        }
+      }
+    },
+    "Wakeup": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復帰"
+          }
+        }
+      }
+    },
+    "What would you like to do?": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "どの操作を行いますか?"
+          }
+        }
+      }
+    },
+    "When Cmd+V is pressed:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cmd+V が押されたとき:"
+          }
+        }
+      }
+    },
+    "When enabled, maintains aspect ratio when resizing the window. When disabled, allows free resizing.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有効にするとウィンドウのサイズ変更時にアスペクト比を維持します。無効にすると自由にサイズ変更できます。"
+          }
+        }
+      }
+    },
+    "Windows": {
+      "extractionState": "manual"
+    },
+    "Windows Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Windows モード"
+          }
+        }
+      }
+    },
+    "Windows Mode Key Mapping:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Windows モードのキーマッピング:"
+          }
+        }
+      }
+    },
+    "You have selected firmware file: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選択したファームウェアファイル: %@"
+          }
+        }
+      }
+    },
+    "Your firmware is already up to date!": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェアは最新です。"
+          }
+        }
+      }
+    },
+    "Your firmware is newer than the latest available version!": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファームウェアは公開されている最新版より新しいバージョンです。"
+          }
+        }
+      }
+    },
+    "Zoom": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ズーム"
+          }
+        }
+      }
+    },
+    "Zoom In": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拡大"
+          }
+        }
+      }
+    },
+    "Zoom Out": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "縮小"
+          }
+        }
+      }
+    },
+    "Zoom to Height": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高さに合わせる"
+          }
+        }
+      }
+    },
+    "Zoom to Width": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "幅に合わせる"
+          }
+        }
+      }
+    },
+    "e.g. Ctrl+Alt+Del": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例: Ctrl+Alt+Del"
+          }
+        }
+      }
+    },
+    "example.com": {
+      "extractionState": "manual"
+    },
+    "gpt-4o-mini": {
+      "extractionState": "manual"
+    },
+    "https://api.openai.com/v1": {
+      "extractionState": "manual"
+    },
+    "sk-...": {
+      "extractionState": "manual"
+    },
+    "•": {
+      "extractionState": "manual"
+    },
+    "• Always Host Paste: Automatically sends clipboard text as keystrokes": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• 常にホスト側ペースト: クリップボードのテキストを自動的にキー入力として送信します"
+          }
+        }
+      }
+    },
+    "• Always Local Paste: Forwards the Cmd+V combination directly": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• 常にローカルペースト: Cmd+V の組み合わせをそのまま転送します"
+          }
+        }
+      }
+    },
+    "• Ask Every Time: Shows a dialog to choose the action": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• 毎回確認: 操作を選択するダイアログを表示します"
+          }
+        }
+      }
+    },
+    "• Cmd (⌘) → Cmd (⌘)": {
+      "extractionState": "manual"
+    },
+    "• Cmd (⌘) → Ctrl": {
+      "extractionState": "manual"
+    },
+    "• Control (⌃) → Control (⌃)": {
+      "extractionState": "manual"
+    },
+    "• Control (⌃) → Super Key": {
+      "extractionState": "manual"
+    },
+    "• Control (⌃) → Win Key": {
+      "extractionState": "manual"
+    },
+    "• Disconnect the HDMI cable": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• HDMI ケーブルを取り外してください"
+          }
+        }
+      }
+    },
+    "• Do not interrupt power during update": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• 更新中は電源を切らないでください"
+          }
+        }
+      }
+    },
+    "• Download the latest firmware from the official server": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• 公式サーバーから最新のファームウェアをダウンロード"
+          }
+        }
+      }
+    },
+    "• Host Paste: When you want to paste text from your computer’s clipboard into the target.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• ホスト側ペースト: このコンピュータのクリップボードのテキストをターゲットに貼り付けたいとき。"
+          }
+        }
+      }
+    },
+    "• If keyboard and mouse stop working, disconnect all cables and reconnect": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• キーボードとマウスが動かなくなった場合は、すべてのケーブルを抜き差ししてください"
+          }
+        }
+      }
+    },
+    "• Install the new firmware to your device": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• 新しいファームウェアをデバイスに書き込み"
+          }
+        }
+      }
+    },
+    "• Local Paste: When you want to paste text already copied inside the target.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• ローカルペースト: ターゲット内で既にコピーしたテキストを貼り付けたいとき。"
+          }
+        }
+      }
+    },
+    "• Option (⌥) → Alt": {
+      "extractionState": "manual"
+    },
+    "• Option (⌥) → Option (⌥)": {
+      "extractionState": "manual"
+    },
+    "• Please disconnect and reconnect all cables after update": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• 更新後はすべてのケーブルを抜き差ししてください"
+          }
+        }
+      }
+    },
+    "• Please wait a few seconds for the change to apply": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• 変更が反映されるまで数秒お待ちください"
+          }
+        }
+      }
+    },
+    "• Restart application after completion": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• 完了後にアプリケーションを再起動してください"
+          }
+        }
+      }
+    },
+    "• The device will reconnect after mode change": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• モード変更後にデバイスは再接続します"
+          }
+        }
+      }
+    },
+    "• Use a high-quality USB cable for host connection": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• ホスト接続には高品質な USB ケーブルを使用してください"
+          }
+        }
+      }
+    },
+    "• When changing to Compatibility Mode from another mode, the device will automatically use mode byte 0x02": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• 他のモードから互換モードに変更すると、デバイスは自動的にモードバイト 0x02 を使用します"
+          }
+        }
+      }
+    },
+    "ℹ️ Note:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ℹ️ 注:"
+          }
+        }
+      }
+    },
+    "⌘+V": {
+      "extractionState": "manual"
+    },
+    "▲": {
+      "extractionState": "manual"
+    },
+    "▶": {
+      "extractionState": "manual"
+    },
+    "▼": {
+      "extractionState": "manual"
+    },
+    "◀": {
+      "extractionState": "manual"
+    },
+    "⚠️ Firmware Flash Warning": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ ファームウェア書き込みの警告"
+          }
+        }
+      }
+    },
+    "⚠️ Important: Entering Bootloader Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ 重要: ブートローダーモードへの入り方"
+          }
+        }
+      }
+    },
+    "⚠️ Important: When changing baudrate:": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ 重要: ボーレート変更時の注意:"
+          }
+        }
+      }
+    },
+    "⚠️ Target Frame Rate Too High": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ ターゲットのフレームレートが高すぎます"
+          }
+        }
+      }
+    },
+    "⚠️ This application does not have permission to access your %@.\n\nYou can enable it in \"System Preferences\" -> \"Privacy\" -> \"%@\".": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ このアプリケーションには %@ へのアクセス権限がありません。\n\n「システム設定」->「プライバシー」->「%@」で有効にできます。"
+          }
+        }
+      }
+    },
+    "✅ Accessibility permissions are granted.\n\nHID-based relative mouse control is available.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "✅ アクセシビリティの権限は付与されています。\n\nHID ベースの相対マウス制御を利用できます。"
+          }
+        }
+      }
+    },
+    "✓": {
+      "extractionState": "manual"
+    },
+    "❌ Accessibility permissions are not granted.\n\nHID-based relative mouse control requires these permissions.\n\nWould you like to automatically request these permissions?\nThis will add Openterface to the accessibility list and show the system permission dialog.": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "❌ アクセシビリティの権限が付与されていません。\n\nHID ベースの相対マウス制御にはこの権限が必要です。\n\n権限を自動的にリクエストしますか?\nOpenterface がアクセシビリティ一覧に追加され、システムの権限ダイアログが表示されます。"
+          }
+        }
+      }
+    },
+    "🎮 Gaming (250 Hz, 115200)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🎮 ゲーミング (250 Hz, 115200)"
+          }
+        }
+      }
+    },
+    "🐇 Max Performance (1000 Hz, 115200)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🐇 最大性能 (1000 Hz, 115200)"
+          }
+        }
+      }
+    },
+    "🐢 Low Performance Target (30 Hz, 9600)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🐢 低性能ターゲット (30 Hz, 9600)"
+          }
+        }
+      }
+    },
+    "📁 Log Files to Attach": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "📁 添付するログファイル"
+          }
+        }
+      }
+    },
+    "📧 Defect Report - Ready to Send": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "📧 不具合レポート - 送信準備完了"
+          }
+        }
+      }
+    },
+    "🖥️ Casual Use (80 Hz, 9600)": {
+      "extractionState": "manual",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🖥️ 日常使用 (80 Hz, 9600)"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

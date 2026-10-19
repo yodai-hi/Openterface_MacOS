@@ -22,15 +22,15 @@ struct MouseHIDSettingsView: View {
         var description: String {
             switch self {
             case .lowPerformance:
-                return "For Raspberry Pi and low-performance targets (30 Hz, 9600 baud)"
+                return String(localized: "For Raspberry Pi and low-performance targets (30 Hz, 9600 baud)")
             case .casual:
-                return "Balanced settings for everyday use (80 Hz, 9600 baud)"
+                return String(localized: "Balanced settings for everyday use (80 Hz, 9600 baud)")
             case .gaming:
-                return "Optimized for gaming and fast interactions (250 Hz, 115200 baud)"
+                return String(localized: "Optimized for gaming and fast interactions (250 Hz, 115200 baud)")
             case .maxPerformance:
-                return "Maximum responsiveness for professional use (1000 Hz, 115200 baud)"
+                return String(localized: "Maximum responsiveness for professional use (1000 Hz, 115200 baud)")
             case .custom:
-                return "Manually configured settings"
+                return String(localized: "Manually configured settings")
             }
         }
 
@@ -109,7 +109,7 @@ struct MouseHIDSettingsView: View {
                                         .font(.system(size: 24))
                                         .foregroundColor(selectedPreset == preset ? .white : .blue)
 
-                                    Text(preset.rawValue)
+                                    Text(LocalizedStringKey(preset.rawValue))
                                         .font(.caption)
                                         .fontWeight(.semibold)
                                         .foregroundColor(selectedPreset == preset ? .white : .primary)

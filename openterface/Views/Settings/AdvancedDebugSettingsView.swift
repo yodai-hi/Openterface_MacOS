@@ -270,7 +270,7 @@ struct AdvancedDebugSettingsView: View {
     
     private func exportSettings() {
         let panel = NSSavePanel()
-        panel.title = "Export Openterface Settings"
+        panel.title = String(localized: "Export Openterface Settings")
         panel.nameFieldStringValue = "Openterface_Settings_\(getCurrentDateString()).json"
         panel.allowedContentTypes = [.json]
         panel.canCreateDirectories = true
@@ -292,7 +292,7 @@ struct AdvancedDebugSettingsView: View {
     
     private func importSettings() {
         let panel = NSOpenPanel()
-        panel.title = "Import Openterface Settings"
+        panel.title = String(localized: "Import Openterface Settings")
         panel.allowedContentTypes = [.json]
         panel.allowsMultipleSelection = false
         

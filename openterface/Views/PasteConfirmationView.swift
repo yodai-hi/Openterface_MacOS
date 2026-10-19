@@ -146,7 +146,7 @@ class PasteConfirmationWindowController: NSWindowController {
         
         super.init(window: window)
         
-        window.title = "Paste Confirmation"
+        window.title = String(localized: "Paste Confirmation")
         window.level = .floating
         window.center()
         window.isReleasedWhenClosed = false

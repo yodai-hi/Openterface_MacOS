@@ -5,7 +5,26 @@ struct DeviceConnectionSettingsView: View {
     @ObservedObject private var userSettings = UserSettings.shared
     @ObservedObject private var serialPortManager = SerialPortManager.shared
     @ObservedObject private var serialStatus = SerialPortStatus.shared
+    @ObservedObject private var deviceSelection = DeviceSelectionManager.shared
     @State private var connectionAttempts = 0
+
+    private static let automaticDeviceTag = "__automatic__"
+
+    /// Picker binding: "automatic" or the id of the pinned unit.
+    private var selectedDeviceTag: Binding<String> {
+        Binding(
+            get: {
+                deviceSelection.isPinned ? (deviceSelection.pinnedCandidate?.id ?? Self.automaticDeviceTag) : Self.automaticDeviceTag
+            },
+            set: { newValue in
+                if newValue == Self.automaticDeviceTag {
+                    deviceSelection.selectAutomatic()
+                } else if let candidate = deviceSelection.candidates.first(where: { $0.id == newValue }) {
+                    deviceSelection.select(candidate)
+                }
+            }
+        )
+    }
     @State private var showingFirmwareUpdate = false
     @State private var isUpdatingBaudrate = false
 
@@ -18,6 +37,72 @@ struct DeviceConnectionSettingsView: View {
             Text("Device & Connection Management")
                 .font(.title2)
                 .bold()
+
+            GroupBox("Device Selection") {
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("Each app instance drives one Openterface unit. Choose the unit for this window, or open another unit in a new instance.")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+
+                    HStack {
+                        Text("Active Device:")
+                        Spacer()
+                        Picker("Active Device", selection: selectedDeviceTag) {
+                            Text("Automatic (First Detected)").tag(Self.automaticDeviceTag)
+                            ForEach(deviceSelection.candidates) { candidate in
+                                Text(verbatim: candidate.displayName).tag(candidate.id)
+                            }
+                        }
+                        .labelsHidden()
+                        .pickerStyle(MenuPickerStyle())
+                        .frame(width: 260)
+                    }
+
+                    if let active = deviceSelection.activeCandidate {
+                        HStack {
+                            Text("Video Location ID:")
+                            Spacer()
+                            Text(verbatim: active.videoLocationID ?? "-")
+                                .font(.system(.caption, design: .monospaced))
+                        }
+                        HStack {
+                            Text("Serial Port:")
+                            Spacer()
+                            Text(verbatim: active.serialPortPath ?? "-")
+                                .font(.system(.caption, design: .monospaced))
+                        }
+                    } else if deviceSelection.isPinned {
+                        Text("The selected device is not connected. Waiting for it to reappear.")
+                            .font(.caption)
+                            .foregroundColor(.orange)
+                    } else {
+                        Text("No Openterface devices detected")
+                            .font(.caption)
+                            .foregroundColor(.orange)
+                    }
+
+                    HStack {
+                        Button("Refresh Devices") {
+                            USBDevicesManager.shared.update()
+                        }
+
+                        Menu("Open in New Instance") {
+                            ForEach(deviceSelection.candidates) { candidate in
+                                Button(action: {
+                                    deviceSelection.openInNewInstance(candidate)
+                                }) {
+                                    Text(verbatim: candidate.displayName)
+                                }
+                            }
+                        }
+                        .frame(width: 200)
+                        .disabled(deviceSelection.candidates.isEmpty)
+
+                        Spacer()
+                    }
+                }
+                .padding(.vertical, 8)
+            }
 
             GroupBox("Device Information") {
                 VStack(alignment: .leading, spacing: 12) {
@@ -272,7 +357,7 @@ struct DeviceConnectionSettingsView: View {
         case .ch32v208:
             return "CH32V208"
         case .unknown:
-            return "Not Detected"
+            return String(localized: "Not Detected")
         }
     }
 
@@ -285,7 +370,7 @@ struct DeviceConnectionSettingsView: View {
         case .ms2130s:
             return "MS2130S"
         case .unknown:
-            return "Not Detected"
+            return String(localized: "Not Detected")
         }
     }
 

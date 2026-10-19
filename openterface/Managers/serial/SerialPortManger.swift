@@ -1525,6 +1525,29 @@ class SerialPortManager: NSObject, ORSSerialPortDelegate, SerialPortManagerProto
     /// Returns nil if no match found — the caller will retry later rather than connecting
     /// to a wrong device (which triggers destructive factory reset loops).
     private func findBestMatchingSerialPort(for usbDevice: USBDeviceInfo) -> ORSSerialPort? {
+        let selection = DeviceSelectionManager.shared
+
+        // 1. Explicit pin (launch argument --serial or UI selection): use exactly that port.
+        if let pinnedPath = selection.currentPinnedSerialPortPath() {
+            if let pinnedPort = self.serialPorts.first(where: { $0.path == pinnedPath }) {
+                logger.log(content: "Using pinned serial port: \(pinnedPath)")
+                return pinnedPort
+            }
+            logger.log(content: "Pinned serial port \(pinnedPath) is not available yet (will retry)")
+            return nil
+        }
+
+        // 2. Pinned by video location only: resolve the port through the control chip's USB location.
+        if selection.currentPinnedVideoLocationID() != nil {
+            if let correlated = serialPort(matchingUSBLocationOf: usbDevice) {
+                logger.log(content: "Using serial port \(correlated.path) correlated with pinned control chip at \(usbDevice.locationID)")
+                return correlated
+            }
+            logger.log(content: "No serial port correlated with pinned control chip at \(usbDevice.locationID) (will retry)")
+            return nil
+        }
+
+        // 3. Automatic mode: legacy behaviour.
         // Look for serial ports that contain "usbserial" (the typical pattern for USB serial devices)
         let usbSerialPorts = self.serialPorts.filter{ $0.path.contains("usbserial") || $0.path.contains("usbmodem")}
 
@@ -1536,8 +1559,15 @@ class SerialPortManager: NSObject, ORSSerialPortDelegate, SerialPortManagerProto
             // Multiple USB serial ports - try to find the best match
             logger.log(content: "Found \(usbSerialPorts.count) USB serial ports, attempting to find best match")
 
-            // For now, return the first one as we don't have enough correlation info
-            // This could be enhanced in the future with more sophisticated matching
+            // Prefer the port that hangs off the same USB device as the control chip, so that
+            // with several units attached the automatic instance does not take a port that
+            // belongs to a unit another instance is pinned to.
+            if let correlated = serialPort(matchingUSBLocationOf: usbDevice, among: usbSerialPorts) {
+                logger.log(content: "Selected USB serial port \(correlated.path) matching control chip location \(usbDevice.locationID)")
+                return correlated
+            }
+
+            // Fall back to the first one when no correlation is possible
             if let firstPort = usbSerialPorts.first {
                 logger.log(content: "Selected first USB serial port: \(firstPort.path)")
                 return firstPort
@@ -1549,6 +1579,16 @@ class SerialPortManager: NSObject, ORSSerialPortDelegate, SerialPortManagerProto
         // (e.g. /dev/cu.debug-console) triggers factory reset loops.
         logger.log(content: "No USB serial ports found for device: \(usbDevice.productName) (will retry)")
         return nil
+    }
+
+    /// Returns the serial port whose IORegistry ancestry carries the same USB location ID
+    /// as `usbDevice` (i.e. the CDC/ACM port exposed by that control chip).
+    private func serialPort(matchingUSBLocationOf usbDevice: USBDeviceInfo, among ports: [ORSSerialPort]? = nil) -> ORSSerialPort? {
+        let locationByPath = SerialPortLocator.usbLocationIDsByCalloutPath()
+        let target = usbDevice.locationID.lowercased()
+        return (ports ?? self.serialPorts).first { port in
+            locationByPath[port.path]?.lowercased() == target
+        }
     }
 
 }

@@ -89,7 +89,7 @@ final class WindowUtils {
             defer: false
         )
         
-        settingsWindow.title = "Aspect Ratio & Video Settings"
+        settingsWindow.title = String(localized: "Aspect Ratio & Video Settings")
         settingsWindow.contentView = hostingView
         settingsWindow.center()
         settingsWindow.isReleasedWhenClosed = true
@@ -284,17 +284,17 @@ final class WindowUtils {
         }
         
         let alert = NSAlert()
-        alert.messageText = "HID Resolution Change Alert Settings"
-        alert.informativeText = "Do you want to show alerts when HID resolution changes?"
+        alert.messageText = String(localized: "HID Resolution Change Alert Settings")
+        alert.informativeText = String(localized: "Do you want to show alerts when HID resolution changes?")
         
         // Add checkbox
-        let showAlertCheckbox = NSButton(checkboxWithTitle: "Show HID resolution change alerts", target: nil, action: nil)
+        let showAlertCheckbox = NSButton(checkboxWithTitle: String(localized: "Show HID resolution change alerts"), target: nil, action: nil)
         // Set checkbox state based on current settings
         showAlertCheckbox.state = UserSettings.shared.doNotShowHidResolutionAlert ? .off : .on
         alert.accessoryView = showAlertCheckbox
         
         alert.addButton(withTitle: "OK")
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: String(localized: "Cancel"))
         
         let response = alert.runModal()
         if response == .alertFirstButtonReturn {

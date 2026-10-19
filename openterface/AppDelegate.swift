@@ -356,7 +356,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMe
 
             let alert = NSAlert()
             alert.alertStyle = .warning
-            alert.messageText = "\(mode.displayName) Connection Error"
+            alert.messageText = String(localized: "\(mode.displayName) Connection Error")
             alert.informativeText = message
             alert.addButton(withTitle: "OK")
 
@@ -552,6 +552,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMe
                     // // Set maximum size to something reasonable (2x initial size)
                     // window.maxSize = NSSize(width: aspectRatio.width * 2, height: aspectRatio.height * 2)
                     window.center()
+                    applyMultiInstanceOffset(to: window)
                     
                     // Apply always on top setting if enabled
                     WindowUtils.shared.setAlwaysOnTop(UserSettings.shared.isAlwaysOnTop)
@@ -562,6 +563,61 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMe
 
         // Disable window tabbing feature
         NSWindow.allowsAutomaticWindowTabbing = false
+
+        // Safety net for additional instances: a second copy launched through LaunchServices
+        // has been observed to end up with a 0x0, off-screen main window. Re-check shortly
+        // after launch (and again once video may have resized it) and repair the frame.
+        for delay in [1.5, 5.0] {
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+                self?.ensureMainWindowVisible()
+            }
+        }
+    }
+
+    // MARK: - Multi-instance window placement
+
+    private var mainWindow: NSWindow? {
+        NSApplication.shared.windows.first { window in
+            window.identifier?.rawValue.contains(UserSettings.shared.mainWindownName) == true
+        }
+    }
+
+    /// Diagonal shift (in points) for this instance so that one window per device does not
+    /// sit exactly on top of the previous instance's window.
+    private var multiInstanceOffset: CGFloat {
+        CGFloat(DeviceSelectionManager.runningInstanceOrdinal()) * 48
+    }
+
+    private func applyMultiInstanceOffset(to window: NSWindow) {
+        let offset = multiInstanceOffset
+        guard offset > 0 else { return }
+        var frame = window.frame
+        frame.origin.x += offset
+        frame.origin.y -= offset
+        if let screen = window.screen ?? NSScreen.main {
+            frame = window.constrainFrameRect(frame, to: screen)
+        }
+        logger.log(content: "Multi-instance window offset applied: \(offset)pt -> \(frameSummary(frame))")
+        window.setFrameOrigin(frame.origin)
+    }
+
+    /// Gives the main window a sane, visible frame when it is degenerate or off every screen.
+    private func ensureMainWindowVisible() {
+        guard let window = mainWindow else { return }
+        guard !window.isMiniaturized, !parallelManager.isParallelModeEnabled else { return }
+
+        let frame = window.frame
+        let degenerate = !frame.width.isFinite || !frame.height.isFinite || frame.width < 200 || frame.height < 120
+        let onScreen = NSScreen.screens.contains { $0.visibleFrame.intersects(frame) }
+        guard degenerate || !onScreen else { return }
+
+        logger.log(content: "Main window frame is unusable (\(frameSummary(frame)), onScreen=\(onScreen)); restoring default frame")
+        window.setContentSize(initialContentSize)
+        window.center()
+        applyMultiInstanceOffset(to: window)
+        refreshNativeAspectRatioLock(for: window, constrainedFrameSize: window.frame.size)
+        window.makeKeyAndOrderFront(nil)
+        updateWindowAppStatus(for: window)
     }
     
     private func setupNotificationObservers() {
@@ -670,7 +726,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMe
     // Update aspect ratio menu items status
     func updateAspectRatioMenuItems() {
         guard let mainMenu = NSApp.mainMenu,
-              let viewMenuItem = mainMenu.items.first(where: { $0.title == "View" || $0.title == "View" }),
+              let viewMenuItem = mainMenu.items.first(where: { [String(localized: "View"), "View"].contains($0.title) }),
               let viewMenu = viewMenuItem.submenu,
               let aspectRatioMenuItem = viewMenu.items.first(where: { $0.title == "Screen Ratio" }),
               let aspectRatioMenu = aspectRatioMenuItem.submenu else { return }
@@ -695,7 +751,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMe
         guard let mainMenu = NSApp.mainMenu else { return }
         
         // Find or create the "View" menu
-        var viewMenuItem = mainMenu.items.first { $0.title == "View" }
+        var viewMenuItem = mainMenu.items.first { [String(localized: "View"), "View"].contains($0.title) }
         var viewMenu: NSMenu
         
         if let existingViewMenuItem = viewMenuItem {
@@ -709,7 +765,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMe
         } else {
             // Create a new View menu
             viewMenu = NSMenu(title: "View")
-            let newViewMenuItem = NSMenuItem(title: "View", action: nil, keyEquivalent: "")
+            let newViewMenuItem = NSMenuItem(title: String(localized: "View"), action: nil, keyEquivalent: "")
             newViewMenuItem.submenu = viewMenu
             
             // Find a suitable position to insert the new menu (usually after "File" and "Edit")
@@ -756,7 +812,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMe
 
     private func updatePlacementMenuItems() {
         guard let mainMenu = NSApp.mainMenu,
-              let viewMenuItem = mainMenu.items.first(where: { $0.title == "View" }),
+              let viewMenuItem = mainMenu.items.first(where: { [String(localized: "View"), "View"].contains($0.title) }),
               let viewMenu = viewMenuItem.submenu,
               let placementMenuItem = viewMenu.items.first(where: { $0.title == "Target Screen Placement" }),
               let placementMenu = placementMenuItem.submenu else { return }
@@ -779,7 +835,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMe
 
     private func updateParallelMenuItemTitle() {
         guard let mainMenu = NSApp.mainMenu,
-              let viewMenuItem = mainMenu.items.first(where: { $0.title == "View" }),
+              let viewMenuItem = mainMenu.items.first(where: { [String(localized: "View"), "View"].contains($0.title) }),
               let viewMenu = viewMenuItem.submenu else { return }
 
         if let item = viewMenu.items.first(where: { $0.action == #selector(toggleParallelModeMenu(_:)) }) {
@@ -826,13 +882,17 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMe
         let newX = screenFrame.origin.x + (screenFrame.width - newSize.width) / 2
         let newY = screenFrame.origin.y + (screenFrame.height - newSize.height) / 2
         
-        // Set window size and position
-        let newFrame = NSRect(
-            x: newX,
-            y: newY,
+        // Set window size and position (shifted per instance so windows do not overlap)
+        let offset = multiInstanceOffset
+        var newFrame = NSRect(
+            x: newX + offset,
+            y: newY - offset,
             width: newSize.width,
             height: newSize.height
         )
+        if offset > 0 {
+            newFrame = window.constrainFrameRect(newFrame, to: screen)
+        }
 
         logger.log(content: "[ResizeDebug] updateWindowSize target={\(frameSummary(newFrame))} screen={\(frameSummary(screenFrame))}")
         
@@ -1513,7 +1573,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMe
             guard let self = self else { return }
             func postNotification() {
                 let content = UNMutableNotificationContent()
-                content.title = "Input Method Switched"
+                content.title = String(localized: "Input Method Switched")
                 content.body = "Input method switched to \(friendlyName)"
                 content.sound = UNNotificationSound.default
 
